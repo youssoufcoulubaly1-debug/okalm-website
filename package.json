@@ -1,0 +1,17 @@
+{
+  "name": "okalm-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site marketing statique okalm.ci — déployé sur Cloudflare Pages.",
+  "type": "module",
+  "scripts": {
+    "deploy": "node scripts/deploy.mjs",
+    "deploy:create-project": "node scripts/deploy.mjs --create-project"
+  },
+  "devDependencies": {
+    "wrangler": "^3.114.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
