@@ -5,4 +5,10 @@
 /terms            /terms.html         200
 /support          /support.html       200
 /beta             /beta.html          200
+
+# Pages de téléchargement des applications Android
+# Les vraies pages vivent aux adresses courtes : /get-app-okalm et /get-app-kalmeurs
+# Les adresses descriptives restent valables en alias (stubs HTML + ci-dessous)
+/telecharger-au-calme  /telecharger-au-calme.html  200
+/telecharger-kalmeurs  /telecharger-kalmeurs.html  200
 /*                /404.html           404

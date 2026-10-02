@@ -11,3 +11,30 @@
 
 /beta.html
   X-Robots-Tag: noindex, nofollow
+
+# Pages de téléchargement des applications Android
+# Jamais mises en cache : le lien APK et la version doivent rester frais
+/get-app-okalm/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/get-app-kalmeurs/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/telecharger-au-calme.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/telecharger-kalmeurs.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Feuille de style partagée des deux pages de téléchargement
+/downloads.css
+  Cache-Control: public, max-age=86400
+
+# Logos et icônes des applications
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+# Fichiers APK téléchargeables
+# Nom de fichier versionné : une nouvelle version = un nouveau fichier,
+# donc cache long sans risque de servir une version périmée.
+/apk/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment

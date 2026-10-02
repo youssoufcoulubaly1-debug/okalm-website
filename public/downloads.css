@@ -1,0 +1,418 @@
+/* ============================================================
+   OKALM — Pages de téléchargement des applications Android
+   Feuille de style partagée par :
+     · telecharger-au-calme.html   (parents / élèves)
+     · telecharger-kalmeurs.html   (professeurs / répétiteurs)
+
+   Principes tenus :
+     · aucune police distante — pile de polices système, comme les
+       deux applications Flutter qui n'embarquent aucune police ;
+     · aucun appel réseau autre que same-origin ;
+     · rendu mobile d'abord (base pensée pour 360 px).
+
+   Reprend les couleurs réelles des applications :
+     · Au calme  : primaire #337843  (lib/core/constants/app_colors.dart:6)
+     · Kalmeurs  : primaire #F47A1F  (lib/core/constants/app_colors.dart:6)
+
+   Fichier créé pour la Phase 3 — aucun déploiement effectué.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Couleurs neutres, communes aux deux pages */
+  --ink:        #1F2937;   /* texte principal  — app_colors.dart:23 */
+  --ink-muted:  #6B7280;   /* texte secondaire — app_colors.dart:24 */
+  --ink-light:  #9CA3AF;   /* texte discret    — app_colors.dart:25 */
+  --border:     #E5E7EB;   /* bordures         — app_colors.dart:28 */
+  --surface:    #FFFFFF;
+  --bg:         #F8FAF9;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --shadow:     0 4px 24px rgba(0, 0, 0, .08);
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, .04), 0 1px 3px rgba(0, 0, 0, .06);
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Thème « Au calme » — parents d'élèves */
+.theme-au-calme {
+  --primary:       #337843;
+  --primary-dark:  #0D6E4F;
+  --primary-soft:  #DDEFE3;   /* app_colors.dart:9  */
+  --primary-deep:  #E9F5EE;
+  --on-primary:    #FFFFFF;
+  --ring:          rgba(51, 120, 67, .30);
+  --shadow-brand:  0 8px 24px -4px rgba(51, 120, 67, .38),
+                   0 4px 12px -2px rgba(51, 120, 67, .20);
+}
+
+/* Thème « Kalmeurs » — professeurs et répétiteurs */
+.theme-kalmeurs {
+  --primary:       #F47A1F;
+  --primary-dark:  #C25E0F;
+  --primary-soft:  #FFE8D6;   /* app_colors.dart:9  */
+  --primary-deep:  #FFF4ED;
+  --on-primary:    #FFFFFF;
+  --ring:          rgba(244, 122, 31, .30);
+  --shadow-brand:  0 8px 24px -4px rgba(244, 122, 31, .38),
+                   0 4px 12px -2px rgba(244, 122, 31, .20);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 16px calc(44px + env(safe-area-inset-bottom));
+}
+
+.wrap {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------- En-tête */
+
+.logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  display: block;
+  background: var(--surface);
+  box-shadow: var(--shadow-brand);
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  border: 1px solid var(--ring);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 480px) { h1 { font-size: 31px; } }
+
+.promise {
+  font-size: 15.5px;
+  color: var(--ink-muted);
+  text-align: center;
+  max-width: 450px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.promise strong { color: var(--ink); font-weight: 700; }
+
+/* ---------------------------------------------------------- Carte de version */
+
+.version-card {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+}
+
+.version-meta { display: flex; flex-direction: column; gap: 2px; }
+
+.version-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.version-compat { font-size: 12.5px; color: var(--ink-muted); }
+
+.version-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  background: var(--primary-deep);
+  border: 1px solid var(--ring);
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------- Appel à l'action */
+
+.cta-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.btn-download {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--on-primary);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 800;
+  padding: 17px 26px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-brand);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-download:hover { transform: translateY(-2px); }
+.btn-download:active { transform: translateY(0); }
+.btn-download svg { width: 21px; height: 21px; flex-shrink: 0; }
+
+/* État affiché tant que le fichier APK n'est pas publié */
+.btn-download.is-placeholder {
+  background: repeating-linear-gradient(
+    135deg, #F3F4F6 0 12px, #E5E7EB 12px 24px
+  );
+  color: #4B5563;
+  box-shadow: none;
+  border: 2px dashed #9CA3AF;
+  cursor: not-allowed;
+}
+
+.microcopy {
+  font-size: 12.5px;
+  color: var(--ink-light);
+  text-align: center;
+  margin-top: 11px;
+  line-height: 1.5;
+  max-width: 440px;
+}
+
+/* ---------------------------------------------------------- Blocs génériques */
+
+.card {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+}
+
+.card__title {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.card__title svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--primary); }
+
+/* ---------------------------------------------------------- Avantages */
+
+.avantages { display: flex; flex-direction: column; gap: 15px; }
+
+.avantage { display: flex; gap: 13px; align-items: flex-start; }
+
+.avantage__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--primary-deep);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avantage__icon svg { width: 18px; height: 18px; }
+
+.avantage h3 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+
+.avantage p { font-size: 13px; color: var(--ink-muted); line-height: 1.5; }
+
+/* ---------------------------------------------------------- Étapes d'installation */
+
+.steps { display: flex; flex-direction: column; gap: 15px; }
+
+.step { display: flex; gap: 13px; align-items: flex-start; }
+
+.step__num {
+  width: 27px;
+  height: 27px;
+  border-radius: 8px;
+  background: var(--primary-deep);
+  border: 1px solid var(--ring);
+  color: var(--primary-dark);
+  font-size: 12.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step h3 { font-size: 13.5px; font-weight: 700; margin-bottom: 2px; }
+
+.step p { font-size: 12.5px; color: var(--ink-muted); line-height: 1.5; }
+
+.step code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  background: #F3F4F6;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: #374151;
+}
+
+/* ---------------------------------------------------------- Encadrés d'information */
+
+.notice {
+  margin-top: 16px;
+  padding: 13px 15px;
+  background: var(--primary-deep);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: 10px;
+  font-size: 12.5px;
+  color: #4B5563;
+  line-height: 1.55;
+}
+
+.notice strong { color: var(--ink); }
+
+/* ---------------------------------------------------------- Prérequis (page Kalmeurs) */
+
+.prerequis { display: flex; flex-direction: column; gap: 12px; }
+
+.prerequis__item {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.prerequis__item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.prerequis__item strong { font-weight: 700; color: var(--ink); }
+
+/* ---------------------------------------------------------- Carte mise à jour */
+
+.update-card {
+  width: 100%;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  text-align: center;
+  margin-bottom: 16px;
+  background: transparent;
+}
+
+.update-card p { font-size: 12.5px; color: var(--ink-muted); line-height: 1.55; }
+
+.update-card strong { color: var(--ink); }
+
+/* ---------------------------------------------------------- Contact */
+
+.contact-block {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 14px;
+  border-radius: 8px;
+  transition: color .15s ease, background .15s ease;
+}
+
+.contact-link:hover { color: var(--primary-dark); background: var(--primary-deep); }
+
+.contact-link svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+/* ---------------------------------------------------------- Pied de page */
+
+.footer {
+  margin-top: 30px;
+  font-size: 11.5px;
+  color: var(--ink-light);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.footer a { color: var(--ink-muted); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
