@@ -30,11 +30,3 @@
 # Logos et icônes des applications
 /assets/*
   Cache-Control: public, max-age=2592000
-
-# Fichiers APK téléchargeables
-# Nom de fichier versionné : une nouvelle version = un nouveau fichier,
-# donc cache long sans risque de servir une version périmée.
-/apk/*
-  Cache-Control: public, max-age=31536000, immutable
-  Content-Type: application/vnd.android.package-archive
-  Content-Disposition: attachment
