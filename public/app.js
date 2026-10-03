@@ -41,10 +41,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
-// Netlify form success message
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('success') === 'true') {
-  const alert = document.querySelector('.form-success');
-  if (alert) alert.style.display = 'block';
-}

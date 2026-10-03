@@ -22,10 +22,9 @@
     <a href="/" class="nav__logo">OKALM</a>
     <button class="nav__toggle" aria-label="Menu">☰</button>
     <div class="nav__links">
-      <a href="/#comment">Comment ça marche</a>
-      <a href="/#tarifs">Tarifs</a>
+      <a href="#postuler">Comment s'inscrire</a>
       <a href="/support">FAQ</a>
-      <a href="/" class="btn btn--outline btn--sm">Espace parents</a>
+      <a href="/get-app-kalmeurs" class="btn btn--orange btn--sm">Télécharger l'app</a>
     </div>
   </div>
 </nav>
@@ -37,7 +36,7 @@
     <h1>Devenez Kalmeur</h1>
     <p class="hero__subtitle">Enseignez près de chez vous · Gagnez 70% sur chaque cours · Créneaux flexibles</p>
     <div class="hero__cta">
-      <a href="#postuler" class="btn btn--orange btn--lg">Postuler gratuitement →</a>
+      <a href="/get-app-kalmeurs/" class="btn btn--orange btn--lg">Télécharger l'application Kalmeurs →</a>
     </div>
   </div>
 </section>
@@ -115,7 +114,7 @@
 <section class="section">
   <div class="container">
     <h2 class="mb-2">Notre processus de sélection</h2>
-    <p class="text-muted mb-4">Seuls 40% des candidats sont retenus — ce qui garantit votre valeur sur la plateforme.</p>
+    <p class="text-muted mb-4">Chaque candidat est vérifié avant de recevoir sa première mission. Ce contrôle protège votre travail autant que la confiance des familles.</p>
     <div class="steps" style="max-width:600px;margin:0 auto">
       <div class="step">
         <div class="step__num">1</div>
@@ -142,56 +141,56 @@
   </div>
 </section>
 
-<!-- Formulaire candidature -->
+<!-- Téléchargement de l'application -->
 <section class="section--alt" id="postuler">
   <div class="container">
-    <div class="form-card">
-      <h2 class="text-center mb-2">Postuler comme Kalmeur</h2>
-      <p class="text-center text-muted mb-4">Gratuit · Réponse sous 72h · Sans engagement</p>
+    <div class="card text-center" style="max-width:560px;margin:0 auto;padding:36px 28px">
+      <img src="/assets/logo-kalmeurs.png" alt="Logo Kalmeurs" width="96" height="96"
+           style="border-radius:22px;margin:0 auto 18px;display:block" />
+      <div class="badge badge--orange mb-2">Inscriptions ouvertes</div>
+      <h2 class="text-center mb-2">Inscrivez-vous depuis l'application</h2>
+      <p class="text-center text-muted mb-4">
+        Gratuit, sans engagement. La vérification de votre identité, de vos diplômes,
+        de votre vidéo et de vos compétences se fait directement dans l'application.
+      </p>
 
-      <div class="alert alert--success form-success" style="display:none">
-        ✅ Candidature reçue ! Notre équipe vous contactera sous 72h.
+      <div class="steps mb-4" style="max-width:480px;margin:0 auto 24px;text-align:left">
+        <div class="step">
+          <div class="step__num">1</div>
+          <div class="step__content">
+            <h3>Téléchargez l'application</h3>
+            <p class="text-muted">Android 7.0 ou version ultérieure. Installation directe, sans Play Store.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <div class="step__content">
+            <h3>Créez votre compte</h3>
+            <p class="text-muted">Renseignez votre profil, vos matières et vos niveaux.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <div class="step__content">
+            <h3>Faites-vous vérifier</h3>
+            <p class="text-muted">Identité, diplômes, vidéo de démonstration et test par matière.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">4</div>
+          <div class="step__content">
+            <h3>Recevez vos premières missions</h3>
+            <p class="text-muted">Vous choisissez vos créneaux et acceptez les missions qui vous conviennent.</p>
+          </div>
+        </div>
       </div>
 
-      <form name="candidature-kalmeur" method="POST" data-netlify="true" action="/devenir-prof?success=true#postuler">
-        <input type="hidden" name="form-name" value="candidature-kalmeur" />
-
-        <div class="form-group">
-          <label class="form-label" for="k-email">Email *</label>
-          <input type="email" name="email" id="k-email" class="form-input" required placeholder="votre@email.com" />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="k-phone">Téléphone *</label>
-          <input type="tel" name="phone" id="k-phone" class="form-input" required placeholder="07 XX XX XX XX" />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="k-niveau">Niveau d'enseignement souhaité *</label>
-          <select name="niveau" id="k-niveau" class="form-select" required>
-            <option value="">Choisir</option>
-            <option>Primaire</option><option>Collège</option>
-            <option>Lycée général</option><option>Lycée scientifique</option><option>Tous niveaux</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="k-matieres">Matières enseignées *</label>
-          <input type="text" name="matieres" id="k-matieres" class="form-input" required
-            placeholder="Ex: Maths, Physique, SVT..." />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="k-commune">Commune *</label>
-          <select name="commune" id="k-commune" class="form-select" required>
-            <option value="">Choisir votre commune</option>
-            <option>Abobo</option><option>Adjamé</option><option>Anyama</option>
-            <option>Attécoubé</option><option>Bingerville</option><option>Cocody</option>
-            <option>Koumassi</option><option>Marcory</option><option>Plateau</option>
-            <option>Port-Bouët</option><option>Songon</option><option>Treichville</option>
-            <option>Yopougon</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn--orange" style="width:100%;justify-content:center;margin-top:8px">
-          Envoyer ma candidature →
-        </button>
-      </form>
+      <a href="/get-app-kalmeurs/" class="btn btn--orange btn--lg" style="width:100%;justify-content:center">
+        Télécharger l'application Kalmeurs →
+      </a>
+      <p class="text-muted mt-3" style="font-size:.85rem">
+        Vous êtes parent ? <a href="/get-app-okalm/">Téléchargez Au calme</a>
+      </p>
     </div>
   </div>
 </section>
@@ -202,6 +201,8 @@
       <div><div class="footer__title">OKALM</div><p style="font-size:.9rem">Plateforme de soutien scolaire à domicile à Abidjan.</p></div>
       <div><div class="footer__title">Liens</div>
         <a href="/" class="footer__link">Espace Parents</a>
+        <a href="/get-app-okalm/" class="footer__link">App Au calme — parents</a>
+        <a href="/get-app-kalmeurs/" class="footer__link">App Kalmeurs — professeurs</a>
         <a href="/support" class="footer__link">Support</a>
       </div>
       <div><div class="footer__title">Légal</div>
