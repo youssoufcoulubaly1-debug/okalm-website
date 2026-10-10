@@ -23,12 +23,16 @@
 <div class="wrap">
 
   <!-- ============================================================
-       ⚠️  À REMPLACER AVANT LA MISE EN LIGNE
        Lien de téléchargement de l'APK « Kalmeurs ».
-       L'APK doit d'abord être reconstruit :
-         flutter build apk --release --flavor prod
-       puis déposé dans les assets, et l'URL réelle collée ci-dessous
-       (dans le href du bouton ET dans la ligne APK_URL du script).
+       L'APK est hébergé dans une RELEASE GITHUB de ce dépôt — pas dans les assets du site.
+       Pour publier une nouvelle version :
+         flutter build apk --release --flavor prod -t lib/main_prod.dart \
+           --dart-define=CLOUD_FUNCTIONS_URL=https://europe-west1-okalm-ci-5c925.cloudfunctions.net
+         gh release create <tag> kalmeurs-<version>.apk --repo youssoufcoulubaly1-debug/okalm-website
+       puis mettre à jour le href du bouton ci-dessous ET son attribut download=.
+       ⚠️ « -t lib/main_prod.dart » est OBLIGATOIRE : sans lui Flutter compile lib/main.dart,
+          FlavorConfig n'est jamais initialisé et les flavors restent INERTES
+          (défaut mesuré dans le binaire le 10/10/2026).
        ============================================================ -->
 
   <img src="/assets/logo-kalmeurs.png" alt="Logo Kalmeurs" class="logo" width="88" height="88" />
@@ -45,7 +49,7 @@
   <div class="version-card">
     <div class="version-meta">
       <div class="version-title">
-        <span id="version-text">Version 1.1.0</span>
+        <span id="version-text">Version 1.1.1</span>
       </div>
       <div class="version-compat" id="compat-text">Android 7.0 ou version ultérieure</div>
     </div>
@@ -54,8 +58,8 @@
 
   <!-- Appel à l'action principal -->
   <div class="cta-block">
-    <a href="https://github.com/youssoufcoulubaly1-debug/okalm-website/releases/download/apps-2026-10-10/kalmeurs-1.1.0.apk"
-       download="kalmeurs-1.1.0.apk"
+    <a href="https://github.com/youssoufcoulubaly1-debug/okalm-website/releases/download/apps-v1.0.2-v1.1.1/kalmeurs-1.1.1.apk"
+       download="kalmeurs-1.1.1.apk"
        class="btn-download" id="download-btn">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
            stroke="currentColor" stroke-width="2.2" aria-hidden="true">
