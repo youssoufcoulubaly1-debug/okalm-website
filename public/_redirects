@@ -1,14 +1,18 @@
 /cgu              /terms              301
 /confidentialite  /privacy            301
-/devenir-prof     /devenir-prof.html  200
-/privacy          /privacy.html       200
-/terms            /terms.html         200
-/support          /support.html       200
-/beta             /beta.html          200
 
-# Pages de téléchargement des applications Android
+# 10 octobre 2026 — BOUCLE DE REDIRECTION INFINIE CORRIGEE
+# Les regles de reecriture « /x  /x.html  200 » ont ete RETIREES.
+# Elles entraient en conflit avec le html_handling de Cloudflare Pages, qui retire
+# deja l'extension « .html » par une redirection 308 :
+#     /devenir-prof  ->  308 /devenir-prof  ->  308 /devenir-prof  ->  boucle infinie
+# Cloudflare Pages sert desormais nativement /devenir-prof a partir de devenir-prof.html.
+# Concernees : /devenir-prof /privacy /terms /support /beta
+#             /telecharger-au-calme /telecharger-kalmeurs
+
+# Pages de telechargement des applications Android
 # Les vraies pages vivent aux adresses courtes : /get-app-okalm et /get-app-kalmeurs
-# Les adresses descriptives restent valables en alias (stubs HTML + ci-dessous)
-/telecharger-au-calme  /telecharger-au-calme.html  200
-/telecharger-kalmeurs  /telecharger-kalmeurs.html  200
+# Ce sont des DOSSIERS avec index.html, servis nativement — ne jamais les declarer ici.
+# Les adresses descriptives /telecharger-au-calme et /telecharger-kalmeurs sont des stubs
+# HTML (redirection <meta refresh> vers les adresses courtes), servis nativement aussi.
 /*                /404.html           404
