@@ -120,21 +120,40 @@
   <p>Aucune donnée n'est vendue à des tiers à des fins publicitaires.</p>
 
   <h2>6. Durées de conservation</h2>
+  <!--
+    ⚠️ CES DURÉES ÉTAIENT FAUSSES (corrigé le 15/10/2026).
+    Le texte annonçait « 3 ans après la dernière connexion », « KYC 5 ans »,
+    « audit logs 5 ans », « messages 3 ans », « logs 90 jours ». Le registre
+    RÉELLEMENT appliqué par la plateforme est `legalRegistry.js`
+    (`RETENTION_POLICIES`) : 12 mois après clôture pour les comptes, 12 mois après
+    fin d'activité pour les pièces des Kalmeurs, 12 mois pour les journaux
+    techniques, 90 jours pour la géolocalisation, 30 jours pour les preuves Wave,
+    5 ans pour les preuves d'acceptation, 3 ans après clôture pour les tickets.
+
+    Les durées ci-dessous sont donc celles qui sont APPLIQUÉES, et non celles qui
+    étaient écrites. Un écart entre les deux est un engagement non tenu.
+  -->
   <ul>
-    <li><strong>Compte utilisateur actif :</strong> pendant toute la durée d'utilisation + 3 ans après la dernière connexion.</li>
-    <li><strong>Données KYC (diplômes, vidéo) :</strong> 5 ans (obligation comptable et légale).</li>
-    <li><strong>Audit logs et logs de paiement :</strong> 5 ans.</li>
-    <li><strong>Messages in-app :</strong> 3 ans à compter de la date d'envoi.</li>
-    <li><strong>Données techniques (logs, crash) :</strong> 90 jours glissants.</li>
-    <li><strong>Brouillons de commande non convertis :</strong> 30 jours, puis suppression automatique.</li>
+    <li><strong>Compte actif et données nécessaires au service :</strong> pendant toute la durée de la relation contractuelle, avec un examen périodique de l'activité.</li>
+    <li><strong>Compte clôturé ou supprimé :</strong> anonymisation ou suppression dans les <strong>12 mois</strong> suivant la clôture — sauf litige en cours, qui suspend la purge jusqu'à sa résolution.</li>
+    <li><strong>Pièces de vérification des Kalmeurs (identité, diplômes, vidéo de recrutement) :</strong> pendant la durée de leur activité, puis suppression ou archivage dans les <strong>12 mois</strong> suivant la fin d'activité, sauf litige.</li>
+    <li><strong>Preuves d'acceptation des conditions et des chartes :</strong> <strong>5 ans</strong> après la fin de la relation contractuelle (preuve opposable).</li>
+    <li><strong>Factures, montants et documents comptables :</strong> <strong>10 ans</strong>, conformément aux règles comptables et fiscales applicables (SYSCOHADA / OHADA).</li>
+    <li><strong>Preuves de paiement Wave (captures d'écran) :</strong> <strong>30 jours</strong> après validation du paiement. Les informations comptables correspondantes (montant, date, référence) sont conservées séparément, sans la capture.</li>
+    <li><strong>Géolocalisation des séances :</strong> <strong>90 jours</strong> après enregistrement, sauf incident ou contestation ouverte.</li>
+    <li><strong>Journaux techniques et de sécurité :</strong> <strong>12 mois</strong>, sans conservation d'adresse IP.</li>
+    <li><strong>Réclamations et tickets de support :</strong> <strong>3 ans</strong> après la clôture du ticket.</li>
+    <li><strong>Dossiers de protection de l'enfance :</strong> revue humaine exclusive, <strong>aucune purge automatique</strong> tant que le dossier est ouvert.</li>
+    <li><strong>Brouillons de commande non convertis :</strong> <strong>30 jours</strong>, puis suppression automatique.</li>
   </ul>
+  <p>Un litige, une contestation ou une réclamation ouverte <strong>suspend toute purge automatique</strong> sur les données concernées jusqu'à sa clôture définitive.</p>
 
   <h2>7. Droits des utilisateurs</h2>
   <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi ivoirienne n°2013-450 relative à la protection des données à caractère personnel, vous disposez des droits suivants :</p>
   <ul>
     <li><strong>Droit d'accès :</strong> obtenir une copie de vos données.</li>
     <li><strong>Droit de rectification :</strong> corriger des données inexactes.</li>
-    <li><strong>Droit à l'effacement :</strong> supprimer votre compte et vos données (sous réserve des obligations légales de conservation).</li>
+    <li><strong>Droit à l'effacement :</strong> supprimer votre compte et vos données personnelles. <strong>Cette suppression prend la forme d'une anonymisation</strong> : votre nom, votre e-mail, votre téléphone, vos adresses, l'établissement scolaire de votre enfant et vos contacts d'urgence sont effacés, ainsi que le jeton de notification de votre téléphone. Vos commandes et vos paiements <strong>subsistent sans votre nom</strong>, parce que la loi nous oblige à conserver notre comptabilité et qu'ils peuvent servir de preuve en cas de litige. Vous pouvez exercer ce droit <strong>directement dans l'application</strong> (Paramètres du compte → Supprimer mon compte). La demande est <strong>momentanément impossible</strong> — et l'application vous dit toujours précisément pourquoi, et à partir de quand elle redeviendra possible — lorsqu'un litige est en cours, qu'un contrat est en cours, qu'un solde reste dû, qu'un Kalmeur a encore une mission en cours, qu'une paie de Kalmeur n'a pas encore été versée, qu'un crédit de minutes reste à utiliser ou qu'un remboursement est en cours de traitement.</li>
     <li><strong>Droit d'opposition :</strong> vous opposer au traitement basé sur l'intérêt légitime.</li>
     <li><strong>Droit à la portabilité :</strong> recevoir vos données dans un format structuré.</li>
     <li><strong>Droit à la limitation :</strong> restreindre un traitement contesté.</li>
@@ -151,7 +170,7 @@
     <li><strong>Audit log immuable :</strong> toutes les actions sensibles (validation/refus paiement, modifications de commande, accès admin) sont enregistrées de manière permanente.</li>
     <li><strong>Rate limiting :</strong> protection contre les abus sur les endpoints API.</li>
     <li><strong>Règles d'isolation Firestore :</strong> chaque utilisateur ne peut accéder qu'à ses propres données.</li>
-    <li><strong>Protection anti-contournement :</strong> détection automatique des échanges de coordonnées hors plateforme.</li>
+    <li><strong>Protection anti-contournement :</strong> les échanges dans le chat intégré sont analysés afin de repérer les tentatives de sortie de la plateforme (partage de coordonnées), conformément aux conditions générales.</li>
   </ul>
 
   <h2>9. Cookies et SDK tiers</h2>
