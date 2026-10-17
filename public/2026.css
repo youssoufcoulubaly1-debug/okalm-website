@@ -416,6 +416,42 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 .theme-kalmeur .foot__bottom{color:#B58566}
 .theme-kalmeur .earn__n{color:#A34708}
 
+/* ---------- TARIFS : BLOC DE RÉFÉRENCE + REMISES -------------------------
+   Le tarif horaire NORMAL est la seule référence. Les remises sont des
+   pourcentages appliqués au prix du cycle : elles ne créent jamais un « tarif
+   horaire promotionnel », qui était la source de confusion.
+   ------------------------------------------------------------------------- */
+.ref{margin-top:40px;background:#fff;border-radius:26px;box-shadow:var(--shadow-sm);border:1px solid rgba(241,228,212,.7);overflow:hidden}
+.ref__head,.ref__row{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center}
+.ref__head{display:none}
+.ref__head span{font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:14px 20px}
+.ref__head span:last-child{text-align:right}
+.ref__row{padding:14px 20px;border-top:1px solid var(--line)}
+.ref__row:first-of-type{border-top:0}
+.ref__k{font-family:var(--display);font-weight:800;font-size:.97rem;letter-spacing:-.01em}
+.ref__h{grid-column:1;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.ref__c{grid-column:2;grid-row:1/3;font-family:var(--display);font-weight:800;font-size:1.18rem;letter-spacing:-.02em;text-align:right;white-space:nowrap}
+.ref__note{margin-top:14px;font-size:.86rem;color:var(--muted);max-width:58em}
+
+.remises{margin-top:26px;background:var(--accent-warm);border-radius:22px;padding:22px 24px;border:1px solid #FFD9B8}
+.remises__t{font-size:.92rem;color:#6B3A12}
+.remises__t b{color:#4A2708;font-weight:800}
+.remises__g{margin-top:14px;display:grid;gap:8px;grid-template-columns:1fr 1fr}
+.remises__g span{background:rgba(255,255,255,.72);border-radius:14px;padding:10px 14px;display:flex;flex-direction:column;gap:1px}
+.remises__g b{font-family:var(--display);font-size:1.05rem;font-weight:800;color:#8A3707;letter-spacing:-.01em}
+.remises__g i{font-style:normal;font-size:.76rem;color:#7A4A22}
+.remises__full b{color:var(--ink-2)}
+.remises__full i{color:var(--muted)}
+
+@media (min-width:620px){
+  .ref__head{display:grid;grid-template-columns:1.3fr 1fr auto}
+  .ref__head span{padding:15px 20px}
+  .ref__row{grid-template-columns:1.3fr 1fr auto;padding:15px 20px}
+  .ref__h{grid-column:2;grid-row:1}
+  .ref__c{grid-column:3;grid-row:1;font-size:1.24rem}
+  .remises__g{grid-template-columns:repeat(4,1fr)}
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:479px){
   /* Sur téléphone, le menu (3 traits) restait loin du bord droit : on rapproche
