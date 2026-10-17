@@ -356,12 +356,77 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 .foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .foot__bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:.77rem;color:#7FA391;line-height:1.7}
 
+/* =========================================================================
+   THÈME KALMEURS — ORANGE
+   L'application des professeurs est orange (AppColors.primary = #F47A1F).
+   ⚠️ CONTRASTE : #F47A1F avec du texte blanc ne fait que 2,75:1 (échec AA).
+   On garde donc la teinte, mais on descend en valeur :
+     #C2530A = 4,63:1 avec du blanc  → boutons, accents sur fond clair
+     #A34708 = 6,06:1 avec du blanc  → grands blocs (rémunération, sélection)
+   Le bloc de calcul « la famille paie → vous recevez » garde son fond crème :
+   c'est le seul endroit où les deux montants doivent rester neutres.
+   ========================================================================= */
+.theme-kalmeur{
+  --green:#C2530A;
+  --green-deep:#8A3707;
+  --accent:#8A3707;
+  --accent-soft:#FFE3D3;
+  --accent-warm:#FFE8D6;
+  --kal-block:#A34708;
+  --kal-text:#FBE3D0;
+}
+.theme-kalmeur .hero{
+  background:
+    radial-gradient(820px 460px at 88% -8%,#FFD9B8 0%,rgba(255,217,184,0) 62%),
+    radial-gradient(700px 420px at -5% 108%,#FFE8D6 0%,rgba(255,232,214,0) 60%);
+}
+.theme-kalmeur .why-pay,
+.theme-kalmeur .stat{background:var(--kal-block);color:var(--kal-text)}
+.theme-kalmeur .why-pay p,
+.theme-kalmeur .why-pay__b,
+.theme-kalmeur .stat p,
+.theme-kalmeur .stat__list{color:var(--kal-text)}
+.theme-kalmeur .why-pay h3,
+.theme-kalmeur .why-pay__b b,
+.theme-kalmeur .stat__n,
+.theme-kalmeur .stat__list b{color:#fff}
+.theme-kalmeur .stat__n span,
+.theme-kalmeur .stat__list i{color:#FFD9A8}
+.theme-kalmeur .teacher{background:var(--kal-block);color:var(--kal-text)}
+.theme-kalmeur .teacher__av{background:#FFF1E5;color:#8A3707}
+.theme-kalmeur .teacher b{color:#fff}
+.theme-kalmeur .teacher b + span{color:var(--kal-text)}
+.theme-kalmeur .teacher__ok{color:#FFD9A8}
+.theme-kalmeur .pill{background:var(--kal-warm);color:#8A3707}
+.theme-kalmeur .pill--warm{background:#FFD9BF;color:#7A2E05}
+.theme-kalmeur .steps li::before,
+.theme-kalmeur .check .ck{background:var(--kal-warm);color:#8A3707}
+.theme-kalmeur .faq summary::after{
+  background:#FFE8D6 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238A3707' stroke-width='3' stroke-linecap='round'><path d='M6 12h12M12 6v12'/></svg>") center/11px no-repeat;
+}
+.theme-kalmeur .faq__more a{color:#8A3707;border-bottom-color:#FED7AA}
+.theme-kalmeur .final__box{background:radial-gradient(120% 120% at 80% 0%,#C2530A 0%,#8A3707 60%)}
+.theme-kalmeur .final p{color:#FFE3D0}
+.theme-kalmeur .final__note{color:#F0C9A6}
+.theme-kalmeur .foot{background:#2A1408;color:#EFDCC9}
+.theme-kalmeur .foot__brand p{color:#C9A88E}
+.theme-kalmeur .foot h4{color:#B58566}
+.theme-kalmeur .foot a{color:#EFDCC9}
+.theme-kalmeur .foot a:hover{color:#FFD9A8}
+.theme-kalmeur .foot__bottom{color:#B58566}
+.theme-kalmeur .earn__n{color:#A34708}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:479px){
+  /* Sur téléphone, le menu (3 traits) restait loin du bord droit : on rapproche
+     le bloc de la barre pour qu'il tombe franchement à droite. */
+  .topbar .wrap{padding:0 12px}
   .topbar__in{padding:7px 8px 7px 13px;gap:10px}
   .brand{font-size:1.06rem;gap:8px}
   .brand img{width:27px;height:27px}
   .btn--sm{padding:10px 15px;font-size:.85rem}
+  .menu > summary{width:42px;height:42px}
+  .menu__panel{right:-2px}
   .report__title{font-size:1rem}
   .report__date{font-size:.69rem}
   .why-pay{padding:24px 20px}
