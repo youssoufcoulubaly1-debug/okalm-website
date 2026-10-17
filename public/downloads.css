@@ -11,7 +11,7 @@
      · rendu mobile d'abord (base pensée pour 360 px).
 
    Reprend les couleurs réelles des applications :
-     · Au calme  : primaire #337843  (lib/core/constants/app_colors.dart:6)
+     · OKALM    : primaire #337843  (lib/core/constants/app_colors.dart:6)
      · Kalmeurs  : primaire #F47A1F  (lib/core/constants/app_colors.dart:6)
 
    Fichier créé pour la Phase 3 — aucun déploiement effectué.
@@ -35,7 +35,7 @@
           'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Thème « Au calme » — parents d'élèves */
+/* Thème « OKALM » — parents d'élèves */
 .theme-au-calme {
   --primary:       #337843;
   --primary-dark:  #0D6E4F;
