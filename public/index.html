@@ -7,12 +7,12 @@
   <meta name="description" content="Profs vérifiés. Cours chez vous. Résultats prouvés. Soutien scolaire à domicile à Abidjan avec OKALM. De 36 000 F le premier cycle, tout inclus." />
   <meta property="og:title" content="OKALM — Soutien Scolaire à Domicile" />
   <meta property="og:description" content="Profs vérifiés. Cours chez vous. Résultats prouvés." />
-  <meta property="og:image" content="https://okalm.ci/assets/og-image.png" />
+  <meta property="og:image" content="https://okalm.ci/assets/icon-au-calme-180.jpg" />
   <meta property="og:url" content="https://okalm.ci/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://okalm.ci/" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/jpeg" href="/assets/icon-au-calme-180.jpg" />
+  <link rel="apple-touch-icon" href="/assets/icon-au-calme-180.jpg" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,6 +69,14 @@
       <a href="/get-app-okalm/" class="btn btn--primary btn--lg">Télécharger l'application</a>
       <a href="/devenir-prof" class="btn btn--outline-white btn--lg">Devenir Kalmeur</a>
     </div>
+
+    <!-- Bandeau de preuves : quatre faits vérifiables, pas des slogans. -->
+    <ul class="hero__proofs">
+      <li><strong>13 niveaux</strong><span>CP1 → Terminale</span></li>
+      <li><strong>3 vérifications</strong><span>avant la 1<sup>re</sup> mission</span></li>
+      <li><strong>4 rapports</strong><span>par cycle</span></li>
+      <li><strong>0 frais caché</strong><span>ni inscription</span></li>
+    </ul>
   </div>
 </section>
 
@@ -121,6 +129,10 @@
         <h3>✅ Garantie Compatible 2 semaines</h3>
         <p class="text-muted mt-2">Si le professeur ne convient pas (personnalité, méthode, résultats), nous en assignons un autre gratuitement dans les 2 semaines. Sans discussion.</p>
       </div>
+      <div class="card card--primary">
+        <h3>🔍 Une sélection qui écarte, vraiment</h3>
+        <p class="text-muted mt-2"><strong>Nous estimons</strong> qu'environ 40 % des candidatures professeur n'aboutissent pas : diplôme invérifiable, vidéo pédagogique insuffisante, ou test de matière sous le seuil. C'est notre estimation, sur nos propres vérifications — et c'est ce qui rend la triple validation crédible.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -170,58 +182,66 @@
     <p class="text-muted mb-4">Dégressif sur les 3 premiers cycles • 1 cycle = 4 semaines (28 jours) • Paiement par cycle</p>
 
     <div class="table-wrap mb-4">
-      <table>
+      <!-- ⚠️ NE PAS ÉLARGIR CE TABLEAU SANS LIRE `styles.css` (§ tableaux).
+           Sur téléphone, les lignes deviennent des CARTES (une par niveau) grâce
+           à `data-label` : sans cet attribut, les prix se coupent en deux
+           (« 36 » au-dessus, « 000 F » en dessous) — c'est exactement le défaut
+           signalé par le propriétaire le 17/10/2026.
+           Les PRIX sont ceux du serveur (`defaultSoutienPricing.js`) :
+           primaire 3 750 F/h, CM2 et collège 4 500, 3e et 2nde 5 250,
+           1ère et Terminale 6 000 — remises 20 % / 15 % / 10 % / 0. -->
+      <table class="pricing">
         <thead>
           <tr>
-            <th>Niveau</th>
-            <th>1ᵉʳ cycle (-20%)</th>
-            <th>2ᵉ cycle (-15%)</th>
-            <th>3ᵉ cycle (-10%)</th>
-            <th>À partir du 4ᵉ cycle</th>
+            <th scope="col">Niveau &amp; volume</th>
+            <th scope="col">1<sup>er</sup> cycle<small>−20 %</small></th>
+            <th scope="col">2<sup>e</sup> cycle<small>−15 %</small></th>
+            <th scope="col">3<sup>e</sup> cycle<small>−10 %</small></th>
+            <th scope="col">4<sup>e</sup> cycle et +<small>plein tarif</small></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Primaire (CP1 – CM1)<br><small>3 h/semaine · 12 h</small></td>
-            <td><s>45 000 F</s><br><strong>36 000 F</strong></td>
-            <td>38 250 F</td>
-            <td>40 500 F</td>
-            <td>45 000 F</td>
+            <td data-label="Niveau">Primaire <span class="pricing__range">CP1 – CM1</span><small>3 h/semaine · 12 h par cycle</small></td>
+            <td data-label="1er cycle" class="price price--promo"><s>45 000 F</s><strong>36 000 F</strong></td>
+            <td data-label="2e cycle" class="price">38 250 F</td>
+            <td data-label="3e cycle" class="price">40 500 F</td>
+            <td data-label="4e cycle et +" class="price">45 000 F</td>
           </tr>
           <tr>
-            <td>CM2<br><small>4 h/semaine · 16 h</small></td>
-            <td><s>72 000 F</s><br><strong>57 600 F</strong></td>
-            <td>61 200 F</td>
-            <td>64 800 F</td>
-            <td>72 000 F</td>
+            <td data-label="Niveau">CM2<span class="pricing__range">examen CEPE</span><small>4 h/semaine · 16 h par cycle</small></td>
+            <td data-label="1er cycle" class="price price--promo"><s>72 000 F</s><strong>57 600 F</strong></td>
+            <td data-label="2e cycle" class="price">61 200 F</td>
+            <td data-label="3e cycle" class="price">64 800 F</td>
+            <td data-label="4e cycle et +" class="price">72 000 F</td>
           </tr>
           <tr>
-            <td>Collège (6ᵉ – 4ᵉ)<br><small>4 h 30/semaine · 18 h</small></td>
-            <td><s>81 000 F</s><br><strong>64 800 F</strong></td>
-            <td>68 850 F</td>
-            <td>72 900 F</td>
-            <td>81 000 F</td>
+            <td data-label="Niveau">Collège <span class="pricing__range">6<sup>e</sup> – 4<sup>e</sup></span><small>4 h 30/semaine · 18 h par cycle</small></td>
+            <td data-label="1er cycle" class="price price--promo"><s>81 000 F</s><strong>64 800 F</strong></td>
+            <td data-label="2e cycle" class="price">68 850 F</td>
+            <td data-label="3e cycle" class="price">72 900 F</td>
+            <td data-label="4e cycle et +" class="price">81 000 F</td>
           </tr>
           <tr>
-            <td>3ᵉ<br><small>5 h/semaine · 20 h</small></td>
-            <td><s>105 000 F</s><br><strong>84 000 F</strong></td>
-            <td>89 250 F</td>
-            <td>94 500 F</td>
-            <td>105 000 F</td>
+            <td data-label="Niveau">3<sup>e</sup><span class="pricing__range">examen BEPC</span><small>5 h/semaine · 20 h par cycle</small></td>
+            <td data-label="1er cycle" class="price price--promo"><s>105 000 F</s><strong>84 000 F</strong></td>
+            <td data-label="2e cycle" class="price">89 250 F</td>
+            <td data-label="3e cycle" class="price">94 500 F</td>
+            <td data-label="4e cycle et +" class="price">105 000 F</td>
           </tr>
           <tr>
-            <td>2ⁿᵈᵉ<br><small>4 h 30/semaine · 18 h</small></td>
-            <td><s>94 500 F</s><br><strong>75 600 F</strong></td>
-            <td>80 325 F</td>
-            <td>85 050 F</td>
-            <td>94 500 F</td>
+            <td data-label="Niveau">2<sup>nde</sup><small>4 h 30/semaine · 18 h par cycle</small></td>
+            <td data-label="1er cycle" class="price price--promo"><s>94 500 F</s><strong>75 600 F</strong></td>
+            <td data-label="2e cycle" class="price">80 325 F</td>
+            <td data-label="3e cycle" class="price">85 050 F</td>
+            <td data-label="4e cycle et +" class="price">94 500 F</td>
           </tr>
           <tr>
-            <td>1ʳᵉ – Terminale<br><small>5 h/semaine · 20 h</small></td>
-            <td><s>120 000 F</s><br><strong>96 000 F</strong></td>
-            <td>102 000 F</td>
-            <td>108 000 F</td>
-            <td>120 000 F</td>
+            <td data-label="Niveau">Lycée <span class="pricing__range">1<sup>re</sup> – Terminale</span><small>5 h/semaine · 20 h par cycle</small></td>
+            <td data-label="1er cycle" class="price price--promo"><s>120 000 F</s><strong>96 000 F</strong></td>
+            <td data-label="2e cycle" class="price">102 000 F</td>
+            <td data-label="3e cycle" class="price">108 000 F</td>
+            <td data-label="4e cycle et +" class="price">120 000 F</td>
           </tr>
         </tbody>
       </table>

@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devenir Kalmeur — Enseignez à domicile à Abidjan | OKALM</title>
   <meta name="description" content="Rejoignez l'équipe OKALM. Donnez des cours à domicile, gagnez 70% sur chaque séance, paiements hebdomadaires Wave/MoMo, créneaux flexibles." />
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" type="image/jpeg" href="/assets/icon-kalmeurs-180.jpg" />
   <link rel="canonical" href="https://okalm.ci/devenir-prof" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
     body { font-family: 'Inter', var(--font); }
-    .hero--orange { background: linear-gradient(135deg, #F47A1F, #FFD6A5); color: #7C2D12; }
-    .hero--orange h1, .hero--orange .hero__subtitle { color: #7C2D12; }
+    /* ⚠️ CONTRASTE (17/10/2026) : le texte brun #7C2D12 sur l'orange #F47A1F ne
+       faisait que 3,41:1, et le blanc sur cet orange 2,75:1. Le bandeau passe en
+       orange brûlé, texte BLANC : #FFFFFF sur #C2530A = 4,63:1 (AA), sur #8A3707
+       = 7,2:1. L'orange clair de marque reste réservé aux accents. */
+    .hero--orange { background: linear-gradient(135deg, #8A3707, #C2530A); color: #fff; }
+    .hero--orange h1, .hero--orange .hero__subtitle { color: #fff; }
+    .hero--orange .badge { background: rgba(0,0,0,.30); color: #fff; border: 1px solid rgba(255,255,255,.35); }
   </style>
 </head>
 <body>
@@ -47,22 +52,55 @@
     <h2 class="mb-4">Rémunération transparente</h2>
 
     <div class="table-wrap mb-4">
-      <table>
+      <!-- ⚠️ MÊME DÉFAUT QUE LE TABLEAU DES TARIFS, CORRIGÉ LE 17/10/2026 :
+           « 2 625 F » se coupait en « 2 » / « 625 » / « F » sur téléphone.
+           `class="pricing"` + `nowrap` + `data-label` (cartes sur mobile). -->
+      <table class="pricing">
         <thead>
           <tr>
-            <th>Niveau</th>
-            <th>Tarif horaire total</th>
-            <th>Votre part (70%)</th>
-            <th>Plateforme (30%)</th>
+            <th scope="col">Niveau</th>
+            <th scope="col">Tarif horaire total</th>
+            <th scope="col">Votre part <small>70 %</small></th>
+            <th scope="col">Plateforme <small>30 %</small></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Primaire (CP1 – CM1)</td><td>3 750 FCFA</td><td><strong>2 625 F</strong></td><td>1 125 F</td></tr>
-          <tr><td>CM2</td><td>4 500 FCFA</td><td><strong>3 150 F</strong></td><td>1 350 F</td></tr>
-          <tr><td>Collège (6ᵉ – 4ᵉ)</td><td>4 500 FCFA</td><td><strong>3 150 F</strong></td><td>1 350 F</td></tr>
-          <tr><td>3ᵉ</td><td>5 250 FCFA</td><td><strong>3 675 F</strong></td><td>1 575 F</td></tr>
-          <tr><td>2ⁿᵈᵉ</td><td>5 250 FCFA</td><td><strong>3 675 F</strong></td><td>1 575 F</td></tr>
-          <tr><td>1ʳᵉ et Terminale</td><td>6 000 FCFA</td><td><strong>4 200 F</strong></td><td>1 800 F</td></tr>
+          <tr>
+            <td data-label="Niveau">Primaire <span class="pricing__range">CP1 – CM1</span></td>
+            <td data-label="Tarif horaire" class="price">3 750 FCFA</td>
+            <td data-label="Votre part (70 %)" class="price"><strong>2 625 F</strong></td>
+            <td data-label="Plateforme (30 %)" class="price">1 125 F</td>
+          </tr>
+          <tr>
+            <td data-label="Niveau">CM2</td>
+            <td data-label="Tarif horaire" class="price">4 500 FCFA</td>
+            <td data-label="Votre part (70 %)" class="price"><strong>3 150 F</strong></td>
+            <td data-label="Plateforme (30 %)" class="price">1 350 F</td>
+          </tr>
+          <tr>
+            <td data-label="Niveau">Collège <span class="pricing__range">6<sup>e</sup> – 4<sup>e</sup></span></td>
+            <td data-label="Tarif horaire" class="price">4 500 FCFA</td>
+            <td data-label="Votre part (70 %)" class="price"><strong>3 150 F</strong></td>
+            <td data-label="Plateforme (30 %)" class="price">1 350 F</td>
+          </tr>
+          <tr>
+            <td data-label="Niveau">3<sup>e</sup></td>
+            <td data-label="Tarif horaire" class="price">5 250 FCFA</td>
+            <td data-label="Votre part (70 %)" class="price"><strong>3 675 F</strong></td>
+            <td data-label="Plateforme (30 %)" class="price">1 575 F</td>
+          </tr>
+          <tr>
+            <td data-label="Niveau">2<sup>nde</sup></td>
+            <td data-label="Tarif horaire" class="price">5 250 FCFA</td>
+            <td data-label="Votre part (70 %)" class="price"><strong>3 675 F</strong></td>
+            <td data-label="Plateforme (30 %)" class="price">1 575 F</td>
+          </tr>
+          <tr>
+            <td data-label="Niveau">Lycée <span class="pricing__range">1<sup>re</sup> et Terminale</span></td>
+            <td data-label="Tarif horaire" class="price">6 000 FCFA</td>
+            <td data-label="Votre part (70 %)" class="price"><strong>4 200 F</strong></td>
+            <td data-label="Plateforme (30 %)" class="price">1 800 F</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -83,6 +121,56 @@
       <div class="card">
         <h3>📅 Créneaux 100% flexibles</h3>
         <p class="text-muted mt-2">Vous choisissez vos disponibilités. Matin, soir, week-end — vous gérez votre emploi du temps via l'app Kalmeurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Combien vous gagnez concrètement (17/10/2026) -->
+<section class="section--alt">
+  <div class="container">
+    <h2 class="mb-2">Combien vous gagnez, concrètement</h2>
+    <p class="text-muted mb-4">Un cycle = 4 semaines. Les montants ci-dessous sont <strong>votre part</strong> (70 % du prix payé par la famille), calculée sur les volumes recommandés. Ils sont nets de nos frais : seuls les frais de réception de votre prestataire de paiement (~1 %) restent à votre charge.</p>
+
+    <div class="grid grid--3">
+      <div class="card card--primary">
+        <h3>Primaire <span class="pricing__range">CP1 – CM1</span></h3>
+        <p class="text-muted mt-2" style="font-size:.9rem">3 h/semaine · 12 h par cycle</p>
+        <p class="mt-2"><strong style="font-size:1.4rem;color:var(--primary)">31 500 F</strong> <span class="text-muted">par cycle</span></p>
+        <p class="text-muted" style="font-size:.85rem">1 élève · 2 625 F/h</p>
+      </div>
+      <div class="card card--primary">
+        <h3>Collège <span class="pricing__range">6<sup>e</sup> – 4<sup>e</sup></span></h3>
+        <p class="text-muted mt-2" style="font-size:.9rem">4 h 30/semaine · 18 h par cycle</p>
+        <p class="mt-2"><strong style="font-size:1.4rem;color:var(--primary)">56 700 F</strong> <span class="text-muted">par cycle</span></p>
+        <p class="text-muted" style="font-size:.85rem">1 élève · 3 150 F/h</p>
+      </div>
+      <div class="card card--primary">
+        <h3>Lycée <span class="pricing__range">1<sup>re</sup> – Terminale</span></h3>
+        <p class="text-muted mt-2" style="font-size:.9rem">5 h/semaine · 20 h par cycle</p>
+        <p class="mt-2"><strong style="font-size:1.4rem;color:var(--primary)">84 000 F</strong> <span class="text-muted">par cycle</span></p>
+        <p class="text-muted" style="font-size:.85rem">1 élève · 4 200 F/h</p>
+      </div>
+    </div>
+
+    <p class="text-muted mt-3" style="font-size:.9rem">Deux élèves de Terminale en parallèle : <strong>168 000 F par cycle</strong>. Les trajets ne sont pas déduits — ils sont déjà compris dans votre part.</p>
+  </div>
+</section>
+
+<!-- Sélectivité : ce que ça vous apporte (17/10/2026) -->
+<section class="section">
+  <div class="container">
+    <h2 class="mb-2">Tout le monde n'entre pas — et c'est votre intérêt</h2>
+    <p class="text-muted mb-4"><strong>Nous estimons</strong> qu'environ <strong>40 % des candidatures</strong> n'aboutissent pas : diplôme non vérifiable, vidéo pédagogique jugée insuffisante, ou test de matière sous le seuil exigé. C'est <strong>notre estimation, sur nos propres vérifications</strong> — pas une statistique officielle.</p>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <h3>Ce que ça change pour vous</h3>
+        <p class="text-muted mt-2">Vous n'êtes pas mis en concurrence avec n'importe qui. Les familles qui vous choisissent savent qu'un professeur vérifié se déplace — c'est ce qui justifie le prix, donc votre rémunération.</p>
+      </div>
+      <div class="card">
+        <h3>Ce que nous vérifions, dans cet ordre</h3>
+        <p class="text-muted mt-2"><strong>1.</strong> Diplôme et spécialité · <strong>2.</strong> Vidéo pédagogique de 3 minutes · <strong>3.</strong> Test de matière noté. Aucune candidature ne reçoit de mission avant ces trois étapes.</p>
       </div>
     </div>
   </div>

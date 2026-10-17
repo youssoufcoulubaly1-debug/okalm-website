@@ -11,6 +11,7 @@
   --primary-dark: #0D6E4F;
   --primary-light: #10B981;
   --orange: #F47A1F;
+  --orange-strong: #B4450A;
   --amber: #F59E0B;
   --text: #111827;
   --text-muted: #6B7280;
@@ -53,8 +54,12 @@ p { margin-bottom: 1rem; }
 .btn:hover { transform: translateY(-2px); text-decoration: none; }
 .btn--primary { background: var(--primary); color: #fff; box-shadow: 0 4px 16px rgba(51,120,67,.35); }
 .btn--primary:hover { background: var(--primary-dark); box-shadow: 0 8px 24px rgba(51,120,67,.40); }
-.btn--orange { background: var(--orange); color: #fff; box-shadow: 0 4px 16px rgba(244,122,31,.35); }
-.btn--orange:hover { box-shadow: 0 8px 24px rgba(244,122,31,.40); }
+/* ⚠️ CONTRASTE (17/10/2026) : blanc sur #F47A1F = 2,75:1, REFUSÉ par WCAG AA
+   (minimum 4,5:1). C'était le bouton « illisible » signalé par le propriétaire.
+   L'orange de marque reste pour les accents ; le BOUTON utilise une teinte plus
+   sombre du même orange : blanc sur #B4450A = 5,53:1, conforme. */
+.btn--orange { background: var(--orange-strong); color: #fff; box-shadow: 0 4px 16px rgba(180,69,10,.32); }
+.btn--orange:hover { background: #8A3707; box-shadow: 0 8px 24px rgba(180,69,10,.38); }
 .btn--outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
 .btn--outline:hover { background: var(--primary); color: #fff; }
 .btn--outline-white { background: transparent; border: 2px solid #fff; color: #fff; }
@@ -85,13 +90,42 @@ p { margin-bottom: 1rem; }
 .badge--blue { background: #DBEAFE; color: #1D4ED8; }
 
 /* Hero */
+/* ⚠️ CONTRASTE (17/10/2026) : la fin du dégradé était #10B981, où le texte blanc
+   ne fait que 2,54:1 — illisible sur la moitié droite du bandeau. La fin passe à
+   #17724F (5,91:1) et le début à #0B5D43 (7,89:1, niveau AAA). La marque reste
+   verte ; c'est la même famille, simplement lisible. */
 .hero {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+  background: linear-gradient(135deg, #0B5D43, #17724F);
   color: #fff; padding: 80px 20px 64px;
   text-align: center;
 }
-.hero__subtitle { font-size: 1.2rem; opacity: .9; margin: 16px 0 32px; }
+.hero__subtitle { font-size: 1.2rem; opacity: .95; margin: 16px 0 32px; }
 .hero__cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+/* Sur le bandeau, le bouton d'action passe en BLANC : un bouton vert sur fond vert
+   ne se détache pas, et c'est l'action la plus importante de la page.
+   Texte #0B5D43 sur blanc = 7,89:1 (AAA). */
+.hero .btn--primary { background: #fff; color: #0B5D43; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.hero .btn--primary:hover { background: #F2F8F4; color: #0B5D43; }
+.hero--orange .btn--orange { background: #fff; color: #8A3707; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.hero--orange .btn--orange:hover { background: #FFF4EC; color: #8A3707; }
+
+/* Bandeau de preuves du héro (17/10/2026) — quatre faits vérifiables.
+   Sur téléphone il passe en 2 × 2 ; les séparateurs disparaissent. */
+.hero__proofs {
+  list-style: none; display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 8px; margin: 40px auto 0; max-width: 760px; padding: 0;
+}
+.hero__proofs li {
+  text-align: center; padding: 12px 8px;
+  border-right: 1px solid rgba(255,255,255,.28);
+}
+.hero__proofs li:last-child { border-right: 0; }
+.hero__proofs strong { display: block; font-size: 1.25rem; font-weight: 800; line-height: 1.1; }
+.hero__proofs span { display: block; font-size: .82rem; opacity: .92; margin-top: 4px; }
+@media (max-width: 640px) {
+  .hero__proofs { grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 28px; }
+  .hero__proofs li { border-right: 0; padding: 8px 4px; }
+}
 
 /* Marquee */
 .marquee-wrap { overflow: hidden; background: var(--primary); color: #fff; padding: 10px 0; white-space: nowrap; }
@@ -118,6 +152,13 @@ p { margin-bottom: 1rem; }
 .nav__links { display: flex; gap: 24px; align-items: center; }
 .nav__links a { color: var(--text-muted); font-weight: 600; font-size: .95rem; }
 .nav__links a:hover { color: var(--primary); text-decoration: none; }
+/* ⚠️ CONTRASTE (17/10/2026) — DÉFAUT RÉEL MESURÉ : `.nav__links a` (gris #6B7280)
+   écrasait la couleur du bouton de la barre de navigation. Le bouton
+   « Télécharger l'app » s'affichait donc en GRIS sur fond vert : rapport 1,11:1,
+   c'est-à-dire illisible — exactement le défaut signalé par le propriétaire.
+   Un bouton garde SON texte blanc, quel que soit son conteneur. */
+.nav__links a.btn { color: #fff; }
+.nav__links a.btn:hover { color: #fff; text-decoration: none; }
 .nav__toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.5rem; }
 
 /* Footer */
@@ -153,6 +194,54 @@ table { width: 100%; border-collapse: collapse; }
 th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
 th { background: var(--bg-light); font-weight: 700; font-size: .9rem; }
 tr:last-child td { border-bottom: none; }
+
+/* ====================================================
+   TABLEAU DES TARIFS (17/10/2026)
+   Défaut signalé par le propriétaire : « les écritures se superposent,
+   36 est en haut et 000 en bas avec Francs CFA ». Cause : les cellules de
+   prix se coupaient entre le montant et l'unité. Correctif : aucun prix ne
+   se coupe (`nowrap`), et sur téléphone chaque niveau devient une CARTE.
+   ==================================================== */
+.pricing { font-size: .95rem; }
+.pricing__caption {
+  caption-side: top; text-align: left; padding: 4px 2px 12px;
+  color: var(--text-muted); font-size: .82rem; font-weight: 600;
+}
+.pricing th { vertical-align: bottom; line-height: 1.25; }
+.pricing th small { display: block; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .02em; }
+.pricing td { vertical-align: middle; }
+.pricing td:first-child { font-weight: 700; }
+.pricing td:first-child small { display: block; font-weight: 500; color: var(--text-muted); font-size: .78rem; margin-top: 2px; }
+.pricing__range { display: block; font-weight: 600; color: var(--text-muted); font-size: .8rem; }
+/* ⚠️ LA RÈGLE QUI CORRIGE LE DÉFAUT : un prix ne se coupe JAMAIS. */
+.pricing .price { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pricing .price--promo s { display: block; color: var(--text-muted); font-size: .78rem; }
+.pricing .price--promo strong { color: var(--primary); font-size: 1.02rem; }
+
+/* Sur téléphone : une carte par niveau, libellés devant chaque prix. */
+@media (max-width: 700px) {
+  .table-wrap:has(.pricing) { overflow: visible; border: 0; border-radius: 0; }
+  .pricing, .pricing tbody, .pricing tr, .pricing td { display: block; width: 100%; }
+  .pricing thead { display: none; }
+  .pricing__caption { padding: 0 2px 10px; }
+  .pricing tr {
+    background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 14px 16px; margin-bottom: 12px;
+  }
+  .pricing td { border: 0; padding: 5px 0; display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+  .pricing td::before {
+    content: attr(data-label); color: var(--text-muted); font-size: .84rem; font-weight: 600;
+  }
+  .pricing td:first-child {
+    display: block; padding: 0 0 10px; margin-bottom: 8px;
+    border-bottom: 1px solid var(--border); font-size: 1.02rem;
+  }
+  .pricing td:first-child::before { content: none; }
+  .pricing .price { font-weight: 700; }
+  .pricing .price--promo { display: flex; justify-content: space-between; align-items: baseline; }
+  .pricing .price--promo s { font-weight: 500; }
+  .pricing .price--promo strong { font-size: 1.05rem; }
+}
 
 /* Steps */
 .steps { counter-reset: step; }
