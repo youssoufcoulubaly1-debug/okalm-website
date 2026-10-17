@@ -3,312 +3,367 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devenir Kalmeur — Enseignez à domicile à Abidjan | OKALM</title>
-  <meta name="description" content="Rejoignez l'équipe OKALM. Donnez des cours à domicile, gagnez 70% sur chaque séance, paiements hebdomadaires Wave/MoMo, créneaux flexibles." />
-  <link rel="icon" type="image/jpeg" href="/assets/icon-kalmeurs-180.jpg" />
+  <title>Devenir Kalmeur — enseigner avec OKALM CI à Abidjan</title>
+  <meta name="description" content="70 % du montant payé par la famille, versement chaque semaine, transport inclus, première séance rémunérée. Enseignez du CP1 à la Terminale à Abidjan avec OKALM CI." />
+  <meta name="theme-color" content="#FFF6EC" />
+  <meta property="og:title" content="Devenir Kalmeur — OKALM CI" />
+  <meta property="og:description" content="70 % du montant payé, versement hebdomadaire, transport inclus. Enseignez du CP1 à la Terminale à Abidjan." />
+  <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png" />
   <link rel="canonical" href="https://okalm.ci/devenir-prof" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <style>
-    body { font-family: 'Inter', var(--font); }
-    /* ⚠️ CONTRASTE (17/10/2026) : le texte brun #7C2D12 sur l'orange #F47A1F ne
-       faisait que 3,41:1, et le blanc sur cet orange 2,75:1. Le bandeau passe en
-       orange brûlé, texte BLANC : #FFFFFF sur #C2530A = 4,63:1 (AA), sur #8A3707
-       = 7,2:1. L'orange clair de marque reste réservé aux accents. */
-    .hero--orange { background: linear-gradient(135deg, #8A3707, #C2530A); color: #fff; }
-    .hero--orange h1, .hero--orange .hero__subtitle { color: #fff; }
-    .hero--orange .badge { background: rgba(0,0,0,.30); color: #fff; border: 1px solid rgba(255,255,255,.35); }
-  </style>
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-okalm-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-okalm-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/2026.css" />
 </head>
 <body>
+<a class="skip" href="#main">Aller au contenu</a>
 
-<nav class="nav">
-  <div class="nav__inner">
-    <a href="/" class="nav__logo">OKALM</a>
-    <button class="nav__toggle" aria-label="Menu">☰</button>
-    <div class="nav__links">
-      <a href="#postuler">Comment s'inscrire</a>
-      <a href="/support">FAQ</a>
-      <a href="/get-app-kalmeurs" class="btn btn--orange btn--sm">Télécharger l'app</a>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero hero--orange">
-  <div class="container">
-    <div class="badge badge--orange mb-3">🏆 Rémunération jusqu'à 4 200 FCFA/h</div>
-    <h1>Devenez Kalmeur</h1>
-    <p class="hero__subtitle">Enseignez près de chez vous · Gagnez 70% sur chaque cours · Créneaux flexibles</p>
-    <div class="hero__cta">
-      <a href="/get-app-kalmeurs/" class="btn btn--orange btn--lg">Télécharger l'application Kalmeurs →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Rémunération -->
-<section class="section">
-  <div class="container">
-    <h2 class="mb-4">Rémunération transparente</h2>
-
-    <div class="table-wrap mb-4">
-      <!-- ⚠️ MÊME DÉFAUT QUE LE TABLEAU DES TARIFS, CORRIGÉ LE 17/10/2026 :
-           « 2 625 F » se coupait en « 2 » / « 625 » / « F » sur téléphone.
-           `class="pricing"` + `nowrap` + `data-label` (cartes sur mobile). -->
-      <table class="pricing">
-        <thead>
-          <tr>
-            <th scope="col">Niveau</th>
-            <th scope="col">Tarif horaire total</th>
-            <th scope="col">Votre part <small>70 %</small></th>
-            <th scope="col">Plateforme <small>30 %</small></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Niveau">Primaire <span class="pricing__range">CP1 – CM1</span></td>
-            <td data-label="Tarif horaire" class="price">3 750 FCFA</td>
-            <td data-label="Votre part (70 %)" class="price"><strong>2 625 F</strong></td>
-            <td data-label="Plateforme (30 %)" class="price">1 125 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">CM2</td>
-            <td data-label="Tarif horaire" class="price">4 500 FCFA</td>
-            <td data-label="Votre part (70 %)" class="price"><strong>3 150 F</strong></td>
-            <td data-label="Plateforme (30 %)" class="price">1 350 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">Collège <span class="pricing__range">6<sup>e</sup> – 4<sup>e</sup></span></td>
-            <td data-label="Tarif horaire" class="price">4 500 FCFA</td>
-            <td data-label="Votre part (70 %)" class="price"><strong>3 150 F</strong></td>
-            <td data-label="Plateforme (30 %)" class="price">1 350 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">3<sup>e</sup></td>
-            <td data-label="Tarif horaire" class="price">5 250 FCFA</td>
-            <td data-label="Votre part (70 %)" class="price"><strong>3 675 F</strong></td>
-            <td data-label="Plateforme (30 %)" class="price">1 575 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">2<sup>nde</sup></td>
-            <td data-label="Tarif horaire" class="price">5 250 FCFA</td>
-            <td data-label="Votre part (70 %)" class="price"><strong>3 675 F</strong></td>
-            <td data-label="Plateforme (30 %)" class="price">1 575 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">Lycée <span class="pricing__range">1<sup>re</sup> et Terminale</span></td>
-            <td data-label="Tarif horaire" class="price">6 000 FCFA</td>
-            <td data-label="Votre part (70 %)" class="price"><strong>4 200 F</strong></td>
-            <td data-label="Plateforme (30 %)" class="price">1 800 F</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="grid grid--2">
-      <div class="card">
-        <h3>🚗 Transport inclus</h3>
-        <p class="text-muted mt-2">Votre transport est inclus directement dans vos 70 % : aucune déduction n'est appliquée sur votre rémunération.</p>
-      </div>
-      <div class="card">
-        <h3>✨ Première séance rémunérée</h3>
-        <p class="text-muted mt-2">Toute séance effectuée est rémunérée dès votre première intervention. Aucune séance bénévole ni gratuite.</p>
-      </div>
-      <div class="card">
-        <h3>💳 Paiements hebdomadaires</h3>
-        <p class="text-muted mt-2">Vos gains sont versés chaque semaine via Wave ou MTN MoMo. Pas d'attente mensuelle.</p>
-      </div>
-      <div class="card">
-        <h3>📅 Créneaux 100% flexibles</h3>
-        <p class="text-muted mt-2">Vous choisissez vos disponibilités. Matin, soir, week-end — vous gérez votre emploi du temps via l'app Kalmeurs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Combien vous gagnez concrètement (17/10/2026) -->
-<section class="section--alt">
-  <div class="container">
-    <h2 class="mb-2">Combien vous gagnez, concrètement</h2>
-    <p class="text-muted mb-4">Un cycle = 4 semaines. Les montants ci-dessous sont <strong>votre part</strong> (70 % du prix payé par la famille), calculée sur les volumes recommandés. Ils sont nets de nos frais : seuls les frais de réception de votre prestataire de paiement (~1 %) restent à votre charge.</p>
-
-    <div class="grid grid--3">
-      <div class="card card--primary">
-        <h3>Primaire <span class="pricing__range">CP1 – CM1</span></h3>
-        <p class="text-muted mt-2" style="font-size:.9rem">3 h/semaine · 12 h par cycle</p>
-        <p class="mt-2"><strong style="font-size:1.4rem;color:var(--primary)">31 500 F</strong> <span class="text-muted">par cycle</span></p>
-        <p class="text-muted" style="font-size:.85rem">1 élève · 2 625 F/h</p>
-      </div>
-      <div class="card card--primary">
-        <h3>Collège <span class="pricing__range">6<sup>e</sup> – 4<sup>e</sup></span></h3>
-        <p class="text-muted mt-2" style="font-size:.9rem">4 h 30/semaine · 18 h par cycle</p>
-        <p class="mt-2"><strong style="font-size:1.4rem;color:var(--primary)">56 700 F</strong> <span class="text-muted">par cycle</span></p>
-        <p class="text-muted" style="font-size:.85rem">1 élève · 3 150 F/h</p>
-      </div>
-      <div class="card card--primary">
-        <h3>Lycée <span class="pricing__range">1<sup>re</sup> – Terminale</span></h3>
-        <p class="text-muted mt-2" style="font-size:.9rem">5 h/semaine · 20 h par cycle</p>
-        <p class="mt-2"><strong style="font-size:1.4rem;color:var(--primary)">84 000 F</strong> <span class="text-muted">par cycle</span></p>
-        <p class="text-muted" style="font-size:.85rem">1 élève · 4 200 F/h</p>
-      </div>
-    </div>
-
-    <p class="text-muted mt-3" style="font-size:.9rem">Deux élèves de Terminale en parallèle : <strong>168 000 F par cycle</strong>. Les trajets ne sont pas déduits — ils sont déjà compris dans votre part.</p>
-  </div>
-</section>
-
-<!-- Sélectivité : ce que ça vous apporte (17/10/2026) -->
-<section class="section">
-  <div class="container">
-    <h2 class="mb-2">Tout le monde n'entre pas — et c'est votre intérêt</h2>
-    <p class="text-muted mb-4"><strong>Nous estimons</strong> qu'environ <strong>40 % des candidatures</strong> n'aboutissent pas : diplôme non vérifiable, vidéo pédagogique jugée insuffisante, ou test de matière sous le seuil exigé. C'est <strong>notre estimation, sur nos propres vérifications</strong> — pas une statistique officielle.</p>
-
-    <div class="grid grid--2">
-      <div class="card">
-        <h3>Ce que ça change pour vous</h3>
-        <p class="text-muted mt-2">Vous n'êtes pas mis en concurrence avec n'importe qui. Les familles qui vous choisissent savent qu'un professeur vérifié se déplace — c'est ce qui justifie le prix, donc votre rémunération.</p>
-      </div>
-      <div class="card">
-        <h3>Ce que nous vérifions, dans cet ordre</h3>
-        <p class="text-muted mt-2"><strong>1.</strong> Diplôme et spécialité · <strong>2.</strong> Vidéo pédagogique de 3 minutes · <strong>3.</strong> Test de matière noté. Aucune candidature ne reçoit de mission avant ces trois étapes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Avantages -->
-<section class="section--alt">
-  <div class="container">
-    <h2 class="mb-4">Pourquoi rejoindre OKALM ?</h2>
-    <div class="grid grid--3">
-      <div class="card">
-        <div style="font-size:2rem;margin-bottom:12px">📱</div>
-        <h3>App dédiée Kalmeurs</h3>
-        <p class="text-muted mt-2">Gérez vos missions, rapports, planning et paiements depuis votre smartphone.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:2rem;margin-bottom:12px">🤝</div>
-        <h3>Communauté & formations</h3>
-        <p class="text-muted mt-2">Accès à une communauté de profs + ressources pédagogiques pour progresser.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:2rem;margin-bottom:12px">🏅</div>
-        <h3>Badge Kalmeur certifié</h3>
-        <p class="text-muted mt-2">Un badge numérique valorisable sur votre CV et vos réseaux après 3 mois de missions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Triple Validation -->
-<section class="section">
-  <div class="container">
-    <h2 class="mb-2">Notre processus de sélection</h2>
-    <p class="text-muted mb-4">Chaque candidat est vérifié avant de recevoir sa première mission. Ce contrôle protège votre travail autant que la confiance des familles.</p>
-    <div class="steps" style="max-width:600px;margin:0 auto">
-      <div class="step">
-        <div class="step__num">1</div>
-        <div class="step__content">
-          <h3>Vérification des diplômes</h3>
-          <p class="text-muted">Bac minimum requis. Nous vérifions votre diplôme et votre spécialité académique.</p>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="/">
+      <img src="/assets/icon-okalm-192.png" alt="" width="30" height="30" />
+      OKALM <span class="brand__ci">CI</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#gains">Ce que vous gagnez</a>
+      <a href="#preparer">Se préparer</a>
+      <a href="#deroulement">Une mission</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="topbar__act">
+      <a class="btn btn--sm" href="#telecharger">Télécharger</a>
+      <details class="menu">
+        <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
+        <div class="menu__panel">
+          <a href="/">Accueil parents</a>
+          <a href="#gains">Ce que vous gagnez</a>
+          <a href="#preparer">Comment se préparer</a>
+          <a href="#deroulement">Une mission, étape par étape</a>
+          <a href="#faq">Questions des professeurs</a>
+          <span class="menu__sep"></span>
+          <a href="#telecharger" class="menu__strong">Télécharger l'application Kalmeurs</a>
         </div>
-      </div>
-      <div class="step">
-        <div class="step__num">2</div>
-        <div class="step__content">
-          <h3>Vidéo pédagogique 3 minutes</h3>
-          <p class="text-muted">Enregistrez une mini-leçon sur la matière de votre choix. Notre équipe évalue votre clarté, méthode et engagement.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step__num">3</div>
-        <div class="step__content">
-          <h3>Tests de matière notés</h3>
-          <p class="text-muted">Passez un test dans les matières que vous souhaitez enseigner. Score minimum exigé selon le niveau.</p>
-        </div>
-      </div>
+      </details>
     </div>
   </div>
-</section>
+</header>
 
-<!-- Téléchargement de l'application -->
-<section class="section--alt" id="postuler">
-  <div class="container">
-    <div class="card text-center" style="max-width:560px;margin:0 auto;padding:36px 28px">
-      <img src="/assets/logo-kalmeurs.png" alt="Logo Kalmeurs" width="96" height="96"
-           style="border-radius:22px;margin:0 auto 18px;display:block" />
-      <div class="badge badge--orange mb-2">Inscriptions ouvertes</div>
-      <h2 class="text-center mb-2">Inscrivez-vous depuis l'application</h2>
-      <p class="text-center text-muted mb-4">
-        Gratuit, sans engagement. La vérification de votre identité, de vos diplômes,
-        de votre vidéo et de vos compétences se fait directement dans l'application.
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap hero__in">
+    <div>
+      <p class="eyebrow">Enseigner avec OKALM CI</p>
+      <h1>Vous enseignez. Vous êtes <em>payé</em> avant de vous déplacer.</h1>
+      <p class="hero__sub">
+        <strong>70 % du montant payé par la famille</strong> — soit environ 69,3 % net après
+        les frais de réception. Le transport est inclus, la première séance est rémunérée
+        comme les autres, et le versement est <strong>hebdomadaire</strong>.
       </p>
+      <div class="hero__cta">
+        <a class="btn" href="#telecharger">Télécharger l'application Kalmeurs <span class="btn__arrow">→</span></a>
+      </div>
+      <p class="hero__note"><span class="dot"></span> Bac minimum · du CP1 à la Terminale · Abidjan</p>
+    </div>
 
-      <div class="steps mb-4" style="max-width:480px;margin:0 auto 24px;text-align:left">
-        <div class="step">
-          <div class="step__num">1</div>
-          <div class="step__content">
-            <h3>Téléchargez l'application</h3>
-            <p class="text-muted">Android 7.0 ou version ultérieure. Installation directe, sans Play Store.</p>
+    <div class="stage" aria-hidden="true">
+      <div class="stage__glow"></div>
+      <div class="card report">
+        <div class="report__top">
+          <div>
+            <p class="report__kicker">Ce que vous recevez</p>
+            <p class="report__title">Cycle de 4 semaines · 4<sup>e</sup></p>
+          </div>
+          <p class="report__date">18 h de cours<br />4 h 30 / semaine</p>
+        </div>
+        <div class="calc" style="margin-top:16px">
+          <div>
+            <span class="calc__k">La famille paie</span>
+            <span class="calc__v">81 000 F</span>
+          </div>
+          <span class="calc__arrow">→</span>
+          <div>
+            <span class="calc__k">Vous recevez</span>
+            <span class="calc__v calc__v--big">56 700 F</span>
           </div>
         </div>
-        <div class="step">
-          <div class="step__num">2</div>
-          <div class="step__content">
-            <h3>Créez votre compte</h3>
-            <p class="text-muted">Renseignez votre profil, vos matières et vos niveaux.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step__num">3</div>
-          <div class="step__content">
-            <h3>Faites-vous vérifier</h3>
-            <p class="text-muted">Identité, diplômes, vidéo de démonstration et test par matière.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step__num">4</div>
-          <div class="step__content">
-            <h3>Recevez vos premières missions</h3>
-            <p class="text-muted">Vous choisissez vos créneaux et acceptez les missions qui vous conviennent.</p>
-          </div>
+        <p class="calc__note">≈ 56 133 F net après les frais de réception (~1 %).
+           Soit 3 150 F de l'heure.</p>
+        <div class="report__foot">
+          <span class="pill">Transport inclus</span>
+          <span class="pill pill--warm">Versement chaque semaine</span>
         </div>
       </div>
-
-      <a href="/get-app-kalmeurs/" class="btn btn--orange btn--lg" style="width:100%;justify-content:center">
-        Télécharger l'application Kalmeurs →
-      </a>
-      <p class="text-muted mt-3" style="font-size:.85rem">
-        Vous êtes parent ? <a href="/get-app-okalm/">Téléchargez Au calme</a>
-      </p>
+      <div class="teacher">
+        <span class="teacher__av">70</span>
+        <span><b>70 % pour vous</b><span>30 % pour la plateforme : vérification, support, paiements</span></span>
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div><div class="footer__title">OKALM</div><p style="font-size:.9rem">Plateforme de soutien scolaire à domicile à Abidjan.</p></div>
-      <div><div class="footer__title">Liens</div>
-        <a href="/" class="footer__link">Espace Parents</a>
-        <a href="/get-app-okalm/" class="footer__link">App Au calme — parents</a>
-        <a href="/get-app-kalmeurs/" class="footer__link">App Kalmeurs — professeurs</a>
-        <a href="/support" class="footer__link">Support</a>
+<section class="sec sec--alt" id="gains">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">La rémunération</p>
+      <h2>Ce que vous gagnez, sans tableau à déchiffrer.</h2>
+      <p class="sec__lead">70 % pour vous, 30 % pour la plateforme — c'est une seule phrase,
+        et elle reste vraie pour tous les niveaux.</p>
+    </div>
+
+    <div class="earn">
+      <article class="earn__i">
+        <p class="earn__n">70 %</p>
+        <p><b>du montant payé par la famille.</b> Pas du tarif affiché : du montant réellement
+           encaissé. Si la famille paie avec une remise, votre part suit le montant payé.</p>
+      </article>
+      <article class="earn__i">
+        <p class="earn__n">≈ 69,3 %</p>
+        <p><b>net sur votre versement.</b> Les frais de réception du prestataire de paiement
+           (~1 %) sont déduits de votre part, pas ajoutés à la charge de la famille.</p>
+      </article>
+      <article class="earn__i">
+        <p class="earn__n">Chaque semaine</p>
+        <p><b>vous êtes payé.</b> Le versement part chaque semaine sur votre numéro mobile
+           money enregistré, pas à la fin du mois. Aucune avance de frais de votre côté.</p>
+      </article>
+      <article class="earn__i">
+        <p class="earn__n">0 F</p>
+        <p><b>de transport à votre charge.</b> Le déplacement est inclus dans votre part.
+           Aucune déduction kilométrique, aucune avance.</p>
+      </article>
+      <article class="earn__i">
+        <p class="earn__n">1<sup>re</sup></p>
+        <p><b>séance rémunérée comme les autres.</b> Vous ne travaillez pas gratuitement
+           « pour voir » : le cycle est payé avant que vous vous déplaciez.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="preparer">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Avant votre première mission</p>
+      <h2>Comment se préparer.</h2>
+      <p class="sec__lead">Quatre pièces, un entretien vidéo, un test. C'est ce qui permet
+        aux familles de vous faire confiance — et à vous d'être assigné vite.</p>
+    </div>
+
+    <div class="teach">
+      <div>
+        <ul class="check">
+          <li><span class="ck">1</span><span><b>Votre pièce d'identité</b>Carte d'identité ou passeport, recto et verso, lisibles.</span></li>
+          <li><span class="ck">2</span><span><b>Vos diplômes</b>Bac minimum. Le diplôme que vous déclarez est vérifié.</span></li>
+          <li><span class="ck">3</span><span><b>Une vidéo pédagogique de 3 minutes</b>Vous expliquez une notion au tableau ou à l'oral. C'est évalué par notre équipe.</span></li>
+          <li><span class="ck">4</span><span><b>Un test de matière noté</b>Sur la matière et le niveau que vous voulez enseigner.</span></li>
+        </ul>
+        <p class="hero__note" style="margin-top:22px">
+          <span class="dot"></span> Préparez ces quatre éléments le même jour : c'est ce qui
+          raccourcit le délai avant la première mission.
+        </p>
       </div>
-      <div><div class="footer__title">Légal</div>
-        <a href="/privacy" class="footer__link">Confidentialité</a>
-        <a href="/terms" class="footer__link">CGU</a>
-      </div>
-      <div><div class="footer__title">Contact</div>
-        <a href="mailto:support@okalm.ci" class="footer__link">support@okalm.ci</a>
-        <a href="https://wa.me/2250509185121" class="footer__link">WhatsApp</a>
+
+      <div class="stat">
+        <p class="stat__n">CP1<span> → Tle</span></p>
+        <p>Vous choisissez les niveaux et les matières que vous voulez enseigner.</p>
+        <div class="stat__rule"></div>
+        <div class="stat__list">
+          <div><i>›</i><span><b>Primaire :</b> ouvert à tous nos professeurs, quel que soit le bac.</span></div>
+          <div><i>›</i><span><b>Collège et lycée :</b> un scientifique enseigne les matières scientifiques, un littéraire les littéraires.</span></div>
+          <div><i>›</i><span><b>Une matière = un test validé.</b> Vous n'êtes jamais envoyé sur une matière non vérifiée.</span></div>
+          <div><i>›</i><span><b>Contrat actif :</b> c'est lui qui ouvre les programmes et les missions dans l'application.</span></div>
+        </div>
       </div>
     </div>
-    <div class="footer__bottom">© 2026 OKALM CI · Édité par Coulibaly Sanga Youssouf Klotchele Wounakanh · Abidjan, Côte d'Ivoire</div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="deroulement">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Une mission, pas un pari</p>
+      <h2>Comment se passe une mission.</h2>
+    </div>
+
+    <div class="how">
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>La famille commande et paie le cycle</h3>
+            <p>Niveau, matière, volume horaire, commune et créneaux. Le cycle de 4 semaines est
+               réglé avant l'assignation.</p>
+            <small>C'est ce qui garantit que vous êtes payé, pas seulement « prévu »</small>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vous recevez une mission</h3>
+            <p>Selon votre niveau, vos matières validées, votre commune et vos disponibilités
+               réelles.</p>
+            <small>Assignation sous 48 à 72 heures côté famille</small>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vous donnez les séances à domicile</h3>
+            <p>Le volume hebdomadaire est fixé au départ : de 3 h en primaire à 5 h en
+               Terminale.</p>
+            <small>Vous n'avez pas à négocier le prix avec la famille</small>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vous écrivez le rapport de séance</h3>
+            <p>Ce qui a été vu, ce qui est acquis, ce qui reste à travailler. La famille le lit
+               le soir même.</p>
+            <small>Un rapport après chaque séance fait partie de la mission</small>
+          </div>
+        </li>
+      </ol>
+
+      <aside class="why-pay">
+        <h3>Pourquoi les 30 % existent</h3>
+        <p>Ils paient la vérification des professeurs, le support aux familles, les
+           remplacements et les versements. Une seule phrase, et elle ne change pas d'un
+           niveau à l'autre.</p>
+        <div class="why-pay__b">
+          <div><span>✓</span><span><b>Pas de frais d'inscription</b> pour candidater.</span></div>
+          <div><span>✓</span><span><b>Pas d'exclusivité</b> : vous gardez vos autres cours.</span></div>
+          <div><span>✓</span><span><b>Pas de séance bénévole</b> : la première est payée.</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Questions des professeurs</p>
+      <h2>Ce qu'on nous demande avant de postuler.</h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>Combien je gagne, concrètement ?</summary>
+        <p><strong>70 % du montant payé par la famille.</strong> Exemple : une famille paie
+           81 000 F pour un cycle de 4<sup>e</sup> (18 h de cours). Votre part est de
+           <strong>56 700 F</strong>, soit environ 56 133 F net après les frais de réception
+           (~1 %) — 3 150 F de l'heure, transport inclus.</p>
+      </details>
+
+      <details>
+        <summary>Quand et comment suis-je payé ?</summary>
+        <p><strong>Chaque semaine.</strong> Le versement part sur votre numéro mobile money
+           enregistré, calculé sur les séances validées du cycle en cours. Vous n'attendez pas
+           la fin du mois.</p>
+      </details>
+
+      <details>
+        <summary>Pourquoi 30 % pour la plateforme ?</summary>
+        <p>Parce que c'est la plateforme qui vérifie votre dossier, trouve les familles,
+           encaisse et reverse, et gère les remplacements. C'est une seule phrase :
+           <strong>70 % pour vous, 30 % pour la plateforme</strong>.</p>
+      </details>
+
+      <details>
+        <summary>Faut-il un diplôme particulier ?</summary>
+        <p><strong>Bac minimum.</strong> Ce qui compte ensuite, c'est la vérification : pièce
+           d'identité, diplôme déclaré, vidéo pédagogique de 3 minutes et test de la matière
+           que vous voulez enseigner.</p>
+      </details>
+
+      <details>
+        <summary>Puis-je enseigner plusieurs matières et plusieurs niveaux ?</summary>
+        <p>Oui, à condition de valider un test par matière. Au primaire, tous nos professeurs
+           peuvent intervenir quel que soit le bac. Au collège et au lycée, l'accès dépend de
+           votre série : un scientifique enseigne les matières scientifiques, un littéraire les
+           littéraires.</p>
+      </details>
+
+      <details>
+        <summary>La première séance est-elle vraiment payée ?</summary>
+        <p><strong>Oui.</strong> Toute séance effectuée est rémunérée. Nous ne demandons
+           jamais une séance « gratuite pour voir » — et le cycle de la famille est réglé avant
+           que vous vous déplaciez.</p>
+      </details>
+
+      <details>
+        <summary>Combien d'heures par semaine ?</summary>
+        <p>Le volume est fixé au moment de la commande : 3 h par semaine en primaire, 4 h en
+           CM2, 4 h 30 en 6<sup>e</sup>–4<sup>e</sup> et en 2<sup>nde</sup>, 5 h en
+           3<sup>e</sup>, en 1<sup>re</sup> et en Terminale — sur un cycle de 4 semaines.</p>
+      </details>
+
+      <details>
+        <summary>Pourquoi les programmes sont-ils grisés dans l'application ?</summary>
+        <p>Parce qu'ils s'ouvrent avec un <strong>contrat actif</strong>. Tant que votre
+           dossier n'est pas validé, les programmes restent visibles mais inactifs, avec la
+           raison affichée. C'est ce qui protège les familles — et votre travail.</p>
+      </details>
+    </div>
+
+    <p class="faq__more">Une autre question ?
+      <a href="/support">Toutes les réponses, et notre contact WhatsApp</a>.</p>
+  </div>
+</section>
+
+<section class="final" id="telecharger">
+  <div class="wrap">
+    <div class="final__box">
+      <img class="final__logo" src="/assets/logo-kalmeurs.png" alt="" width="64" height="64" />
+      <h2>Kalmeurs — l'application des professeurs</h2>
+      <p>Préparez votre dossier, choisissez vos niveaux, recevez vos missions.
+         L'inscription se fait dans l'application.</p>
+      <a class="btn" href="/get-app-kalmeurs/">Télécharger l'application Kalmeurs <span class="btn__arrow">→</span></a>
+      <p class="final__note">Android 7 ou plus · installation directe, sans Play Store</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="/">OKALM <span class="brand__ci">CI</span></a>
+        <p>Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale. Un professeur
+           vérifié, un rapport après chaque séance.</p>
+      </div>
+      <div>
+        <h4>Applications</h4>
+        <a href="/get-app-okalm/">OKALM — parents</a>
+        <a href="/get-app-kalmeurs/">Kalmeurs — professeurs</a>
+      </div>
+      <div>
+        <h4>Aide</h4>
+        <a href="/support">Aide et FAQ</a>
+        <a href="https://wa.me/2250509185121">WhatsApp</a>
+        <a href="mailto:support@okalm.ci">support@okalm.ci</a>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <a href="/terms">Conditions d'utilisation</a>
+        <a href="/privacy">Confidentialité</a>
+        <a href="/terms">Mentions légales</a>
+      </div>
+      <div>
+        <h4>Enseigner</h4>
+        <a href="/devenir-prof">Devenir Kalmeur</a>
+        <a href="/devenir-prof#preparer">Comment se préparer</a>
+        <a href="/get-app-kalmeurs/">Télécharger Kalmeurs</a>
+      </div>
+    </div>
+    <p class="foot__bottom">
+      © 2026 OKALM CI — OKALM Côte d'Ivoire · Édité par Coulibaly Sanga Youssouf Klotchele
+      Wounakanh · Abobo, Abidjan, Côte d'Ivoire
+    </p>
   </div>
 </footer>
 
-<a href="https://wa.me/2250509185121" class="whatsapp-fab" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
-<script src="/app.js"></script>
 </body>
 </html>

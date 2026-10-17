@@ -3,417 +3,555 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OKALM — Soutien Scolaire à Domicile | Abidjan, Côte d'Ivoire</title>
-  <meta name="description" content="Profs vérifiés. Cours chez vous. Résultats prouvés. Soutien scolaire à domicile à Abidjan avec OKALM. De 36 000 F le premier cycle, tout inclus." />
-  <meta property="og:title" content="OKALM — Soutien Scolaire à Domicile" />
-  <meta property="og:description" content="Profs vérifiés. Cours chez vous. Résultats prouvés." />
-  <meta property="og:image" content="https://okalm.ci/assets/icon-au-calme-180.jpg" />
+  <title>OKALM CI — Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale</title>
+  <meta name="description" content="Un professeur vérifié se déplace chez vous avec le programme de sa classe. Après chaque séance, un rapport écrit : ce qui est acquis, ce qui reste à travailler. Du CP1 à la Terminale, de 3 000 à 4 800 F de l'heure, transport inclus." />
+  <meta name="theme-color" content="#FFF6EC" />
+  <meta property="og:title" content="OKALM CI — Ce que votre enfant apprend, noir sur blanc" />
+  <meta property="og:description" content="Professeur vérifié à domicile, programme de la classe, rapport écrit après chaque séance. Du CP1 à la Terminale à Abidjan." />
+  <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png" />
   <meta property="og:url" content="https://okalm.ci/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://okalm.ci/" />
-  <link rel="icon" type="image/jpeg" href="/assets/icon-au-calme-180.jpg" />
-  <link rel="apple-touch-icon" href="/assets/icon-au-calme-180.jpg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-okalm-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-okalm-192.png" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <style>body { font-family: 'Inter', var(--font); }</style>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/2026.css" />
 </head>
 <body>
+<a class="skip" href="#main">Aller au contenu</a>
 
-<!-- Nav -->
-<nav class="nav">
-  <div class="nav__inner">
-    <a href="/" class="nav__logo">OKALM</a>
-    <button class="nav__toggle" aria-label="Menu">☰</button>
-    <div class="nav__links">
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="/">
+      <img src="/assets/icon-okalm-192.png" alt="" width="30" height="30" />
+      OKALM <span class="brand__ci">CI</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#pourquoi">Pourquoi OKALM</a>
       <a href="#comment">Comment ça marche</a>
       <a href="#tarifs">Tarifs</a>
-      <a href="#communes">Zones</a>
-      <a href="/support">FAQ</a>
-      <a href="/get-app-okalm" class="btn btn--primary btn--sm">Télécharger l'app</a>
-    </div>
-  </div>
-</nav>
-
-<!-- Marquee -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee">
-    <span>📅 1 cycle = 4 semaines (28 jours)</span>
-    <span>•</span>
-    <span>Professeur assigné sous 48-72h</span>
-    <span>•</span>
-    <span>Sans engagement</span>
-    <span>•</span>
-    <span>Offre de Lancement -20%</span>
-    <span>•</span>
-    <span>📅 1 cycle = 4 semaines (28 jours)</span>
-    <span>•</span>
-    <span>Professeur assigné sous 48-72h</span>
-    <span>•</span>
-    <span>Sans engagement</span>
-    <span>•</span>
-    <span>Offre de Lancement -20%</span>
-    <span>•</span>
-  </div>
-</div>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <div class="badge badge--orange mb-3">🎉 Offre de Lancement — -20% le premier cycle</div>
-    <h1>OKALM — Soutien Scolaire<br>à Domicile</h1>
-    <p class="hero__subtitle">Profs vérifiés. Cours chez vous. Résultats prouvés.</p>
-    <div class="hero__cta">
-      <a href="/get-app-okalm/" class="btn btn--primary btn--lg">Télécharger l'application</a>
-      <a href="/devenir-prof" class="btn btn--outline-white btn--lg">Devenir Kalmeur</a>
-    </div>
-
-    <!-- Bandeau de preuves : quatre faits vérifiables, pas des slogans. -->
-    <ul class="hero__proofs">
-      <li><strong>13 niveaux</strong><span>CP1 → Terminale</span></li>
-      <li><strong>3 vérifications</strong><span>avant la 1<sup>re</sup> mission</span></li>
-      <li><strong>4 rapports</strong><span>par cycle</span></li>
-      <li><strong>0 frais caché</strong><span>ni inscription</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Benefits mini -->
-<section class="section--alt">
-  <div class="container">
-    <div class="grid grid--4 text-center">
-      <div>
-        <div style="font-size:2rem;margin-bottom:8px">🎓</div>
-        <strong>Profs Validés</strong>
-        <p class="text-muted" style="font-size:.9rem;margin-top:4px">Triple validation</p>
-      </div>
-      <div>
-        <div style="font-size:2rem;margin-bottom:8px">📊</div>
-        <strong>Rapports Détaillés</strong>
-        <p class="text-muted" style="font-size:.9rem;margin-top:4px">Après chaque séance</p>
-      </div>
-      <div>
-        <div style="font-size:2rem;margin-bottom:8px">⏱️</div>
-        <strong>Suivi Temps Réel</strong>
-        <p class="text-muted" style="font-size:.9rem;margin-top:4px">Via l'application</p>
-      </div>
-      <div>
-        <div style="font-size:2rem;margin-bottom:8px">🔄</div>
-        <strong>Changement Gratuit</strong>
-        <p class="text-muted" style="font-size:.9rem;margin-top:4px">Garantie 2 semaines</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Différence -->
-<section class="section">
-  <div class="container">
-    <h2 class="text-center mb-4">Ce qui nous rend différents</h2>
-    <div class="grid grid--2">
-      <div class="card card--primary">
-        <h3>🏆 Triple Validation</h3>
-        <p class="text-muted mt-2">Vérification Bac + diplôme, vidéo pédagogique 3 min évaluée, tests de matière notés. Votre enfant mérite le meilleur.</p>
-      </div>
-      <div class="card card--primary">
-        <h3>📚 Spécialisation Garantie</h3>
-        <p class="text-muted mt-2">Chaque Kalmeur est assigné selon son profil exact : niveau, matière, série. Pas de généraliste — un expert pour chaque besoin.</p>
-      </div>
-      <div class="card card--primary">
-        <h3>📋 4 Types de Rapports</h3>
-        <p class="text-muted mt-2">Rapport de séance, bilan hebdomadaire, rapport mensuel, évaluation diagnostique. Vous voyez les progrès en temps réel, pas seulement à la fin du trimestre.</p>
-      </div>
-      <div class="card card--primary">
-        <h3>✅ Garantie Compatible 2 semaines</h3>
-        <p class="text-muted mt-2">Si le professeur ne convient pas (personnalité, méthode, résultats), nous en assignons un autre gratuitement dans les 2 semaines. Sans discussion.</p>
-      </div>
-      <div class="card card--primary">
-        <h3>🔍 Une sélection qui écarte, vraiment</h3>
-        <p class="text-muted mt-2"><strong>Nous estimons</strong> qu'environ 40 % des candidatures professeur n'aboutissent pas : diplôme invérifiable, vidéo pédagogique insuffisante, ou test de matière sous le seuil. C'est notre estimation, sur nos propres vérifications — et c'est ce qui rend la triple validation crédible.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Comment ça marche -->
-<section class="section--alt" id="comment">
-  <div class="container">
-    <h2 class="text-center mb-4">Comment ça marche</h2>
-    <div class="steps" style="max-width:600px;margin:0 auto">
-      <div class="step">
-        <div class="step__num">1</div>
-        <div class="step__content">
-          <h3>Bilan pédagogique initial (90 min)</h3>
-          <p class="text-muted">Un Kalmeur vient chez vous évaluer le niveau de votre enfant et vous remet un plan de travail adapté.</p>
+      <a href="#professeurs">Nos professeurs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="topbar__act">
+      <a class="btn btn--sm" href="#telecharger">Télécharger</a>
+      <details class="menu">
+        <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
+        <div class="menu__panel">
+          <a href="#pourquoi">Pourquoi OKALM</a>
+          <a href="#comment">Comment ça marche</a>
+          <a href="#tarifs">Tarifs par niveau</a>
+          <a href="#professeurs">Nos professeurs</a>
+          <a href="#faq">Questions des parents</a>
+          <a href="#communes">Quartiers desservis</a>
+          <span class="menu__sep"></span>
+          <a href="/devenir-prof" class="menu__strong">Devenir Kalmeur</a>
+          <a href="/support">Aide et contact</a>
+          <a href="#telecharger" class="menu__strong">Télécharger l'application</a>
         </div>
-      </div>
-      <div class="step">
-        <div class="step__num">2</div>
-        <div class="step__content">
-          <h3>Nous assignons le bon professeur</h3>
-          <p class="text-muted">Sous 48-72h, vous recevez un profil complet du Kalmeur sélectionné selon le niveau, la matière et votre commune.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step__num">3</div>
-        <div class="step__content">
-          <h3>Cours à domicile, suivi via app</h3>
-          <p class="text-muted">Les séances se déroulent chez vous. Vous suivez les arrivées, la durée et recevez le rapport après chaque cours.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step__num">4</div>
-        <div class="step__content">
-          <h3>Paiement sécurisé Wave / Orange / MTN</h3>
-          <p class="text-muted">Réglez en toute sécurité via votre mobile. Reçu numérique immédiat. Remboursement garanti en cas de problème.</p>
-        </div>
-      </div>
+      </details>
     </div>
   </div>
-</section>
+</header>
 
-<!-- Tarifs -->
-<section class="section" id="tarifs">
-  <div class="container">
-    <div class="badge badge--green mb-3">100% TRANSPARENT</div>
-    <h2 class="mb-2">Tarifs clairs, aucune surprise</h2>
-    <p class="text-muted mb-4">Dégressif sur les 3 premiers cycles • 1 cycle = 4 semaines (28 jours) • Paiement par cycle</p>
+<main id="main">
 
-    <!-- Sélecteur de cycle (17/10/2026) — demandé par le propriétaire : trois
-         blocs cliquables, « bloqué sur le premier mois » par défaut, et le
-         tableau affiche le prix de CE cycle. Aucun défilement horizontal. -->
-    <div class="cycle-picker" role="tablist" aria-label="Choisir le cycle">
-      <button type="button" class="cycle-btn is-active" data-cycle="1" role="tab" aria-selected="true">
-        <span class="cycle-btn__label">1<sup>er</sup> cycle</span>
-        <span class="cycle-btn__promo">−20 %</span>
-      </button>
-      <button type="button" class="cycle-btn" data-cycle="2" role="tab" aria-selected="false">
-        <span class="cycle-btn__label">2<sup>e</sup> cycle</span>
-        <span class="cycle-btn__promo">−15 %</span>
-      </button>
-      <button type="button" class="cycle-btn" data-cycle="3" role="tab" aria-selected="false">
-        <span class="cycle-btn__label">3<sup>e</sup> cycle</span>
-        <span class="cycle-btn__promo">−10 %</span>
-      </button>
-      <button type="button" class="cycle-btn" data-cycle="4" role="tab" aria-selected="false">
-        <span class="cycle-btn__label">4<sup>e</sup> et +</span>
-        <span class="cycle-btn__promo">plein tarif</span>
-      </button>
-    </div>
-
-    <div class="table-wrap mb-4" data-cycle="1">
-      <!-- ⚠️ NE PAS ÉLARGIR CE TABLEAU SANS LIRE `styles.css` (§ tableaux).
-           Sur téléphone, les lignes deviennent des CARTES (une par niveau) grâce
-           à `data-label` : sans cet attribut, les prix se coupent en deux
-           (« 36 » au-dessus, « 000 F » en dessous) — c'est exactement le défaut
-           signalé par le propriétaire le 17/10/2026.
-           Les PRIX sont ceux du serveur (`defaultSoutienPricing.js`) :
-           primaire 3 750 F/h, CM2 et collège 4 500, 3e et 2nde 5 250,
-           1ère et Terminale 6 000 — remises 20 % / 15 % / 10 % / 0. -->
-      <table class="pricing">
-        <thead>
-          <tr>
-            <th scope="col">Niveau &amp; volume</th>
-            <th scope="col" data-cycle="1">1<sup>er</sup> cycle<small>−20 %</small></th>
-            <th scope="col" data-cycle="2">2<sup>e</sup> cycle<small>−15 %</small></th>
-            <th scope="col" data-cycle="3">3<sup>e</sup> cycle<small>−10 %</small></th>
-            <th scope="col" data-cycle="4">4<sup>e</sup> cycle et +<small>plein tarif</small></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Niveau">Primaire <span class="pricing__range">CP1 – CM1</span><small>3 h/semaine · 12 h par cycle</small></td>
-            <td data-label="1er cycle" class="price price--promo"><s>45 000 F</s><strong>36 000 F</strong></td>
-            <td data-label="2e cycle" class="price">38 250 F</td>
-            <td data-label="3e cycle" class="price">40 500 F</td>
-            <td data-label="4e cycle et +" class="price">45 000 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">CM2<span class="pricing__range">examen CEPE</span><small>4 h/semaine · 16 h par cycle</small></td>
-            <td data-label="1er cycle" class="price price--promo"><s>72 000 F</s><strong>57 600 F</strong></td>
-            <td data-label="2e cycle" class="price">61 200 F</td>
-            <td data-label="3e cycle" class="price">64 800 F</td>
-            <td data-label="4e cycle et +" class="price">72 000 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">Collège <span class="pricing__range">6<sup>e</sup> – 4<sup>e</sup></span><small>4 h 30/semaine · 18 h par cycle</small></td>
-            <td data-label="1er cycle" class="price price--promo"><s>81 000 F</s><strong>64 800 F</strong></td>
-            <td data-label="2e cycle" class="price">68 850 F</td>
-            <td data-label="3e cycle" class="price">72 900 F</td>
-            <td data-label="4e cycle et +" class="price">81 000 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">3<sup>e</sup><span class="pricing__range">examen BEPC</span><small>5 h/semaine · 20 h par cycle</small></td>
-            <td data-label="1er cycle" class="price price--promo"><s>105 000 F</s><strong>84 000 F</strong></td>
-            <td data-label="2e cycle" class="price">89 250 F</td>
-            <td data-label="3e cycle" class="price">94 500 F</td>
-            <td data-label="4e cycle et +" class="price">105 000 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">2<sup>nde</sup><small>4 h 30/semaine · 18 h par cycle</small></td>
-            <td data-label="1er cycle" class="price price--promo"><s>94 500 F</s><strong>75 600 F</strong></td>
-            <td data-label="2e cycle" class="price">80 325 F</td>
-            <td data-label="3e cycle" class="price">85 050 F</td>
-            <td data-label="4e cycle et +" class="price">94 500 F</td>
-          </tr>
-          <tr>
-            <td data-label="Niveau">Lycée <span class="pricing__range">1<sup>re</sup> – Terminale</span><small>5 h/semaine · 20 h par cycle</small></td>
-            <td data-label="1er cycle" class="price price--promo"><s>120 000 F</s><strong>96 000 F</strong></td>
-            <td data-label="2e cycle" class="price">102 000 F</td>
-            <td data-label="3e cycle" class="price">108 000 F</td>
-            <td data-label="4e cycle et +" class="price">120 000 F</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="text-muted mb-4" style="font-size:.9rem" id="cycle-note">Affichage du <strong>1<sup>er</sup> cycle</strong> (remise de 20 %, offre de lancement). Touchez un autre cycle pour voir son prix.</p>
-
-    <script>
-      // Sélecteur de cycle — ajouté le 17/10/2026 à la demande du propriétaire.
-      // Quatre boutons, aucune dépendance : le CSS masque les trois autres
-      // colonnes (et, sur téléphone, les trois autres lignes de chaque carte).
-      (function () {
-        var picker = document.querySelector('.cycle-picker');
-        var wrap = document.querySelector('.table-wrap[data-cycle]');
-        var note = document.getElementById('cycle-note');
-        if (!picker || !wrap) return;
-        var textes = {
-          '1': '1<sup>er</sup> cycle</strong> (remise de 20 %, offre de lancement)',
-          '2': '2<sup>e</sup> cycle</strong> (remise de 15 %)',
-          '3': '3<sup>e</sup> cycle</strong> (remise de 10 %)',
-          '4': '4<sup>e</sup> cycle et suivants</strong> (plein tarif)'
-        };
-        picker.addEventListener('click', function (e) {
-          var btn = e.target.closest ? e.target.closest('.cycle-btn') : null;
-          if (!btn) return;
-          var cycle = btn.getAttribute('data-cycle');
-          wrap.setAttribute('data-cycle', cycle);
-          picker.querySelectorAll('.cycle-btn').forEach(function (b) {
-            var actif = b === btn;
-            b.classList.toggle('is-active', actif);
-            b.setAttribute('aria-selected', actif ? 'true' : 'false');
-          });
-          if (note) {
-            note.innerHTML = 'Affichage du <strong>' + textes[cycle] + '. Touchez un autre cycle pour voir son prix.';
-          }
-        });
-      })();
-    </script>
-
-    <p class="text-muted mb-4" style="font-size:.9rem">Prix en FCFA, tout compris, pour un cycle de 4 semaines. Le volume indiqué est celui recommandé pour chaque niveau ; il est ajustable. Aucun frais d'inscription, aucun frais caché.</p>
-
-    <div class="grid grid--2">
-      <div class="card">
-        <h3>📅 Un cycle = 4 semaines, 28 jours</h3>
-        <p class="text-muted mt-2">Le premier cycle est à -20 %, le deuxième à -15 %, le troisième à -10 %. À partir du quatrième cycle, vous payez le tarif normal. Aucun engagement de durée : vous restez libre d'arrêter à la fin de chaque cycle.</p>
-      </div>
-      <div class="card">
-        <h3>💳 Paiement mobile sécurisé</h3>
-        <p class="text-muted mt-2">Wave, Orange Money, MTN MoMo. Preuve de paiement vérifiée par notre équipe avant confirmation.</p>
-        <div class="chips mt-3">
-          <span class="chip chip--green">Wave</span>
-          <span class="chip chip--green">Orange Money</span>
-          <span class="chip chip--green">MTN MoMo</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Communes -->
-<section class="section--alt" id="communes">
-  <div class="container text-center">
-    <h2 class="mb-3">Communes desservies à Abidjan</h2>
-    <div class="chips" style="justify-content:center">
-      <span class="chip chip--green">Abobo</span>
-      <span class="chip chip--green">Adjamé</span>
-      <span class="chip chip--green">Anyama</span>
-      <span class="chip chip--green">Attécoubé</span>
-      <span class="chip chip--green">Bingerville</span>
-      <span class="chip chip--green">Cocody</span>
-      <span class="chip chip--green">Koumassi</span>
-      <span class="chip chip--green">Marcory</span>
-      <span class="chip chip--green">Plateau</span>
-      <span class="chip chip--green">Port-Bouët</span>
-      <span class="chip chip--green">Songon</span>
-      <span class="chip chip--green">Treichville</span>
-      <span class="chip chip--green">Yopougon</span>
-    </div>
-  </div>
-</section>
-
-<!-- Téléchargement de l'application -->
-<section class="section" id="telecharger">
-  <div class="container">
-    <div class="card text-center" style="max-width:560px;margin:0 auto;padding:36px 28px">
-      <img src="/assets/logo-au-calme.png" alt="Logo Au calme" width="96" height="96"
-           style="border-radius:22px;margin:0 auto 18px;display:block" />
-      <div class="badge badge--green mb-2">Application disponible</div>
-      <h2 class="mb-2">Téléchargez Au calme</h2>
-      <p class="text-muted mb-4">
-        Réservez les séances, suivez l'arrivée du professeur et consultez le rapport
-        de chaque cours, directement depuis votre téléphone.
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="top">
+  <div class="wrap hero__in">
+    <div>
+      <p class="eyebrow">Soutien scolaire à domicile · Abidjan</p>
+      <h1>Ce que votre enfant apprend, <em>noir sur blanc</em>.</h1>
+      <p class="hero__sub">
+        Un professeur vérifié se déplace chez vous avec le programme de sa classe.
+        Après chaque séance, un rapport écrit : ce qui est acquis, ce qui reste à
+        travailler. Du CP1 à la Terminale, de <strong>3 000 à 4 800 F de l'heure</strong>
+        au premier cycle, transport inclus.
       </p>
-      <a href="/get-app-okalm/" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">
-        Télécharger l'application parents →
-      </a>
-      <p class="text-muted mt-3" style="font-size:.85rem">
-        Android 7.0 ou version ultérieure · installation directe, sans Play Store
-      </p>
-      <div style="border-top:1px solid var(--border);margin-top:28px;padding-top:22px">
-        <p class="text-muted" style="font-size:.95rem;margin-bottom:12px">
-          Vous êtes professeur ou répétiteur ?
+      <div class="hero__cta">
+        <a class="btn" href="#telecharger">Télécharger l'application <span class="btn__arrow">→</span></a>
+      </div>
+      <p class="hero__note"><span class="dot"></span> Android 7 ou plus · installation directe, sans Play Store</p>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="stage__glow"></div>
+
+      <div class="card report">
+        <div class="report__top">
+          <div>
+            <p class="report__kicker">Rapport de séance</p>
+            <p class="report__title">Mathématiques · CM1</p>
+          </div>
+          <p class="report__date">Jeudi 16 octobre<br />18 h 30</p>
+        </div>
+        <div class="report__who">
+          <span class="avatar">K</span>
+          <span><b>Koffi, professeur assigné</b><span>1 h 30 · à domicile · Cocody</span></span>
+        </div>
+        <div class="report__body">
+          <p class="report__row"><span class="tick">✓</span> Ce qui a été vu : comparer et additionner des fractions.</p>
+          <p class="report__row"><span class="tick">✓</span> Acquis : les fractions de même dénominateur.</p>
+          <p class="report__row"><span class="tick">→</span> À travailler : dénominateurs différents, exercices 3 à 6.</p>
+        </div>
+        <div class="report__foot">
+          <span class="pill">Séance validée</span>
+          <span class="pill pill--warm">Prochain cours : samedi 10 h</span>
+        </div>
+      </div>
+
+      <div class="teacher">
+        <span class="teacher__av">K</span>
+        <span><b>Identité et diplômes vérifiés</b><span>Vidéo pédagogique et test de matière validés</span></span>
+        <span class="teacher__ok">✓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ COMPARATIF ══════════════ -->
+<section class="sec" id="pourquoi">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">La question que tout le monde se pose</p>
+      <h2>Pourquoi payer plus qu'un tuteur trouvé dans le quartier ?</h2>
+      <p class="sec__lead">Parce que ce n'est pas la même chose que vous achetez.
+        Ligne par ligne, voilà ce que vous payez.</p>
+    </div>
+
+    <div class="cmp">
+      <div class="cmp__head">
+        <span>Ce que vous payez</span>
+        <span>Sans OKALM CI</span>
+        <span>Avec OKALM CI</span>
+      </div>
+
+      <div class="cmp__row">
+        <p class="cmp__k">Le professeur</p>
+        <p class="cmp__a"><span class="cmp__tag">Sans OKALM CI</span>Un diplôme annoncé, jamais vérifié.</p>
+        <p class="cmp__b"><span class="cmp__tag">Avec OKALM CI</span>Identité, diplôme, vidéo pédagogique et test de matière vérifiés avant la première mission.</p>
+      </div>
+
+      <div class="cmp__row">
+        <p class="cmp__k">Le contenu</p>
+        <p class="cmp__a"><span class="cmp__tag">Sans OKALM CI</span>Ce qu'il sait enseigner, dans l'ordre qu'il choisit.</p>
+        <p class="cmp__b"><span class="cmp__tag">Avec OKALM CI</span>Le programme de sa classe, et un bilan initial de votre enfant pour cibler ses lacunes.</p>
+      </div>
+
+      <div class="cmp__row">
+        <p class="cmp__k">Le suivi</p>
+        <p class="cmp__a"><span class="cmp__tag">Sans OKALM CI</span>Sa parole, en fin de mois.</p>
+        <p class="cmp__b"><span class="cmp__tag">Avec OKALM CI</span>Un rapport écrit après chaque séance : ce qui est acquis, ce qui reste à travailler.</p>
+      </div>
+
+      <div class="cmp__row">
+        <p class="cmp__k">S'il s'arrête ou ne convient pas</p>
+        <p class="cmp__a"><span class="cmp__tag">Sans OKALM CI</span>Vous recommencez à chercher, et vous payez quand même.</p>
+        <p class="cmp__b"><span class="cmp__tag">Avec OKALM CI</span>Remplacement gratuit dans les deux semaines qui suivent la première séance.</p>
+      </div>
+
+      <div class="cmp__row">
+        <p class="cmp__k">Le prix</p>
+        <p class="cmp__a"><span class="cmp__tag">Sans OKALM CI</span>Négocié à la séance, sans recours.</p>
+        <p class="cmp__b"><span class="cmp__tag">Avec OKALM CI</span>De 3 000 à 4 800 F de l'heure au premier cycle, transport inclus. Aucun frais d'inscription.</p>
+      </div>
+    </div>
+
+    <p class="cmp__verdict">
+      Le tuteur du quartier est moins cher, et il le restera. Ce qu'il ne vous donne pas,
+      c'est <b>un programme</b>, <b>un bilan</b>, <b>une preuve écrite</b> — et quelqu'un pour
+      le remplacer le jour où il s'arrête. C'est exactement ce que vous payez.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ COMMENT ÇA MARCHE ══════════════ -->
+<section class="sec sec--alt" id="comment">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Dans l'ordre réel</p>
+      <h2>Comment ça marche.</h2>
+      <p class="sec__lead">Quatre étapes, et une règle simple : le cycle est réglé avant que
+        le professeur se déplace.</p>
+    </div>
+
+    <div class="how">
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Vous commandez</h3>
+            <p>Niveau, matière, volume horaire par semaine et commune. Vous indiquez les
+               créneaux qui arrangent la maison.</p>
+            <small>Depuis l'application OKALM · moins de 5 minutes</small>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vous réglez le cycle d'avance</h3>
+            <p>Un cycle = 4 semaines. Wave, Orange Money ou MTN MoMo : vous envoyez la preuve,
+               notre équipe la vérifie et confirme le paiement.</p>
+            <small>Le montant est connu avant de payer · aucun frais d'inscription</small>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Nous assignons le professeur</h3>
+            <p>Sous 48 à 72 heures, selon le niveau, la matière, la commune et les
+               disponibilités réelles du professeur.</p>
+            <small>Le professeur est engagé pour tout le cycle, pas séance par séance</small>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Les séances ont lieu chez vous</h3>
+            <p>Le professeur se déplace à votre adresse. Après chaque séance, un rapport arrive
+               dans l'application, avec ce qui reste à travailler.</p>
+            <small>Un rapport par séance · quatre types de rapports</small>
+          </div>
+        </li>
+      </ol>
+
+      <aside class="why-pay">
+        <h3>Pourquoi payer avant la première séance ?</h3>
+        <p>Parce que c'est ce qui protège les deux côtés. Le professeur qui prend le
+           déplacement sait que le cycle est réglé : il vient pour enseigner, pas pour
+           négocier un prix à la porte.</p>
+        <p>Et de votre côté, vous savez que le professeur envoyé a été sélectionné sur
+           son identité, ses diplômes et ses matières — et qu'il est rémunéré pour venir.</p>
+        <div class="why-pay__b">
+          <div><span>✓</span><span><b>Pour le professeur :</b> un contrat payé avant le premier déplacement.</span></div>
+          <div><span>✓</span><span><b>Pour vous :</b> un professeur engagé, pas un rendez-vous d'essai.</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TARIFS ══════════════ -->
+<section class="sec" id="tarifs">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Prix par niveau</p>
+      <h2>Un cycle de 4 semaines, tout compris.</h2>
+      <p class="sec__lead">Transport du professeur inclus, aucun frais d'inscription.
+        Les trois premiers cycles sont remisés ; à partir du 4<sup>e</sup>, plein tarif.</p>
+    </div>
+
+    <div class="pricing__grid">
+
+      <article class="price-card">
+        <p class="price-card__group">Primaire</p>
+        <h3>CP1 → CM1</h3>
+        <p class="price-card__meta">3 h par semaine · 12 h par cycle · <b>3 000 F/h</b></p>
+        <ul class="ladder">
+          <li class="is-promo"><span class="ladder__k">1<sup>er</sup> cycle</span><span class="ladder__b">−20 %</span>
+            <span class="ladder__p"><span class="ladder__off">45 000 F</span><span class="ladder__v">36 000<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">2<sup>e</sup> cycle</span><span class="ladder__b">−15 %</span>
+            <span class="ladder__p"><span class="ladder__off">45 000 F</span><span class="ladder__v">38 250<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">3<sup>e</sup> cycle</span><span class="ladder__b">−10 %</span>
+            <span class="ladder__p"><span class="ladder__off">45 000 F</span><span class="ladder__v">40 500<i>F</i></span></span></li>
+          <li class="is-full"><span class="ladder__k">4<sup>e</sup> cycle et +</span><span class="ladder__b">plein tarif</span>
+            <span class="ladder__p"><span class="ladder__v">45 000<i>F</i></span></span></li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <p class="price-card__group">Primaire</p>
+        <h3>CM2 <span class="price-card__flag">CEPE</span></h3>
+        <p class="price-card__meta">4 h par semaine · 16 h par cycle · <b>3 600 F/h</b></p>
+        <ul class="ladder">
+          <li class="is-promo"><span class="ladder__k">1<sup>er</sup> cycle</span><span class="ladder__b">−20 %</span>
+            <span class="ladder__p"><span class="ladder__off">72 000 F</span><span class="ladder__v">57 600<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">2<sup>e</sup> cycle</span><span class="ladder__b">−15 %</span>
+            <span class="ladder__p"><span class="ladder__off">72 000 F</span><span class="ladder__v">61 200<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">3<sup>e</sup> cycle</span><span class="ladder__b">−10 %</span>
+            <span class="ladder__p"><span class="ladder__off">72 000 F</span><span class="ladder__v">64 800<i>F</i></span></span></li>
+          <li class="is-full"><span class="ladder__k">4<sup>e</sup> cycle et +</span><span class="ladder__b">plein tarif</span>
+            <span class="ladder__p"><span class="ladder__v">72 000<i>F</i></span></span></li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <p class="price-card__group">Collège</p>
+        <h3>6<sup>e</sup> · 5<sup>e</sup> · 4<sup>e</sup></h3>
+        <p class="price-card__meta">4 h 30 par semaine · 18 h par cycle · <b>3 600 F/h</b></p>
+        <ul class="ladder">
+          <li class="is-promo"><span class="ladder__k">1<sup>er</sup> cycle</span><span class="ladder__b">−20 %</span>
+            <span class="ladder__p"><span class="ladder__off">81 000 F</span><span class="ladder__v">64 800<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">2<sup>e</sup> cycle</span><span class="ladder__b">−15 %</span>
+            <span class="ladder__p"><span class="ladder__off">81 000 F</span><span class="ladder__v">68 850<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">3<sup>e</sup> cycle</span><span class="ladder__b">−10 %</span>
+            <span class="ladder__p"><span class="ladder__off">81 000 F</span><span class="ladder__v">72 900<i>F</i></span></span></li>
+          <li class="is-full"><span class="ladder__k">4<sup>e</sup> cycle et +</span><span class="ladder__b">plein tarif</span>
+            <span class="ladder__p"><span class="ladder__v">81 000<i>F</i></span></span></li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <p class="price-card__group">Collège</p>
+        <h3>3<sup>e</sup> <span class="price-card__flag">BEPC</span></h3>
+        <p class="price-card__meta">5 h par semaine · 20 h par cycle · <b>4 200 F/h</b></p>
+        <ul class="ladder">
+          <li class="is-promo"><span class="ladder__k">1<sup>er</sup> cycle</span><span class="ladder__b">−20 %</span>
+            <span class="ladder__p"><span class="ladder__off">105 000 F</span><span class="ladder__v">84 000<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">2<sup>e</sup> cycle</span><span class="ladder__b">−15 %</span>
+            <span class="ladder__p"><span class="ladder__off">105 000 F</span><span class="ladder__v">89 250<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">3<sup>e</sup> cycle</span><span class="ladder__b">−10 %</span>
+            <span class="ladder__p"><span class="ladder__off">105 000 F</span><span class="ladder__v">94 500<i>F</i></span></span></li>
+          <li class="is-full"><span class="ladder__k">4<sup>e</sup> cycle et +</span><span class="ladder__b">plein tarif</span>
+            <span class="ladder__p"><span class="ladder__v">105 000<i>F</i></span></span></li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <p class="price-card__group">Lycée</p>
+        <h3>2<sup>nde</sup></h3>
+        <p class="price-card__meta">4 h 30 par semaine · 18 h par cycle · <b>4 200 F/h</b></p>
+        <ul class="ladder">
+          <li class="is-promo"><span class="ladder__k">1<sup>er</sup> cycle</span><span class="ladder__b">−20 %</span>
+            <span class="ladder__p"><span class="ladder__off">94 500 F</span><span class="ladder__v">75 600<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">2<sup>e</sup> cycle</span><span class="ladder__b">−15 %</span>
+            <span class="ladder__p"><span class="ladder__off">94 500 F</span><span class="ladder__v">80 325<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">3<sup>e</sup> cycle</span><span class="ladder__b">−10 %</span>
+            <span class="ladder__p"><span class="ladder__off">94 500 F</span><span class="ladder__v">85 050<i>F</i></span></span></li>
+          <li class="is-full"><span class="ladder__k">4<sup>e</sup> cycle et +</span><span class="ladder__b">plein tarif</span>
+            <span class="ladder__p"><span class="ladder__v">94 500<i>F</i></span></span></li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <p class="price-card__group">Lycée</p>
+        <h3>1<sup>re</sup> · Terminale <span class="price-card__flag">BAC</span></h3>
+        <p class="price-card__meta">5 h par semaine · 20 h par cycle · <b>4 800 F/h</b></p>
+        <ul class="ladder">
+          <li class="is-promo"><span class="ladder__k">1<sup>er</sup> cycle</span><span class="ladder__b">−20 %</span>
+            <span class="ladder__p"><span class="ladder__off">120 000 F</span><span class="ladder__v">96 000<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">2<sup>e</sup> cycle</span><span class="ladder__b">−15 %</span>
+            <span class="ladder__p"><span class="ladder__off">120 000 F</span><span class="ladder__v">102 000<i>F</i></span></span></li>
+          <li class="is-promo"><span class="ladder__k">3<sup>e</sup> cycle</span><span class="ladder__b">−10 %</span>
+            <span class="ladder__p"><span class="ladder__off">120 000 F</span><span class="ladder__v">108 000<i>F</i></span></span></li>
+          <li class="is-full"><span class="ladder__k">4<sup>e</sup> cycle et +</span><span class="ladder__b">plein tarif</span>
+            <span class="ladder__p"><span class="ladder__v">120 000<i>F</i></span></span></li>
+        </ul>
+      </article>
+
+    </div>
+
+    <p class="pricing__note">
+      Prix en francs CFA, pour un cycle de 4 semaines, tout compris — transport du professeur
+      inclus, aucun frais d'inscription. Le tarif horaire indiqué est celui du <strong>premier
+      cycle</strong> ; sans remise, il correspond au tarif du niveau : 3 750 F/h en primaire,
+      4 500 F/h en CM2 et au collège, 5 250 F/h en 3<sup>e</sup> et en 2<sup>nde</sup>,
+      6 000 F/h en 1<sup>re</sup> et en Terminale. Le volume horaire est celui que nous
+      recommandons ; il s'ajuste au moment de la commande.
+    </p>
+
+    <div class="pricing__cta">
+      <a class="btn" href="#telecharger">Télécharger l'application <span class="btn__arrow">→</span></a>
+      <span class="hero__note"><span class="dot"></span> Le montant exact est calculé avant le paiement</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROFESSEURS ══════════════ -->
+<section class="sec sec--alt" id="professeurs">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">La sélection</p>
+      <h2>Ce que nous vérifions avant la première mission.</h2>
+    </div>
+
+    <div class="teach">
+      <div>
+        <p class="sec__lead" style="margin-top:0">
+          Identité et diplômes vérifiés : c'est la formulation exacte de ce que nous faisons.
+          Aucune promesse que nous ne pouvons pas tenir.
         </p>
-        <a href="/get-app-kalmeurs/" class="btn btn--orange" style="justify-content:center">
-          Télécharger l'application Kalmeurs
-        </a>
+        <ul class="check">
+          <li><span class="ck">✓</span><span><b>Pièce d'identité</b>Recto et verso, contrôlés par notre équipe.</span></li>
+          <li><span class="ck">✓</span><span><b>Diplômes</b>Le diplôme déclaré est vérifié avant la première mission.</span></li>
+          <li><span class="ck">✓</span><span><b>Vidéo pédagogique</b>Trois minutes sur une notion, évaluées par notre équipe.</span></li>
+          <li><span class="ck">✓</span><span><b>Test de matière noté</b>Sur la matière et le niveau qu'il souhaite enseigner.</span></li>
+        </ul>
+      </div>
+
+      <div class="stat">
+        <p class="stat__n">≈ 40<span> %</span></p>
+        <p>des candidatures professeur n'aboutissent pas : diplôme invérifiable, vidéo
+           insuffisante ou test de matière sous le seuil. C'est notre estimation, sur nos
+           propres vérifications.</p>
+        <div class="stat__rule"></div>
+        <div class="stat__list">
+          <div><i>›</i><span><b>Assignation</b> selon le niveau, la matière, la commune et les disponibilités.</span></div>
+          <div><i>›</i><span><b>Un professeur par domaine</b> : scientifique avec scientifique, littéraire avec littéraire.</span></div>
+          <div><i>›</i><span><b>Primaire ouvert à tous</b> nos professeurs, quel que soit le bac.</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <div class="footer__title">OKALM</div>
-        <p style="font-size:.9rem;line-height:1.6">Soutien scolaire à domicile à Abidjan. Profs vérifiés, résultats prouvés.</p>
+<!-- ══════════════ FAQ ══════════════ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Questions des parents</p>
+      <h2>Ce qu'on nous demande le plus.</h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>Pourquoi payer plus qu'un tuteur du quartier ?</summary>
+        <p>Parce que vous n'achetez pas la même chose. Un tuteur trouvé seul vous vend son
+           temps ; personne n'a vérifié son diplôme, il improvise le contenu, et vous n'avez
+           que sa parole sur ce qui a été fait. Chez OKALM CI, le professeur est vérifié,
+           il travaille sur le programme de la classe, et <strong>chaque séance laisse un
+           rapport écrit</strong>. C'est ce qui justifie la différence — et c'est aussi ce qui
+           vous permet de changer de professeur gratuitement s'il ne convient pas.</p>
+      </details>
+
+      <details>
+        <summary>Combien coûte un cycle, et que comprend-il ?</summary>
+        <p>Un cycle dure 4 semaines (28 jours). Le prix dépend du niveau : de
+           <strong>36 000 F</strong> pour le primaire au premier cycle jusqu'à
+           <strong>120 000 F</strong> pour la Terminale au plein tarif — soit de
+           <strong>3 000 à 4 800 F de l'heure</strong> au premier cycle. Le transport du
+           professeur est inclus, il n'y a aucun frais d'inscription, et le volume horaire
+           est celui recommandé pour le niveau — vous pouvez l'ajuster.</p>
+      </details>
+
+      <details>
+        <summary>Pourquoi régler avant la première séance ?</summary>
+        <p>Le professeur qui se déplace sait que le cycle est payé : il vient pour enseigner.
+           Et vous, vous savez que le professeur assigné est sélectionné, engagé et rémunéré
+           pour venir. C'est une double sécurité — la sienne et la vôtre.</p>
+      </details>
+
+      <details>
+        <summary>En combien de temps mon enfant a-t-il un professeur ?</summary>
+        <p>Sous <strong>48 à 72 heures</strong> après la confirmation du paiement. Le délai
+           dépend du niveau, de la matière et de votre commune, parce que nous cherchons un
+           professeur réellement disponible sur vos créneaux.</p>
+      </details>
+
+      <details>
+        <summary>Y a-t-il une séance gratuite ou une évaluation offerte ?</summary>
+        <p><strong>Non.</strong> La première séance est facturée comme les autres : c'est un
+           bilan pédagogique de 90 minutes qui sert à établir le plan de travail. Nous ne
+           promettons pas de séance offerte, et c'est volontaire.</p>
+      </details>
+
+      <details>
+        <summary>Que contient un rapport ?</summary>
+        <p>Un rapport arrive <strong>après chaque séance</strong> : ce qui a été vu, ce qui est
+           acquis, ce qui reste à travailler. Il existe quatre types de rapports : initial,
+           hebdomadaire, mensuel et fin d'essai.</p>
+      </details>
+
+      <details>
+        <summary>Et si le professeur ne convient pas ?</summary>
+        <p>Nous remplaçons le professeur gratuitement dans les deux semaines qui suivent la
+           première séance — que le problème vienne de la méthode, du feeling ou des résultats.
+           Vous n'avez rien à justifier.</p>
+      </details>
+
+      <details>
+        <summary>Faut-il s'engager sur plusieurs cycles ?</summary>
+        <p><strong>Non.</strong> Vous payez cycle par cycle et vous restez libre d'arrêter à la
+           fin de chaque cycle. Aucun prélèvement automatique, aucune reconduction tacite.</p>
+      </details>
+
+      <details>
+        <summary>Comment installer l'application ?</summary>
+        <p>L'application <strong>OKALM</strong> s'installe directement depuis ce site :
+           téléchargement du fichier, puis autorisation d'installation dans Android. Pas besoin
+           de Play Store. Il faut Android 7 ou plus récent.</p>
+      </details>
+    </div>
+
+    <p class="faq__more">Une autre question ? <a href="/support">Toutes les réponses, et
+      notre contact WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- ══════════════ ZONES ══════════════ -->
+<section class="sec sec--alt" id="communes">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Où nous venons</p>
+      <h2>Quartiers desservis à Abidjan.</h2>
+      <p class="sec__lead">Treize communes. Si la vôtre n'est pas là, écrivez-nous : nous
+        ouvrons en priorité là où la demande se présente.</p>
+    </div>
+    <div class="zones">
+      <span class="zone">Abobo</span><span class="zone">Adjamé</span><span class="zone">Anyama</span>
+      <span class="zone">Attécoubé</span><span class="zone">Bingerville</span><span class="zone">Cocody</span>
+      <span class="zone">Koumassi</span><span class="zone">Marcory</span><span class="zone">Plateau</span>
+      <span class="zone">Port-Bouët</span><span class="zone">Songon</span><span class="zone">Treichville</span>
+      <span class="zone">Yopougon</span>
+    </div>
+    <p class="zones__more">Votre commune n'est pas listée ?
+      <a href="https://wa.me/2250509185121">Écrivez-nous sur WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- ══════════════ CTA FINAL ══════════════ -->
+<section class="final" id="telecharger">
+  <div class="wrap">
+    <div class="final__box">
+      <img class="final__logo" src="/assets/logo-okalm.png" alt="" width="64" height="64" />
+      <h2>L'application OKALM, pour les parents</h2>
+      <p>Commandez le cycle, suivez les séances, lisez le rapport de chaque cours.
+         C'est gratuit à installer.</p>
+      <a class="btn" href="/get-app-okalm/">Télécharger l'application <span class="btn__arrow">→</span></a>
+      <p class="final__note">Android 7 ou plus · installation directe, sans Play Store</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="/">OKALM <span class="brand__ci">CI</span></a>
+        <p>Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale. Un professeur
+           vérifié, un rapport après chaque séance.</p>
       </div>
       <div>
-        <div class="footer__title">Applications</div>
-        <a href="/get-app-okalm/" class="footer__link">Au calme — parents</a>
-        <a href="/get-app-kalmeurs/" class="footer__link">Kalmeurs — professeurs</a>
+        <h4>Applications</h4>
+        <a href="/get-app-okalm/">OKALM — parents</a>
+        <a href="/get-app-kalmeurs/">Kalmeurs — professeurs</a>
       </div>
       <div>
-        <div class="footer__title">Liens</div>
-        <a href="/" class="footer__link">Accueil</a>
-        <a href="/devenir-prof" class="footer__link">Devenir Kalmeur</a>
-        <a href="/support" class="footer__link">Support / FAQ</a>
+        <h4>Aide</h4>
+        <a href="/support">Aide et FAQ</a>
+        <a href="https://wa.me/2250509185121">WhatsApp</a>
+        <a href="mailto:support@okalm.ci">support@okalm.ci</a>
       </div>
       <div>
-        <div class="footer__title">Légal</div>
-        <a href="/privacy" class="footer__link">Politique de confidentialité</a>
-        <a href="/terms" class="footer__link">Conditions d'utilisation</a>
+        <h4>Légal</h4>
+        <a href="/terms">Conditions d'utilisation</a>
+        <a href="/privacy">Confidentialité</a>
+        <a href="/terms">Mentions légales</a>
       </div>
       <div>
-        <div class="footer__title">Contact</div>
-        <a href="mailto:support@okalm.ci" class="footer__link">support@okalm.ci</a>
-        <a href="https://wa.me/2250509185121" class="footer__link">WhatsApp Business</a>
+        <h4>Enseigner</h4>
+        <a href="/devenir-prof">Devenir Kalmeur</a>
+        <a href="/devenir-prof#preparer">Comment se préparer</a>
+        <a href="/get-app-kalmeurs/">Télécharger Kalmeurs</a>
       </div>
     </div>
-    <div class="footer__bottom">
-      © 2026 OKALM CI · Édité par Coulibaly Sanga Youssouf Klotchele Wounakanh · Abobo, Abidjan, Côte d'Ivoire
-    </div>
+    <p class="foot__bottom">
+      © 2026 OKALM CI — OKALM Côte d'Ivoire · Édité par Coulibaly Sanga Youssouf Klotchele
+      Wounakanh · Abobo, Abidjan, Côte d'Ivoire
+    </p>
   </div>
 </footer>
 
-<!-- WhatsApp FAB -->
-<a href="https://wa.me/2250509185121" class="whatsapp-fab" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
-
-<script src="/app.js"></script>
 </body>
 </html>
