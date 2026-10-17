@@ -356,6 +356,28 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 .foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .foot__bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:.77rem;color:#7FA391;line-height:1.7}
 
+
+/* ---------- DERNIÈRE VAGUE (17/10 soir) ---------- */
+/* le prix du hero : « dès » doit sauter aux yeux, sinon on croit que la
+   Terminale coûte 36 000 F */
+.hero__price{
+  margin-top:14px;font-size:1.02rem;color:var(--ink-2);
+  border-left:3px solid var(--green);padding:2px 0 2px 14px;max-width:34em;
+}
+.hero__price strong{color:var(--green);font-weight:800;font-size:1.12em;white-space:nowrap}
+/* champs du rapport laissés vides : on montre que c'est un formulaire */
+.report__ghost{color:#C9C0B4;letter-spacing:.2em;font-size:.9em}
+/* tarif de référence : heures en gras, montants normaux dans le vert OKALM */
+.ref__h{font-weight:700;color:var(--ink-2)}
+.ref__h::first-line{font-weight:700}
+.ref__c{color:var(--green)}
+.ref__row:nth-child(2) .ref__c,.ref__row:nth-child(3) .ref__c{color:var(--green)}
+/* lien WhatsApp de la page parents : vert OKALM, pas terracotta */
+.zones__more a{color:var(--green);font-weight:700}
+/* menu : Devenir Kalmeur est un autre sujet, et il porte la couleur Kalmeurs */
+.menu__panel .menu__kalmeur{color:#8A3707;font-weight:700}
+.menu__panel .menu__kalmeur:hover{background:#FFE8D6;color:#7A2E05}
+
 /* =========================================================================
    THÈME KALMEURS — ORANGE
    L'application des professeurs est orange (AppColors.primary = #F47A1F).
