@@ -188,6 +188,54 @@ p { margin-bottom: 1rem; }
 .alert--success { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
 .alert--error { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
 
+/* Sélecteur de cycle des tarifs (17/10/2026).
+   Demande du propriétaire : des petits blocs cliquables, bloqués sur le premier
+   mois par défaut, qui font apparaître le prix du cycle choisi — pour n'avoir
+   jamais de tableau qui glisse horizontalement. */
+.cycle-picker {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px;
+}
+.cycle-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 12px 8px; border-radius: var(--radius); cursor: pointer;
+  background: #fff; border: 2px solid var(--border); color: var(--text);
+  font-family: inherit; font-size: .95rem; font-weight: 700;
+  transition: border-color .15s, background .15s, transform .15s;
+}
+.cycle-btn:hover { border-color: var(--primary-light); transform: translateY(-1px); }
+.cycle-btn.is-active { border-color: var(--primary); background: #F2F8F4; }
+.cycle-btn__label { line-height: 1.2; }
+.cycle-btn__promo { font-size: .8rem; font-weight: 800; color: var(--primary); }
+.cycle-btn.is-active .cycle-btn__promo { color: var(--primary-dark); }
+
+/* ⚠️ LA RÈGLE QUI SUPPRIME LE DÉFILEMENT HORIZONTAL : on n'affiche QUE le cycle
+   choisi. Le cycle est repéré par la POSITION de la cellule dans la ligne (le 1er
+   `td` est le niveau, donc le cycle N est le (N+1)ᵉ `td`) : aucun attribut à
+   maintenir sur 24 cellules, donc aucun risque de désynchronisation. */
+.table-wrap[data-cycle] .pricing tbody td.price,
+.table-wrap[data-cycle] .pricing thead th[data-cycle] { display: none; }
+
+.table-wrap[data-cycle="1"] .pricing tbody tr td.price:nth-of-type(2),
+.table-wrap[data-cycle="2"] .pricing tbody tr td.price:nth-of-type(3),
+.table-wrap[data-cycle="3"] .pricing tbody tr td.price:nth-of-type(4),
+.table-wrap[data-cycle="4"] .pricing tbody tr td.price:nth-of-type(5) { display: table-cell; }
+
+.table-wrap[data-cycle="1"] .pricing thead th:nth-of-type(2),
+.table-wrap[data-cycle="2"] .pricing thead th:nth-of-type(3),
+.table-wrap[data-cycle="3"] .pricing thead th:nth-of-type(4),
+.table-wrap[data-cycle="4"] .pricing thead th:nth-of-type(5) { display: table-cell; }
+
+@media (max-width: 640px) {
+  .cycle-picker { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cycle-btn { padding: 10px 6px; font-size: .9rem; }
+  /* Sur téléphone les cellules sont des lignes de carte (flex) : la cellule
+     affichée garde ce comportement, sinon l'étiquette et le prix se collent. */
+  .table-wrap[data-cycle="1"] .pricing tbody tr td.price:nth-of-type(2),
+  .table-wrap[data-cycle="2"] .pricing tbody tr td.price:nth-of-type(3),
+  .table-wrap[data-cycle="3"] .pricing tbody tr td.price:nth-of-type(4),
+  .table-wrap[data-cycle="4"] .pricing tbody tr td.price:nth-of-type(5) { display: flex; }
+}
+
 /* Table */
 .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
 table { width: 100%; border-collapse: collapse; }

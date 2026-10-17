@@ -181,7 +181,29 @@
     <h2 class="mb-2">Tarifs clairs, aucune surprise</h2>
     <p class="text-muted mb-4">Dégressif sur les 3 premiers cycles • 1 cycle = 4 semaines (28 jours) • Paiement par cycle</p>
 
-    <div class="table-wrap mb-4">
+    <!-- Sélecteur de cycle (17/10/2026) — demandé par le propriétaire : trois
+         blocs cliquables, « bloqué sur le premier mois » par défaut, et le
+         tableau affiche le prix de CE cycle. Aucun défilement horizontal. -->
+    <div class="cycle-picker" role="tablist" aria-label="Choisir le cycle">
+      <button type="button" class="cycle-btn is-active" data-cycle="1" role="tab" aria-selected="true">
+        <span class="cycle-btn__label">1<sup>er</sup> cycle</span>
+        <span class="cycle-btn__promo">−20 %</span>
+      </button>
+      <button type="button" class="cycle-btn" data-cycle="2" role="tab" aria-selected="false">
+        <span class="cycle-btn__label">2<sup>e</sup> cycle</span>
+        <span class="cycle-btn__promo">−15 %</span>
+      </button>
+      <button type="button" class="cycle-btn" data-cycle="3" role="tab" aria-selected="false">
+        <span class="cycle-btn__label">3<sup>e</sup> cycle</span>
+        <span class="cycle-btn__promo">−10 %</span>
+      </button>
+      <button type="button" class="cycle-btn" data-cycle="4" role="tab" aria-selected="false">
+        <span class="cycle-btn__label">4<sup>e</sup> et +</span>
+        <span class="cycle-btn__promo">plein tarif</span>
+      </button>
+    </div>
+
+    <div class="table-wrap mb-4" data-cycle="1">
       <!-- ⚠️ NE PAS ÉLARGIR CE TABLEAU SANS LIRE `styles.css` (§ tableaux).
            Sur téléphone, les lignes deviennent des CARTES (une par niveau) grâce
            à `data-label` : sans cet attribut, les prix se coupent en deux
@@ -194,10 +216,10 @@
         <thead>
           <tr>
             <th scope="col">Niveau &amp; volume</th>
-            <th scope="col">1<sup>er</sup> cycle<small>−20 %</small></th>
-            <th scope="col">2<sup>e</sup> cycle<small>−15 %</small></th>
-            <th scope="col">3<sup>e</sup> cycle<small>−10 %</small></th>
-            <th scope="col">4<sup>e</sup> cycle et +<small>plein tarif</small></th>
+            <th scope="col" data-cycle="1">1<sup>er</sup> cycle<small>−20 %</small></th>
+            <th scope="col" data-cycle="2">2<sup>e</sup> cycle<small>−15 %</small></th>
+            <th scope="col" data-cycle="3">3<sup>e</sup> cycle<small>−10 %</small></th>
+            <th scope="col" data-cycle="4">4<sup>e</sup> cycle et +<small>plein tarif</small></th>
           </tr>
         </thead>
         <tbody>
@@ -246,6 +268,40 @@
         </tbody>
       </table>
     </div>
+
+    <p class="text-muted mb-4" style="font-size:.9rem" id="cycle-note">Affichage du <strong>1<sup>er</sup> cycle</strong> (remise de 20 %, offre de lancement). Touchez un autre cycle pour voir son prix.</p>
+
+    <script>
+      // Sélecteur de cycle — ajouté le 17/10/2026 à la demande du propriétaire.
+      // Quatre boutons, aucune dépendance : le CSS masque les trois autres
+      // colonnes (et, sur téléphone, les trois autres lignes de chaque carte).
+      (function () {
+        var picker = document.querySelector('.cycle-picker');
+        var wrap = document.querySelector('.table-wrap[data-cycle]');
+        var note = document.getElementById('cycle-note');
+        if (!picker || !wrap) return;
+        var textes = {
+          '1': '1<sup>er</sup> cycle</strong> (remise de 20 %, offre de lancement)',
+          '2': '2<sup>e</sup> cycle</strong> (remise de 15 %)',
+          '3': '3<sup>e</sup> cycle</strong> (remise de 10 %)',
+          '4': '4<sup>e</sup> cycle et suivants</strong> (plein tarif)'
+        };
+        picker.addEventListener('click', function (e) {
+          var btn = e.target.closest ? e.target.closest('.cycle-btn') : null;
+          if (!btn) return;
+          var cycle = btn.getAttribute('data-cycle');
+          wrap.setAttribute('data-cycle', cycle);
+          picker.querySelectorAll('.cycle-btn').forEach(function (b) {
+            var actif = b === btn;
+            b.classList.toggle('is-active', actif);
+            b.setAttribute('aria-selected', actif ? 'true' : 'false');
+          });
+          if (note) {
+            note.innerHTML = 'Affichage du <strong>' + textes[cycle] + '. Touchez un autre cycle pour voir son prix.';
+          }
+        });
+      })();
+    </script>
 
     <p class="text-muted mb-4" style="font-size:.9rem">Prix en FCFA, tout compris, pour un cycle de 4 semaines. Le volume indiqué est celui recommandé pour chaque niveau ; il est ajustable. Aucun frais d'inscription, aucun frais caché.</p>
 
