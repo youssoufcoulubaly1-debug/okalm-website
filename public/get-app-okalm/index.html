@@ -3,317 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Télécharger OKALM pour Android — Application officielle</title>
-  <meta name="description" content="Installez OKALM, l'application des parents pour le soutien scolaire à domicile à Abidjan : professeurs vérifiés, rapport après chaque séance." />
-  <meta name="theme-color" content="#337843" />
-  <link rel="icon" type="image/jpeg" href="/assets/icon-au-calme-180.jpg" />
-  <link rel="apple-touch-icon" href="/assets/icon-au-calme-180.jpg" />
-  <link rel="stylesheet" href="/downloads.css" />
-
-  <!-- Open Graph -->
+  <title>Télécharger OKALM pour Android — application des parents | OKALM CI</title>
+  <meta name="description" content="Installez OKALM, l'application des parents : professeurs vérifiés, un rapport écrit après chaque séance, cycle de 4 semaines. Android 7.0 ou plus, installation directe." />
+  <meta name="theme-color" content="#FFF6EC" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Télécharger OKALM sur Android — Version officielle" />
-  <meta property="og:description" content="Trouvez un professeur vérifié pour votre enfant, à domicile à Abidjan. Un rapport écrit après chaque séance." />
-  <meta property="og:url" content="https://okalm.ci/get-app-okalm" />
-  <meta property="og:image" content="https://okalm.ci/assets/logo-au-calme.png" />
-  <link rel="canonical" href="https://okalm.ci/get-app-okalm" />
+  <meta property="og:title" content="Télécharger OKALM sur Android — version officielle" />
+  <meta property="og:description" content="Un professeur vérifié pour votre enfant, à domicile à Abidjan. Un rapport écrit après chaque séance." />
+  <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png" />
+  <meta property="og:url" content="https://okalm.ci/get-app-okalm/" />
+  <link rel="canonical" href="https://okalm.ci/get-app-okalm/" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-okalm-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-okalm-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/2026.css" />
 </head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
 
-<body class="theme-au-calme">
-<div class="wrap">
-
-  <!-- ============================================================
-       Lien de téléchargement de l'APK « OKALM ».
-       L'APK est hébergé dans une RELEASE GITHUB de ce dépôt — pas dans les assets du site.
-       Pour publier une nouvelle version :
-         flutter build apk --release --flavor prod -t lib/main_prod.dart --dart-define-from-file=.env
-         gh release create <tag> au-calme-<version>.apk --repo youssoufcoulubaly1-debug/okalm-website
-       puis mettre à jour le href du bouton ci-dessous ET son attribut download=.
-       ⚠️ « -t lib/main_prod.dart » est OBLIGATOIRE : sans lui Flutter compile lib/main.dart,
-          FlavorConfig n'est jamais initialisé et les flavors restent INERTES
-          (défaut mesuré dans le binaire le 10/10/2026).
-       ============================================================ -->
-
-  <img src="/assets/logo-okalm.png" alt="Logo OKALM" class="logo" width="88" height="88" />
-
-  <div class="badge">Application Android officielle</div>
-
-  <h1>Installez OKALM sur Android</h1>
-  <p class="promise">
-    Trouvez un professeur vérifié pour votre enfant — et
-    <strong>recevez un rapport écrit après chaque séance</strong>.
-  </p>
-
-  <!-- Carte de version -->
-  <div class="version-card">
-    <div class="version-meta">
-      <div class="version-title">
-        <span id="version-text">Version 1.0.3</span>
-      </div>
-      <div class="version-compat" id="compat-text">Android 7.0 ou version ultérieure</div>
-    </div>
-    <div class="version-pill">APK signé</div>
-  </div>
-
-  <!-- Appel à l'action principal -->
-  <div class="cta-block">
-    <a href="https://github.com/youssoufcoulubaly1-debug/okalm-website/releases/download/apps-v1.0.3-v1.1.2/au-calme-1.0.3.apk"
-       download="au-calme-1.0.3.apk"
-       class="btn-download" id="download-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-           stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-      </svg>
-      <span id="download-label">Télécharger OKALM</span>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="/">
+      <img src="/assets/icon-okalm-192.png" alt="" width="30" height="30" />
+      OKALM <span class="brand__ci">CI</span>
     </a>
-    <p class="microcopy" id="download-note">
-      Application officielle OKALM · Android 7.0 ou version ultérieure ·
-      73 Mo · installable même sans connexion Wi-Fi
+    <nav class="nav" aria-label="Sections">
+      <a href="/#pourquoi">Pourquoi OKALM</a>
+      <a href="/#comment">Comment ça marche</a>
+      <a href="/#tarifs">Tarifs</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <div class="topbar__act">
+      <a class="btn btn--sm" href="/#telecharger">Télécharger</a>
+      <details class="menu">
+        <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
+        <div class="menu__panel">
+          <a href="/">Accueil</a>
+          <a href="/#tarifs">Tarifs par niveau</a>
+          <a href="/#faq">Questions des parents</a>
+          <a href="/support">Aide et contact</a>
+          <a href="/get-app-kalmeurs/">Application Kalmeurs</a>
+          <span class="menu__sep"></span>
+          <a href="/devenir-prof" class="menu__kalmeur">Devenir Kalmeur</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="sec">
+  <div class="wrap">
+    <div class="doc">
+      <p class="eyebrow">Application Android officielle</p>
+      <h1>Installez OKALM sur Android</h1>
+      <p>Trouvez un professeur vérifié pour votre enfant — et recevez
+        <strong>un rapport écrit après chaque séance</strong>.</p>
+
+      <h2>Ce que l'application vous apporte</h2>
+      <ul class="check">
+        <li><span class="ck">✓</span><span><b>Des professeurs réellement vérifiés.</b>
+          Pièce d'identité, diplôme, vidéo pédagogique de 1 à 2 minutes 30 et test de la
+          matière noté — 70&nbsp;% minimum pour être validé.</span></li>
+        <li><span class="ck">✓</span><span><b>Vous savez ce qui s'est passé pendant la séance.</b>
+          Après chaque cours, un rapport : ce qui a été travaillé, les points forts, ce qui
+          reste à travailler, le devoir donné.</span></li>
+        <li><span class="ck">✓</span><span><b>Le cycle est réglé une fois, pas séance par séance.</b>
+          4 semaines (28 jours), volume horaire fixé, aucun frais d'inscription.</span></li>
+        <li><span class="ck">✓</span><span><b>Un incident est traité, pas ignoré.</b>
+          Deux absences non signalées du professeur ouvrent droit à un changement ; à la
+          troisième, le remplacement est automatique.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="telecharger">
+  <div class="wrap">
+    <div class="final__box">
+      <img class="final__logo" src="/assets/icon-okalm-192.png" alt="" width="64" height="64" />
+      <h2>OKALM — l'application des parents</h2>
+      <p>Version <span id="version-text">1.0.3</span> · Android 7.0 ou version ultérieure ·
+         73 Mo · APK signé</p>
+      <a class="btn" id="download-btn"
+         href="https://github.com/youssoufcoulubaly1-debug/okalm-website/releases/download/apps-v1.0.3-v1.1.2/au-calme-1.0.3.apk"
+         download="au-calme-1.0.3.apk">Télécharger OKALM <span class="btn__arrow">→</span></a>
+      <p class="final__note">Installation directe, sans Play Store · l'application est déjà
+         installée ? La nouvelle version la met à jour sans perdre vos données.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="doc">
+      <h2 style="margin-top:0">Installer l'application, étape par étape</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Téléchargez le fichier</h3>
+            <p>Appuyez sur « Télécharger OKALM » ci-dessus. Un fichier se place dans vos
+               téléchargements.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Autorisez l'installation</h3>
+            <p>Android affiche un message de prudence parce que l'application ne vient pas du
+               Play Store. Appuyez sur <strong>Paramètres</strong>, puis activez
+               <strong>« Autoriser depuis cette source »</strong> ou
+               <strong>« Installer des applications inconnues »</strong>.
+               <br />Selon votre téléphone&nbsp;: <code>Paramètres › Sécurité</code>, ou
+               <code>Paramètres › Applications › Accès spéciaux</code>.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Lancez l'analyse</h3>
+            <p>Ouvrez le fichier téléchargé. Si Android ou Play Protect propose d'analyser
+               l'application, laissez-le faire&nbsp;: cela prend quelques secondes.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Appuyez sur « Installer »</h3>
+            <p>Ouvrez ensuite OKALM et créez votre compte. Vous pouvez désactiver
+               l'autorisation donnée à l'étape 2, si vous le souhaitez.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="note-box">
+        <p><strong>Pourquoi cet avertissement&nbsp;?</strong> OKALM est distribué directement
+           par OKALM et non par le Google Play Store — c'est ce qui déclenche le message de
+           prudence d'Android. L'application est signée numériquement, et son certificat reste
+           identique à chaque version, ce qui permet les mises à jour sans désinstaller.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="doc">
+      <h2 style="margin-top:0">Si le professeur ne convient pas</h2>
+      <p>Le changement n'est pas une option de confort&nbsp;: il est déclenché par le suivi des
+         incidents. <strong>Deux absences non signalées dans le cycle</strong> vous donnent le
+         droit de demander un changement&nbsp;; à la troisième, le remplacement est
+         <strong>automatique</strong>. Pour tout autre problème, écrivez au support&nbsp;: le
+         changement est prononcé par OKALM, <strong>sans frais pour la famille</strong>, et le
+         reliquat de ce que vous avez payé vous est remboursé.</p>
+
+      <h2>Vous vivez à l'étranger&nbsp;?</h2>
+      <p>L'application vous permet de suivre les séances depuis l'étranger&nbsp;: un rapport
+         après chaque cours et l'historique complet du cycle. Les cours ont lieu à Abidjan et le
+         paiement se fait en francs CFA, par Wave, pour que la famille sur place puisse régler
+         directement.</p>
+
+      <h2>Besoin d'aide pour installer&nbsp;?</h2>
+      <p>Écrivez-nous&nbsp;: <a href="https://wa.me/2250509185121">WhatsApp
+         +225 05 09 18 51 21</a> ou <a href="mailto:support@okalm.ci">support@okalm.ci</a>.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="/">OKALM <span class="brand__ci">CI</span></a>
+        <p>Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale. Un professeur
+           vérifié, un rapport après chaque séance.</p>
+      </div>
+      <div>
+        <h4>Applications</h4>
+        <a href="/get-app-okalm/">OKALM — parents</a>
+        <a href="/get-app-kalmeurs/">Kalmeurs — professeurs</a>
+      </div>
+      <div>
+        <h4>Aide</h4>
+        <a href="/support">Aide et FAQ</a>
+        <a href="https://wa.me/2250509185121">WhatsApp</a>
+        <a href="mailto:support@okalm.ci">support@okalm.ci</a>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <a href="/terms">Conditions d'utilisation</a>
+        <a href="/privacy">Confidentialité</a>
+        <a href="/terms">Mentions légales</a>
+      </div>
+      <div>
+        <h4>Enseigner</h4>
+        <a href="/devenir-prof">Devenir Kalmeur</a>
+        <a href="/devenir-prof#preparer">Comment se préparer</a>
+        <a href="/get-app-kalmeurs/">Télécharger Kalmeurs</a>
+      </div>
+    </div>
+    <p class="foot__bottom">
+      © 2026 OKALM CI — OKALM Côte d'Ivoire · Édité par Coulibaly Sanga Youssouf Klotchele
+      Wounakanh · Abobo, Abidjan, Côte d'Ivoire
     </p>
   </div>
+</footer>
 
-  <!-- Trois avantages -->
-  <div class="card">
-    <div class="card__title">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-           stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      Ce que l'application vous apporte
-    </div>
-
-    <div class="avantages">
-
-      <div class="avantage">
-        <div class="avantage__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
-        </div>
-        <div>
-          <h3>Des professeurs réellement vérifiés</h3>
-          <p>
-            Avant d'enseigner, chaque professeur passe un test pédagogique
-            (70 % minimum), fait vérifier ses diplômes, sa pièce d'identité
-            et enregistre une vidéo de démonstration.
-          </p>
-        </div>
-      </div>
-
-      <div class="avantage">
-        <div class="avantage__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-          </svg>
-        </div>
-        <div>
-          <h3>Vous savez ce qui s'est passé pendant la séance</h3>
-          <p>
-            Après chaque cours, le professeur rédige un rapport : ce qui a été
-            travaillé, les difficultés rencontrées et les progrès. Tout reste
-            archivé dans votre espace.
-          </p>
-        </div>
-      </div>
-
-      <div class="avantage">
-        <div class="avantage__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
-        </div>
-        <div>
-          <h3>Un professeur qui ne convient pas ? Il est remplacé</h3>
-          <p>
-            Si le professeur ne convient pas ou fait défaut, OKALM vous propose un
-            remplaçant qualifié sur le même niveau et les mêmes matières. Les
-            séances non assurées vous sont rendues en temps supplémentaire.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Garantie de remplacement -->
-  <div class="card">
-    <div class="card__title">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-           stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-      Si le professeur ne convient pas, il est remplacé
-    </div>
-
-    <p style="font-size:13px;color:var(--ink-muted);line-height:1.6;margin-bottom:16px">
-      Nous faisons d'abord en sorte que votre enfant ne perde aucun cours.
-      La solution se choisit toujours dans cet ordre :
-    </p>
-
-    <div class="prerequis">
-      <div class="prerequis__item">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-        <div>
-          <strong>1. Un remplaçant qualifié</strong> — même niveau, mêmes matières,
-          proposé en priorité si le professeur ne convient pas ou fait défaut.
-        </div>
-      </div>
-      <div class="prerequis__item">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-        <div>
-          <strong>2. Le temps perdu vous est rendu</strong> — les séances non
-          assurées sont reprogrammées, en temps supplémentaire, sans frais
-          supplémentaires pour vous.
-        </div>
-      </div>
-      <div class="prerequis__item">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-        <div>
-          <strong>3. Le remboursement, en dernier recours seulement</strong> — si
-          aucun remplacement n'est possible dans les 48 heures, la somme
-          correspondante vous est remboursée. Votre argent ne part jamais sans
-          service rendu.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Installation pas à pas -->
-  <div class="card">
-    <div class="card__title">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-           stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-      Installer l'application, étape par étape
-    </div>
-
-    <div class="steps">
-
-      <div class="step">
-        <div class="step__num">1</div>
-        <div>
-          <h3>Téléchargez le fichier</h3>
-          <p>Appuyez sur le bouton « Télécharger OKALM » ci-dessus. Un fichier se place dans vos téléchargements.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__num">2</div>
-        <div>
-          <h3>Autorisez l'installation</h3>
-          <p>
-            Android affiche un message de prudence parce que l'application ne
-            vient pas du Play Store. Appuyez sur <strong>Paramètres</strong>, puis
-            activez <strong>« Autoriser depuis cette source »</strong> ou
-            <strong>« Installer des applications inconnues »</strong>.
-            <br />Selon votre téléphone : <code>Paramètres › Sécurité</code>,
-            ou <code>Paramètres › Applications › Accès spéciaux</code>.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__num">3</div>
-        <div>
-          <h3>Lancez l'analyse</h3>
-          <p>Ouvrez le fichier téléchargé. Si Android ou Play Protect propose d'analyser l'application, laissez-le faire : cela prend quelques secondes.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__num">4</div>
-        <div>
-          <h3>Appuyez sur « Installer »</h3>
-          <p>Ouvrez ensuite OKALM et créez votre compte. Vous pouvez ensuite désactiver l'autorisation donnée à l'étape 2, si vous le souhaitez.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="notice">
-      <strong>Pourquoi cet avertissement ?</strong> OKALM est distribué
-      directement par OKALM et non par le Google Play Store. C'est ce qui
-      déclenche le message de prudence d'Android. L'application est signée
-      numériquement et son certificat reste identique à chaque version, ce qui
-      permet les mises à jour sans désinstaller.
-    </div>
-  </div>
-
-  <!-- Encart diaspora -->
-  <div class="card">
-    <div class="card__title">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-           stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      Vous vivez à l'étranger ?
-    </div>
-    <p style="font-size:13px;color:var(--ink-muted);line-height:1.6">
-      L'application vous permet de suivre les séances de votre enfant depuis
-      l'étranger : rapports après chaque cours, historique complet et
-      communication avec le professeur. Les cours ont lieu à Abidjan et le
-      paiement se fait en francs CFA par Wave, afin que la famille sur place
-      puisse régler directement. Et si un professeur fait défaut, OKALM gère le
-      remplacement pour vous, même à distance.
-    </p>
-  </div>
-
-  <!-- Mise à jour -->
-  <div class="update-card">
-    <p>
-      <strong>OKALM est déjà installé ?</strong><br />
-      Téléchargez la dernière version : Android proposera la mise à jour sans
-      perdre vos données.
-    </p>
-  </div>
-
-  <!-- Contact -->
-  <div class="contact-block">
-    <a class="contact-link" target="_blank" rel="noopener noreferrer"
-       href="https://wa.me/2250767693930?text=Bonjour%2C%20j%27ai%20besoin%20d%27aide%20pour%20installer%20l%27application%20Au%20calme.">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.072-2.126-.499-1.425-.569-2.34-2.02-2.411-2.114-.071-.094-.576-.767-.576-1.463 0-.696.365-1.038.495-1.18.13-.142.285-.178.38-.178.096 0 .19.002.274.006.088.004.206-.034.321.242.119.285.405.992.441 1.064.036.071.06.155.012.25-.048.095-.072.155-.144.238-.071.083-.151.186-.216.25-.071.072-.146.15-.063.292.083.143.37 1.011 1.134 1.69.584.519 1.077.68 1.23.752.153.071.242.06.332-.045.09-.107.383-.448.486-.602.103-.155.206-.131.344-.083.138.048.882.416 1.033.491.151.075.252.111.289.175.036.064.036.37-.108.775z" />
-      </svg>
-      Besoin d'aide pour installer ? Écrivez-nous sur WhatsApp
-    </a>
-
-    <a class="contact-link" href="mailto:support@okalm.ci">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-9.44 5.66a1.5 1.5 0 01-1.56 0L1.5 8.67z" />
-        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.828a1.5 1.5 0 001.572 0L22.5 6.908z" />
-      </svg>
-      support@okalm.ci
-    </a>
-  </div>
-
-  <p class="footer">
-    © 2026 OKALM · <a href="/privacy">Confidentialité</a> ·
-    <a href="/terms">Conditions d'utilisation</a> ·
-    <a href="/support">Aide</a>
-  </p>
-
-</div>
-
+<script src="/2026.js" defer></script>
 </body>
 </html>

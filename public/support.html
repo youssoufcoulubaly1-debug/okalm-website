@@ -3,195 +3,334 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support & FAQ | OKALM</title>
-  <meta name="description" content="Questions fréquentes sur OKALM — parents, élèves, professeurs. Sécurité, paiements Wave, annulation, changement de prof, tarifs par cycle." />
+  <title>Aide et contact | OKALM CI</title>
+  <meta name="description" content="Les réponses vérifiées aux questions des parents et des Kalmeurs : professeur, sécurité, rapports, annulation, paiement Wave, rémunération. WhatsApp et support@okalm.ci." />
+  <meta name="theme-color" content="#FFF6EC" />
+  <meta property="og:title" content="Aide et contact — OKALM CI" />
+  <meta property="og:description" content="Questions des parents et des Kalmeurs, réponses vérifiées. WhatsApp et support@okalm.ci." />
+  <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png" />
+  <meta property="og:url" content="https://okalm.ci/support" />
   <link rel="canonical" href="https://okalm.ci/support" />
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-okalm-192.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <style>body { font-family: 'Inter', var(--font); }</style>
+  <link rel="apple-touch-icon" href="/assets/icon-okalm-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/2026.css" />
 </head>
 <body>
+<a class="skip" href="#main">Aller au contenu</a>
 
-<nav class="nav">
-  <div class="nav__inner">
-    <a href="/" class="nav__logo">OKALM</a>
-    <button class="nav__toggle" aria-label="Menu">☰</button>
-    <div class="nav__links">
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="/">
+      <img src="/assets/icon-okalm-192.png" alt="" width="30" height="30" />
+      OKALM <span class="brand__ci">CI</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/#pourquoi">Pourquoi OKALM</a>
       <a href="/#comment">Comment ça marche</a>
       <a href="/#tarifs">Tarifs</a>
-      <a href="/support">FAQ</a>
-      <a href="/devenir-prof" class="btn btn--outline btn--sm">Devenir Kalmeur</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <div class="topbar__act">
+      <a class="btn btn--sm" href="/#telecharger">Télécharger</a>
+      <details class="menu">
+        <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
+        <div class="menu__panel">
+          <a href="/">Accueil</a>
+          <a href="/#pourquoi">Pourquoi OKALM</a>
+          <a href="/#comment">Comment ça marche</a>
+          <a href="/#tarifs">Tarifs par niveau</a>
+          <a href="/#faq">Questions des parents</a>
+          <span class="menu__sep"></span>
+          <a href="/support">Aide et contact</a>
+          <a href="/#telecharger" class="menu__strong">Télécharger l'application</a>
+          <span class="menu__sep"></span>
+          <a href="/devenir-prof" class="menu__kalmeur">Devenir Kalmeur</a>
+        </div>
+      </details>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- Hero support -->
-<section class="hero" style="padding:56px 20px 48px">
-  <div class="container">
-    <h1 style="font-size:clamp(1.8rem,4vw,2.5rem)">Comment pouvons-nous vous aider ?</h1>
-    <p class="hero__subtitle">Parcourez les questions fréquentes ou contactez-nous directement.</p>
-    <div class="hero__cta">
-      <a href="https://wa.me/2250509185121" class="btn btn--primary btn--lg" target="_blank" rel="noopener">💬 WhatsApp Business</a>
-      <a href="mailto:support@okalm.ci" class="btn btn--outline-white btn--lg">✉️ support@okalm.ci</a>
-    </div>
-  </div>
-</section>
+<main id="main">
 
-<!-- FAQ Parents -->
-<section class="section">
-  <div class="container" style="max-width:760px">
-    <h2 class="mb-4">🏠 Questions des parents</h2>
-
-    <div class="faq-item">
-      <button class="faq-q">Qui est le Kalmeur assigné à mon enfant ?</button>
-      <div class="faq-a">Avant chaque mission, vous recevez une fiche complète du Kalmeur : photo, diplômes vérifiés, matières enseignées, note moyenne et commentaires des familles précédentes. Vous pouvez l'accepter ou demander un autre profil.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Mon enfant est-il en sécurité ?</button>
-      <div class="faq-a">Tous les Kalmeurs passent une triple validation avant d'être acceptés : vérification du diplôme, évaluation d'une vidéo pédagogique par notre équipe, et test de matière noté. Les séances se déroulent à votre domicile — vous êtes présent.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Comment se passe la première séance ?</button>
-      <div class="faq-a">La première séance (90 minutes) est un <strong>bilan pédagogique</strong> : le Kalmeur évalue le niveau de votre enfant et définit le plan de travail. Elle est facturée comme les autres séances — <strong>il n'y a pas de séance gratuite</strong>. Aucun engagement de durée : vous restez libre d'arrêter à la fin de chaque cycle.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Comment changer de professeur si ça ne convient pas ?</button>
-      <div class="faq-a">Vous bénéficiez d'une <strong>garantie de remplacement gratuite dans les 2 semaines</strong> suivant la première séance. Si la méthode, la personnalité ou les résultats ne vous conviennent pas, contactez le support — nous assignons un nouveau Kalmeur sans frais supplémentaires.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Comment puis-je suivre les progrès de mon enfant ?</button>
-      <div class="faq-a">Après chaque séance, vous recevez un rapport détaillé dans l'app : ce qui a été vu, les points à travailler, et l'évaluation du Kalmeur. Vous accédez également à un bilan hebdomadaire, un bilan de fin de cycle, et le rapport initial.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Puis-je annuler une séance ?</button>
-      <div class="faq-a">Oui. <strong>Annulation ≥ 24h à l'avance :</strong> gratuite, la séance peut être reprogrammée. <strong>Annulation < 24h :</strong> des frais d'annulation tardive peuvent s'appliquer (50% du tarif). En cas d'empêchement exceptionnel, contactez le support.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Quelles communes sont desservies ?</button>
-      <div class="faq-a">Abobo, Adjamé, Anyama, Attécoubé, Bingerville, Cocody, Koumassi, Marcory, Plateau, Port-Bouët, Songon, Treichville, Yopougon. Si votre commune n'est pas listée, inscrivez-vous quand même — nous l'ajouterons en priorité selon la demande.</div>
+<section class="sec">
+  <div class="wrap">
+    <div class="doc">
+      <p class="eyebrow">Aide et contact</p>
+      <h1>Comment pouvons-nous vous aider&nbsp;?</h1>
+      <p class="meta">Les réponses ci-dessous sont celles que le service rend réellement.
+        Si une réponse manque, écrivez-nous : c'est le canal le plus rapide.</p>
+      <p style="margin-top:22px">
+        <a class="btn" href="https://wa.me/2250509185121">WhatsApp&nbsp;: +225 05 09 18 51 21 <span class="btn__arrow">→</span></a>
+        <a class="btn btn--ghost" href="mailto:support@okalm.ci">support@okalm.ci</a>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- FAQ Élèves -->
-<section class="section--alt">
-  <div class="container" style="max-width:760px">
-    <h2 class="mb-4">🎓 Questions des élèves</h2>
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="doc">
+      <h2>Les parents</h2>
 
-    <div class="faq-item">
-      <button class="faq-q">Je suis étudiant majeur, puis-je m'inscrire seul ?</button>
-      <div class="faq-a">Oui, les élèves majeurs (18 ans et plus) peuvent s'inscrire directement sur l'app OKALM. Pour les mineurs, c'est le parent ou tuteur légal qui crée et gère le compte.</div>
-    </div>
+      <div class="faq">
+        <details>
+          <summary>Qui est le professeur assigné à mon enfant&nbsp;?</summary>
+          <p>OKALM assigne le professeur <strong>sous 48 à 72 heures</strong> après la
+             confirmation du paiement, selon le niveau, la matière, votre commune et les
+             disponibilités réelles. Vous ne le choisissez pas vous-même&nbsp;: il est engagé
+             pour tout le cycle, pas séance par séance — c'est ce qui fait tenir le créneau.</p>
+          <p>Son nom et ses matières apparaissent dans l'application. Si quelque chose ne
+             convient pas, voyez la question du changement de professeur plus bas.</p>
+        </details>
 
-    <div class="faq-item">
-      <button class="faq-q">Quelles matières sont disponibles ?</button>
-      <div class="faq-a">Toutes les matières scolaires : Mathématiques, Physique-Chimie, SVT, Français, Anglais, Histoire-Géographie, Philosophie, Économie, Comptabilité, Informatique. Les Kalmeurs sont assignés selon leur spécialité exacte — pas de généraliste.</div>
-    </div>
+        <details>
+          <summary>Mon enfant est-il en sécurité&nbsp;?</summary>
+          <p>Chaque Kalmeur est vérifié <strong>avant sa première mission</strong>&nbsp;: pièce
+             d'identité, diplôme déclaré, vidéo pédagogique de <strong>1 à 2 minutes 30</strong>,
+             et test de la matière qu'il veut enseigner — <strong>70&nbsp;% minimum</strong>
+             pour être validé.</p>
+          <p>Les séances ont lieu à votre domicile, en votre présence.</p>
+        </details>
 
-    <div class="faq-item">
-      <button class="faq-q">Le prof vient-il vraiment à domicile ?</button>
-      <div class="faq-a">Oui, c'est le principe fondateur d'OKALM. Le Kalmeur se déplace à votre adresse. Vous choisissez le créneau horaire. Le déplacement est inclus dans votre forfait : aucun supplément transport ne vous est facturé.</div>
-    </div>
+        <details>
+          <summary>Comment se passe la première séance&nbsp;?</summary>
+          <p>C'est un <strong>bilan de 90 minutes</strong>&nbsp;: le professeur évalue le niveau
+             de votre enfant, repère les lacunes et fixe le plan de travail du cycle.</p>
+          <p>Elle est <strong>facturée comme les autres séances</strong>. Il n'y a pas de séance
+             gratuite, et c'est volontaire&nbsp;: la première séance est un travail, pas un
+             rendez-vous d'essai.</p>
+        </details>
 
-    <div class="faq-item">
-      <button class="faq-q">Comment savoir si mon niveau est compatible avec le service ?</button>
-      <div class="faq-a">Le bilan pédagogique initial (90 min) sert précisément à cela : évaluer votre niveau, identifier les lacunes, et définir un plan de cours adapté. Aucun engagement de durée.</div>
+        <details>
+          <summary>Comment changer de professeur si ça ne convient pas&nbsp;?</summary>
+          <p>Le changement est déclenché par le suivi des incidents&nbsp;:
+             <strong>deux absences non signalées dans le cycle</strong> vous donnent le droit
+             de demander un changement&nbsp;; à la troisième, le remplacement est
+             <strong>automatique</strong>.</p>
+          <p>Pour tout autre problème — la méthode, la relation, le rythme — écrivez au support.
+             Le changement est prononcé par OKALM, <strong>sans frais pour la famille</strong>.</p>
+        </details>
+
+        <details>
+          <summary>Comment suivre les progrès de mon enfant&nbsp;?</summary>
+          <p>Un rapport arrive <strong>après chaque séance</strong>&nbsp;: objectif de la séance,
+             contenus traités, points forts, ce qui reste à travailler, devoir donné et le
+             commentaire du professeur.</p>
+          <p>Quatre types se succèdent au fil du cycle&nbsp;: <strong>initial</strong>,
+             <strong>hebdomadaire</strong>, <strong>mensuel</strong> et
+             <strong>note rapide</strong>.</p>
+        </details>
+
+        <details>
+          <summary>Puis-je annuler, et que se passe-t-il pour l'argent&nbsp;?</summary>
+          <p>Trois moments, trois conséquences&nbsp;:</p>
+          <p><strong>Avant qu'un professeur soit assigné</strong> — aucun engagement n'a été
+             pris&nbsp;: la totalité de ce que vous avez payé vous est remboursée.</p>
+          <p><strong>Dès qu'un professeur est assigné</strong> — il a bloqué son créneau pour
+             votre enfant&nbsp;: <strong>la première séance est due</strong>, et le reliquat vous
+             est remboursé.</p>
+          <p><strong>Une fois des séances réalisées</strong> — les séances qui ont eu lieu sont
+             réglées, le reste vous est remboursé.</p>
+          <p>Le montant exact est <strong>calculé par la plateforme et affiché avant que vous
+             confirmiez</strong>. Aucun montant n'est estimé par l'application.</p>
+        </details>
+
+        <details>
+          <summary>Et si mon enfant est absent&nbsp;?</summary>
+          <p><strong>Absence non signalée de la famille&nbsp;:</strong> la séance est consommée et
+             n'est pas remboursée.</p>
+          <p><strong>Absence du professeur&nbsp;:</strong> aucun frais pour vous, une compensation
+             vous est accordée, et l'incident est enregistré au suivi du Kalmeur.</p>
+          <p>Dans les deux cas, prévenez le support au plus tôt&nbsp;: c'est ce qui permet de
+             reprogrammer au lieu de perdre la séance.</p>
+        </details>
+
+        <details>
+          <summary>Quelles communes sont desservies&nbsp;?</summary>
+          <p>Abobo, Adjamé, Anyama, Attécoubé, Bingerville, Cocody, Koumassi, Marcory, Plateau,
+             Port-Bouët, Songon, Treichville et Yopougon.</p>
+          <p>Si votre commune n'est pas listée, écrivez-nous&nbsp;: nous ouvrons en priorité là
+             où la demande se présente.</p>
+        </details>
+
+        <details>
+          <summary>Comment payer un cycle&nbsp;?</summary>
+          <p>Par <strong>Wave</strong>, en une fois pour le cycle de 4 semaines (28 jours),
+             <strong>avant la première séance</strong>. Vous envoyez la preuve de virement dans
+             l'application&nbsp;; notre équipe la vérifie et confirme le paiement.</p>
+          <p>Aucune carte bancaire n'est demandée ni stockée.</p>
+        </details>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ Kalmeurs -->
-<section class="section">
-  <div class="container" style="max-width:760px">
-    <h2 class="mb-4">👨‍🏫 Questions des enseignants (Kalmeurs)</h2>
+<section class="sec">
+  <div class="wrap">
+    <div class="doc">
+      <h2>L'enfant, le compte et les matières</h2>
 
-    <div class="faq-item">
-      <button class="faq-q">Quelles sont les conditions pour postuler ?</button>
-      <div class="faq-a">Bac minimum requis. Vous devez soumettre votre diplôme, enregistrer une vidéo pédagogique de 3 minutes sur la matière de votre choix, et passer un test de matière noté. L'inscription est gratuite.</div>
-    </div>
+      <div class="faq">
+        <details>
+          <summary>Qui crée le compte&nbsp;?</summary>
+          <p>Le parent ou le tuteur légal. L'application OKALM est un compte de famille&nbsp;:
+             le nom de l'enfant se renseigne au moment de la commande.</p>
+        </details>
 
-    <div class="faq-item">
-      <button class="faq-q">Combien puis-je gagner ?</button>
-      <div class="faq-a">Vous percevez <strong>70% du montant payé</strong>. Soit entre 2 625 F/h (Primaire) et 4 200 F/h (1ʳᵉ et Terminale). Votre transport est inclus directement dans vos 70 % : aucune déduction n'est appliquée. Les paiements sont versés <strong>chaque semaine</strong> via Wave ou MTN MoMo.</div>
-    </div>
+        <details>
+          <summary>Quelles matières sont couvertes&nbsp;?</summary>
+          <p>Les matières du programme ivoirien (DPFC), <strong>par niveau</strong> — et, au
+             lycée, <strong>par série</strong>. Ce n'est donc pas la même liste en CP1 et en
+             Terminale, et c'est volontaire.</p>
+          <p>Le professeur est assigné sur une matière qu'il a validée par un test&nbsp;: pas de
+             généraliste.</p>
+        </details>
 
-    <div class="faq-item">
-      <button class="faq-q">Est-ce que je choisis mes créneaux ?</button>
-      <div class="faq-a">Oui, à 100%. Vous renseignez vos disponibilités dans l'app Kalmeurs. Matin, soir, week-end — vous gérez votre emploi du temps comme vous l'entendez. Aucune exclusivité exigée.</div>
-    </div>
+        <details>
+          <summary>Le professeur vient-il vraiment à domicile&nbsp;?</summary>
+          <p>Oui, à l'adresse que vous indiquez, sur les créneaux que vous choisissez. Le
+             déplacement est <strong>inclus</strong>&nbsp;: aucun supplément de transport ne vous
+             est facturé.</p>
+        </details>
 
-    <div class="faq-item">
-      <button class="faq-q">La première séance est-elle payée ?</button>
-      <div class="faq-a">Oui. Toute séance effectuée est intégralement rémunérée par OKALM dès le premier contact avec l'élève. Vous n'avancez aucun frais et aucune séance n'est bénévole ni gratuite.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Comment fonctionne le paiement Wave pour les Kalmeurs ?</button>
-      <div class="faq-a">Chaque semaine, OKALM calcule vos gains (70% des séances validées) et effectue un virement Wave ou MoMo sur votre numéro enregistré. Vous recevez une notification à chaque virement. Aucune attente mensuelle.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Puis-je enseigner plusieurs matières ?</button>
-      <div class="faq-a">Oui, à condition de valider un test pour chaque matière déclarée. Vous êtes assigné uniquement aux matières pour lesquelles votre qualification a été vérifiée.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q">Comment fonctionne Wave côté clients ?</button>
-      <div class="faq-a">Après chaque séance, le client effectue un virement Wave (ou Orange Money / MTN MoMo) au numéro OKALM communiqué, puis soumet une capture d'écran de la preuve dans l'app. Notre équipe valide le paiement sous 24h et confirme la séance.</div>
+        <details>
+          <summary>Comment installer l'application&nbsp;?</summary>
+          <p>L'application <strong>OKALM</strong> s'installe directement depuis ce site&nbsp;:
+             vous téléchargez le fichier, puis vous autorisez l'installation dans Android. Pas
+             besoin du Play Store. Il faut <strong>Android 7 ou plus récent</strong>.</p>
+        </details>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Contact bloc -->
-<section class="section--alt">
-  <div class="container text-center" style="max-width:600px">
-    <h2 class="mb-2">Vous n'avez pas trouvé votre réponse ?</h2>
-    <p class="text-muted mb-4">Notre équipe support répond dans les 2h en semaine, 4h le week-end.</p>
-    <div class="hero__cta" style="justify-content:center">
-      <a href="https://wa.me/2250509185121" class="btn btn--primary" target="_blank" rel="noopener">💬 Écrire sur WhatsApp</a>
-      <a href="mailto:support@okalm.ci" class="btn btn--outline">✉️ Envoyer un email</a>
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="doc">
+      <h2>Les Kalmeurs (professeurs)</h2>
+
+      <div class="faq">
+        <details>
+          <summary>Quelles sont les conditions pour enseigner&nbsp;?</summary>
+          <p><strong>Bac minimum.</strong> Ensuite&nbsp;: pièce d'identité, diplôme déclaré,
+             vidéo pédagogique de <strong>1 à 2 minutes 30</strong>, et test de la matière visée
+             — <strong>70&nbsp;% minimum</strong>.</p>
+          <p>L'inscription est gratuite. Les programmes ne s'ouvrent qu'avec un
+             <strong>contrat actif</strong>&nbsp;: avant validation, ils restent visibles mais
+             grisés, avec la raison affichée.</p>
+        </details>
+
+        <details>
+          <summary>Combien est-ce que je gagne&nbsp;?</summary>
+          <p><strong>70&nbsp;% du montant réellement payé par la famille</strong> — pas d'un tarif
+             affiché. Le transport est inclus dans ces 70&nbsp;%. Les frais de réception du
+             prestataire de paiement (environ 1&nbsp;%) restent à votre charge&nbsp;: le net
+             crédité est d'environ <strong>69,3&nbsp;%</strong>.</p>
+          <p>Deux repères&nbsp;: <strong>3 750&nbsp;F</strong> facturés de l'heure → 2 625&nbsp;F
+             pour vous&nbsp;; <strong>6 000&nbsp;F</strong> de l'heure → 4 200&nbsp;F. Et si la
+             famille a payé avec une remise, votre part suit le montant payé.</p>
+        </details>
+
+        <details>
+          <summary>Quand et comment suis-je payé&nbsp;?</summary>
+          <p><strong>Chaque semaine</strong>, sur le numéro que vous avez enregistré, sur les
+             séances validées du cycle en cours. Vous n'attendez pas la fin du mois.</p>
+        </details>
+
+        <details>
+          <summary>Est-ce que je choisis mes créneaux&nbsp;?</summary>
+          <p>Vous renseignez vos disponibilités dans l'application Kalmeurs, et les missions
+             proposées en tiennent compte&nbsp;: la disponibilité pèse dans le choix du
+             professeur, autant que la distance.</p>
+          <p>Aucune exclusivité n'est exigée&nbsp;: vous restez libre de votre emploi du
+             temps.</p>
+        </details>
+
+        <details>
+          <summary>La première séance est-elle payée&nbsp;?</summary>
+          <p><strong>Oui.</strong> Toute séance effectuée est rémunérée. Le cycle de la famille
+             est réglé avant que vous vous déplaciez&nbsp;: vous ne travaillez jamais « pour
+             voir ».</p>
+        </details>
+
+        <details>
+          <summary>Puis-je enseigner plusieurs matières et plusieurs niveaux&nbsp;?</summary>
+          <p>Oui, avec <strong>un test par matière</strong>. Le <strong>primaire est ouvert à
+             tous les professeurs</strong>, quel que soit le bac. Au collège et au lycée, l'accès
+             dépend de votre série&nbsp;: un scientifique enseigne les matières scientifiques, un
+             littéraire les littéraires.</p>
+        </details>
+
+        <details>
+          <summary>Comment la famille paie-t-elle&nbsp;?</summary>
+          <p>Par <strong>Wave</strong>, en une fois pour le cycle, avant le début des séances.
+             Vous n'avez jamais d'argent à encaisser&nbsp;: ni à la porte, ni à la fin du mois.</p>
+        </details>
+      </div>
     </div>
-    <p class="text-muted mt-4" style="font-size:.9rem">
-      support@okalm.ci — réponse garantie sous 24h<br>
-      WhatsApp Business : +225 0509185121
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="doc" style="text-align:center">
+      <h2 style="margin-top:0">Vous n'avez pas trouvé votre réponse&nbsp;?</h2>
+      <p>Écrivez-nous&nbsp;: la question posée est la meilleure façon d'améliorer cette page.</p>
+      <p style="margin-top:24px">
+        <a class="btn" href="https://wa.me/2250509185121">Écrire sur WhatsApp <span class="btn__arrow">→</span></a>
+        <a class="btn btn--ghost" href="mailto:support@okalm.ci">Envoyer un email</a>
+      </p>
+      <p class="meta" style="margin-top:20px">WhatsApp&nbsp;: +225 05 09 18 51 21 ·
+         support@okalm.ci</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="/">OKALM <span class="brand__ci">CI</span></a>
+        <p>Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale. Un professeur
+           vérifié, un rapport après chaque séance.</p>
+      </div>
+      <div>
+        <h4>Applications</h4>
+        <a href="/get-app-okalm/">OKALM — parents</a>
+        <a href="/get-app-kalmeurs/">Kalmeurs — professeurs</a>
+      </div>
+      <div>
+        <h4>Aide</h4>
+        <a href="/support">Aide et FAQ</a>
+        <a href="https://wa.me/2250509185121">WhatsApp</a>
+        <a href="mailto:support@okalm.ci">support@okalm.ci</a>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <a href="/terms">Conditions d'utilisation</a>
+        <a href="/privacy">Confidentialité</a>
+        <a href="/terms">Mentions légales</a>
+      </div>
+      <div>
+        <h4>Enseigner</h4>
+        <a href="/devenir-prof">Devenir Kalmeur</a>
+        <a href="/devenir-prof#preparer">Comment se préparer</a>
+        <a href="/get-app-kalmeurs/">Télécharger Kalmeurs</a>
+      </div>
+    </div>
+    <p class="foot__bottom">
+      © 2026 OKALM CI — OKALM Côte d'Ivoire · Édité par Coulibaly Sanga Youssouf Klotchele
+      Wounakanh · Abobo, Abidjan, Côte d'Ivoire
     </p>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div><div class="footer__title">OKALM</div><p style="font-size:.9rem">Plateforme de soutien scolaire à domicile à Abidjan.</p></div>
-      <div><div class="footer__title">Applications</div>
-        <a href="/get-app-okalm/" class="footer__link">OKALM — parents</a>
-        <a href="/get-app-kalmeurs/" class="footer__link">Kalmeurs — professeurs</a>
-      </div>
-      <div><div class="footer__title">Liens</div>
-        <a href="/" class="footer__link">Accueil</a>
-        <a href="/devenir-prof" class="footer__link">Devenir Kalmeur</a>
-        <a href="/support" class="footer__link">Support / FAQ</a>
-      </div>
-      <div><div class="footer__title">Légal</div>
-        <a href="/privacy" class="footer__link">Confidentialité</a>
-        <a href="/terms" class="footer__link">CGU</a>
-      </div>
-      <div><div class="footer__title">Contact</div>
-        <a href="mailto:support@okalm.ci" class="footer__link">support@okalm.ci</a>
-        <a href="https://wa.me/2250509185121" class="footer__link">WhatsApp</a>
-      </div>
-    </div>
-    <div class="footer__bottom">© 2026 OKALM CI · Édité par Coulibaly Sanga Youssouf Klotchele Wounakanh · Abobo, Abidjan, Côte d'Ivoire</div>
   </div>
 </footer>
 
-<a href="https://wa.me/2250509185121" class="whatsapp-fab" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
-<script src="/app.js"></script>
+<script src="/2026.js" defer></script>
 </body>
 </html>

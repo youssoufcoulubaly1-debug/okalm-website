@@ -474,6 +474,32 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
   .remises__g{grid-template-columns:repeat(4,1fr)}
 }
 
+/* ---------- PAGES DE CONTENU (migration du 17/10/2026, nuit) --------------
+   Bloc AJOUTÉ pour migrer /terms, /privacy, /support, 404 et /get-app-* vers
+   cette feuille sans toucher une seule règle existante. Seules les classes
+   .doc, .doc--legal et .note-box sont nouvelles ; aucune ne s'applique à
+   l'accueil, qui n'en contient pas. Le texte légal est repris au mot près :
+   ce bloc ne fait que le rendre lisible, il ne le réécrit pas.
+   ------------------------------------------------------------------------- */
+.doc{max-width:768px;margin:0 auto}
+.doc h1{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:10px}
+.doc h2{font-size:1.22rem;margin:2.4rem 0 .7rem;letter-spacing:-.01em}
+.doc h3{font-size:1.04rem;margin:1.6rem 0 .5rem;font-family:var(--display)}
+.doc p{margin:.72rem 0;color:var(--ink-2)}
+.doc ul,.doc ol{margin:.72rem 0;padding-left:1.3rem;color:var(--ink-2)}
+.doc li{margin:.4rem 0}
+.doc strong{color:var(--ink)}
+/* Les liens du corps sont soulignés, MAIS PAS les boutons : `.doc a` s'appliquait
+   aux `.btn` et rendait le texte vert sur fond vert — bouton vide, vu en capture
+   le 17/10/2026. Les boutons gardent donc leur propre couleur. */
+.doc p a:not(.btn),.doc li a:not(.btn),.doc .note-box a:not(.btn){color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.doc code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--cream);border-radius:5px;padding:1px 5px}
+.doc .meta{font-size:.87rem;color:var(--muted);margin:0 0 1.8rem}
+.doc hr{border:0;border-top:1px solid var(--line-strong);margin:2.2rem 0}
+.note-box{background:var(--accent-warm);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:18px 20px;margin:26px 0;font-size:.95rem;color:var(--ink-2)}
+.note-box p{margin:.4rem 0}
+.note-box strong,.note-box b{color:var(--ink)}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:479px){
   /* Sur téléphone, le menu (3 traits) restait loin du bord droit : on rapproche
