@@ -543,6 +543,22 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 @media (min-width:1100px){
   .why-pay{position:sticky;top:calc(var(--topbar-h) + 10px)}
 }
+/* ---------- CARTE DU RAPPORT : DES LIGNES, PAS DES TIRETS (18/10/2026) -----
+   Le proprietaire : « les lignes objectifs, le contenu se superpose sur les
+   trois lignes, ce n'est pas joli [...] c'est des lignes meme, comme ligne de
+   contenu sur feuille, bien allongee, qui commence a gauche et finit vers le
+   bout a droite. Tout au plus deux lignes. »
+   Les « — — — » etaient du TEXTE : il s'affichait au-dessus des lignes au lieu
+   de les dessiner. On les masque, et la ligne devient un vrai filet de cahier
+   sous chaque champ. Le texte repose sur le filet, il ne le traverse plus.
+   ------------------------------------------------------------------------- */
+.report__row{
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(28,23,18,.09);
+}
+.report__row:last-child{border-bottom:1px solid rgba(28,23,18,.09)}
+.report__ghost{display:none}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
