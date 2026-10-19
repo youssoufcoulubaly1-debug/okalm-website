@@ -704,3 +704,30 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
   *{transition:none!important;animation:none!important}
 }
 
+
+/* ── Bloc « Réduction exceptionnelle » : un seul tableau, mis à jour au clic ────────────── */
+.cyc{margin-top:22px;background:linear-gradient(158deg,var(--green-deep),var(--green));border-radius:26px;padding:26px 24px 22px;color:#F4EBE1;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cyc__tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green-deep);background:var(--accent-warm);border-radius:999px;padding:6px 12px}
+.cyc__head h3{font-family:var(--display);font-size:clamp(1.15rem,2.6vw,1.55rem);margin:12px 0 6px;color:#fff;letter-spacing:-.02em;line-height:1.2}
+.cyc__sub{margin:0;font-size:.88rem;color:#D9CDBF;max-width:56em;line-height:1.6}
+.cyc__seg{display:flex;gap:6px;background:rgba(255,255,255,.13);border-radius:999px;padding:6px;margin:18px 0;max-width:540px}
+.cyc__seg button{flex:1;border:0;cursor:pointer;background:transparent;color:#EFE4D6;font-family:var(--sans);font-size:.92rem;font-weight:700;padding:10px 8px;border-radius:999px;line-height:1.15;transition:background .18s ease,color .18s ease}
+.cyc__seg button span{display:block;font-size:.66rem;font-weight:600;opacity:.75;margin-top:2px}
+.cyc__seg button[aria-selected="true"]{background:var(--cream);color:var(--green-deep);box-shadow:0 2px 12px rgba(0,0,0,.20)}
+.cyc__seg button[aria-selected="true"] span{opacity:.72}
+.cyc__seg button:focus-visible{outline:2px solid var(--accent-warm);outline-offset:3px}
+.ref--cyc{margin-top:0;background:#fff;border-radius:18px;border:0;box-shadow:none}
+.ref--cyc .ref__h s{text-decoration:line-through;color:#9C8D7E;font-weight:600}
+.ref--cyc .ref__c{transition:color .15s ease}
+.cyc__note{margin:14px 0 0;font-size:.8rem;color:#CFC3B5;line-height:1.5}
+@media (max-width:720px){
+  .cyc{padding:20px 16px 18px;border-radius:22px}
+  .cyc__seg{max-width:none;margin:16px 0}
+  .cyc__seg button{padding:9px 6px;font-size:.84rem}
+  .ref--cyc .ref__row{padding:12px 14px}
+}
+
+/* Correctif 19/10 : sans cette ligne les noms de niveaux héritent du texte clair
+   de la carte verte et deviennent invisibles sur le fond blanc. */
+.ref--cyc{color:var(--ink)}
+.ref--cyc .ref__k{color:var(--ink)}

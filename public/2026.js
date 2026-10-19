@@ -32,3 +32,35 @@
     if (e.key === "Escape") fermer(document.querySelector(".menu"));
   });
 })();
+
+/* ── Bloc « Réduction exceptionnelle » : un seul tableau, mis à jour au clic ────────────── */
+(function () {
+  var seg = document.querySelector(".cyc__seg");
+  var table = document.getElementById("cycTable");
+  if (!seg || !table) return;
+  var cells = table.querySelectorAll(".ref__c[data-base]");
+
+  function formater(n) {
+    return n.toLocaleString("fr-FR").replace(/[\u202f\u00a0]/g, " ") + " F";
+  }
+
+  function rendre(pct) {
+    cells.forEach(function (c) {
+      var base = Number(c.getAttribute("data-base"));
+      if (base) c.textContent = formater(Math.round(base * (1 - pct / 100)));
+    });
+  }
+
+  seg.addEventListener("click", function (e) {
+    var bouton = e.target.closest("button[data-pct]");
+    if (!bouton) return;
+    Array.prototype.forEach.call(seg.querySelectorAll("button"), function (b) {
+      b.setAttribute("aria-selected", "false");
+    });
+    bouton.setAttribute("aria-selected", "true");
+    rendre(Number(bouton.getAttribute("data-pct")));
+  });
+
+  // Le HTML porte déjà les prix du 1er cycle : on ne repeint que si besoin.
+  rendre(20);
+})();
