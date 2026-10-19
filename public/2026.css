@@ -559,7 +559,148 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 .report__row:last-child{border-bottom:1px solid rgba(28,23,18,.09)}
 .report__ghost{display:none}
 
+/* ---------- NOUVELLES RÈGLES COPYWRITING 2026 ---------- */
+.btn--wa{
+  background:#1B8755;
+  color:#fff;
+  border-color:#166e45;
+}
+.btn--wa:hover{
+  background:#157347;
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 16px 30px -14px rgba(27,135,85,.6);
+}
+.hero__promise{
+  margin-top:14px;
+  font-size:.95rem;
+  line-height:1.5;
+  color:var(--green-deep);
+  background:#EAF3ED;
+  border-left:4px solid var(--green);
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+}
+.args-grid{
+  display:grid;
+  gap:16px;
+  margin-top:36px;
+  grid-template-columns:1fr;
+}
+@media (min-width:680px){
+  .args-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media (min-width:980px){
+  .args-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+.arg-card{
+  background:#fff;
+  border-radius:20px;
+  padding:24px 22px;
+  border:1px solid rgba(241,228,212,.7);
+  box-shadow:var(--shadow-sm);
+  display:flex;
+  flex-direction:column;
+}
+.arg-card__num{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:#E4F1E9;
+  color:var(--green);
+  font-family:var(--display);
+  font-weight:800;
+  display:grid;
+  place-items:center;
+  font-size:.95rem;
+  margin-bottom:14px;
+}
+.arg-card h3{
+  font-size:1.08rem;
+  margin-bottom:8px;
+  letter-spacing:-.015em;
+  color:var(--ink);
+}
+.arg-card p{
+  font-size:.92rem;
+  color:var(--ink-2);
+  line-height:1.55;
+}
+.promesse-boxes{
+  display:grid;
+  gap:16px;
+  margin-top:32px;
+  grid-template-columns:1fr;
+}
+@media (min-width:720px){
+  .promesse-boxes{
+    grid-template-columns:1fr 1fr;
+  }
+}
+.promesse-box{
+  background:#fff;
+  border:1px solid #D6E8DC;
+  border-radius:20px;
+  padding:24px 22px;
+  box-shadow:var(--shadow-sm);
+  position:relative;
+}
+.promesse-box--garantie{
+  border-color:#F0DFC8;
+  background:#FFFDF9;
+}
+.promesse-box__tag{
+  display:inline-block;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#E9F4ED;
+  color:var(--green);
+  margin-bottom:12px;
+}
+.promesse-box--garantie .promesse-box__tag{
+  background:#FDF1E2;
+  color:#B45309;
+}
+.promesse-box h3{
+  font-size:1.15rem;
+  margin-bottom:8px;
+  letter-spacing:-.015em;
+}
+.promesse-box p{
+  font-size:.92rem;
+  color:var(--ink-2);
+  line-height:1.55;
+}
+.notice-box{
+  margin-top:24px;
+  background:#FFF8F1;
+  border:1px solid #F5DEC2;
+  border-radius:18px;
+  padding:20px 22px;
+  color:var(--ink-2);
+  font-size:.92rem;
+  line-height:1.55;
+}
+.notice-box h3{
+  font-size:1.02rem;
+  color:var(--ink);
+  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
 }
+
