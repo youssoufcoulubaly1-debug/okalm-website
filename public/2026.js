@@ -64,3 +64,20 @@
   // Le HTML porte déjà les prix du 1er cycle : on ne repeint que si besoin.
   rendre(20);
 })();
+
+/* Correctif 19/10 — la couleur suit le cycle choisi. */
+(function () {
+  var bloc = document.querySelector(".cyc");
+  if (!bloc) return;
+  var cycle = { "20": "1", "15": "2", "10": "3" };
+  function peindre(pct) {
+    bloc.setAttribute("data-cycle", cycle[String(pct)] || "1");
+  }
+  peindre(20);
+  var seg = bloc.querySelector(".cyc__seg");
+  if (!seg) return;
+  seg.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-pct]");
+    if (b) peindre(b.getAttribute("data-pct"));
+  });
+})();

@@ -731,3 +731,14 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
    de la carte verte et deviennent invisibles sur le fond blanc. */
 .ref--cyc{color:var(--ink)}
 .ref--cyc .ref__k{color:var(--ink)}
+
+/* Correctif 19/10 — une couleur par cycle : le montant ET le curseur changent
+   de couleur en même temps que de valeur. Sans ça, tout est vert et la
+   différence ne se perçoit pas. */
+.cyc[data-cycle="1"]{--cyc-c:#B0451A}
+.cyc[data-cycle="2"]{--cyc-c:#1D4E9E}
+.cyc[data-cycle="3"]{--cyc-c:#0C5136}
+.cyc[data-cycle] .ref__c{color:var(--cyc-c);transition:color .18s ease}
+.cyc__seg button[aria-selected="true"]{background:var(--cyc-c,#0C5136);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.22)}
+.cyc__seg button[aria-selected="true"] span{opacity:.85}
+.stat__n{font-size:clamp(3.6rem,6vw,4.8rem)}
