@@ -1,0 +1,27 @@
+/* Installation en deux étapes, styles limités aux pages de téléchargement. */
+.test-install{scroll-margin-top:100px}
+.test-install__wrap{max-width:780px}
+.test-install__eyebrow{color:var(--accent);font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.test-install h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.08}
+.test-install__intro{margin-top:18px;color:var(--ink-2)}
+.test-install__account{margin:28px 0 34px;padding:18px 20px;border-radius:var(--radius-sm);background:var(--accent-warm);color:var(--accent)}
+.test-install__steps{list-style:none;margin:0;padding:0;display:grid;gap:30px}
+.test-install__step{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm)}
+.test-install__step h2{font-size:1.5rem;display:flex;align-items:center;gap:12px;line-height:1.2;margin-bottom:16px}
+.test-install__number{background:var(--accent);color:white;border-radius:50%;width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem}
+.test-install__button{width:100%;margin:24px 0 16px;gap:12px;text-align:center;min-height:54px;white-space:normal;line-height:1.3}
+.test-install__hint{font-size:.88rem;color:var(--muted);line-height:1.75}
+.test-install__help{margin-top:30px;padding:0 4px}
+.test-install__help h2{font-size:1.2rem;margin-bottom:12px}
+.test-install__help p{margin-top:12px}
+.test-install__help a{text-decoration:underline;text-underline-offset:3px;color:var(--green);font-weight:700}
+.test-install a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.test-install__sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:480px){.test-install.sec{padding:48px 0}.test-install__step{padding:24px 20px}.test-install__step h2{font-size:1.25rem}.test-install__button{font-size:1rem}.test-install__account{padding:16px}}
+
+.test-install__step>p{line-height:1.8}
+.test-install__help details{margin-top:24px;font-size:.9rem;color:var(--muted)}
+.test-install__help summary{cursor:pointer;color:var(--green);font-weight:600;padding:8px 0}
+.test-install__help details p{margin-top:14px;line-height:1.8}
+.test-install__button{padding-left:16px;padding-right:16px}
+@media(min-width:700px){.test-install__step{padding:34px}.test-install__step>p{max-width:60ch}}

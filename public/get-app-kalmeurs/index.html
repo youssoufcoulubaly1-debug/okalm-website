@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/2026.css" />
+  <link rel="stylesheet" href="/test-install.css?v=20261105" />
 </head>
 <body class="theme-kalmeur">
 <a class="skip" href="#main">Aller au contenu</a>
@@ -53,31 +54,38 @@
 </header>
 
 <main id="main">
-<section class="sec">
-  <div class="wrap" style="max-width:760px">
-    <h1>Installer Kalmeurs depuis Google Play</h1>
-    <p>L&rsquo;application est en <strong>test fermé sur Google Play</strong>, en Côte d&rsquo;Ivoire. L&rsquo;installation est gratuite et se fait depuis le Play Store, en 3 étapes, avec votre compte Gmail.</p>
-    <ol style="line-height:1.8;font-size:17px">
-      <li><strong>Rejoindre le groupe « Okalm CI Kalmeurs »</strong> : <a id="lien-groupe" href="#">ouvrir le groupe</a>, puis appuyer sur « Rejoindre le groupe ».</li>
-      <li><strong>Devenir testeur</strong> : <a id="lien-test" href="https://play.google.com/apps/testing/com.okalm.kalmeurs">ouvrir la page de test</a>, puis appuyer sur « Devenir testeur ».</li>
-      <li><strong>Installer</strong> : appuyer sur « Télécharger sur Google Play », puis installer <strong>Kalmeurs</strong>. Créez ensuite votre profil et passez le test d&rsquo;entrée.</li>
+<section class="sec test-install" id="telecharger">
+  <div class="wrap test-install__wrap">
+    <p class="test-install__eyebrow">Application Android · Côte d’Ivoire</p>
+    <h1>Installer Kalmeurs</h1>
+    <p class="test-install__intro">Rejoignez le groupe, puis installez l’application depuis Google Play.</p>
+    <p class="test-install__account"><strong>Utilisez le même compte Google pour le groupe et pour votre Play Store.</strong></p>
+    <ol class="test-install__steps">
+      <li class="test-install__step">
+        <h2><span class="test-install__number" aria-hidden="true">1</span> Rejoindre le groupe</h2>
+        <p>L’adhésion est immédiate, sans approbation.</p>
+        <a class="btn test-install__button" id="lien-groupe" href="https://groups.google.com/g/okalm-ci-kalmeurs" target="_blank" rel="noopener noreferrer">1 — Rejoindre le groupe Kalmeurs <span aria-hidden="true">↗</span><span class="test-install__sr"> (nouvel onglet)</span></a>
+        <p class="test-install__hint">Le groupe s’ouvre dans un autre onglet. Une fois membre, revenez ici.</p>
+      </li>
+      <li class="test-install__step">
+        <h2><span class="test-install__number" aria-hidden="true">2</span> Installer l’application</h2>
+        <p>Sur la page Google Play, cliquez sur <strong>« Devenir testeur »</strong>, puis sur le lien de téléchargement pour installer Kalmeurs.</p>
+        <a class="btn test-install__button" id="lien-test" href="https://play.google.com/apps/testing/com.okalm.kalmeurs">2 — Installer Kalmeurs</a>
+        <p class="test-install__hint">Tout se poursuit sur Google Play, sans revenir ici.</p>
+      </li>
     </ol>
-    <p><strong>Important :</strong> utilisez le <strong>même compte Gmail</strong> que celui de votre Play Store. Si l&rsquo;application n&rsquo;apparaît pas, attendez 5 à 10 minutes puis rouvrez la page de test.</p>
-    <p>iPhone : l&rsquo;application n&rsquo;est pas encore disponible.</p>
-    <p>Besoin d&rsquo;aide ? Écrivez à <a href="mailto:support@okalm.ci">support@okalm.ci</a>.</p>
-    <p id="lien-absent" style="display:none;color:#8a5a00">Le lien du groupe n&rsquo;est pas encore publié. Écrivez à <a href="mailto:support@okalm.ci">support@okalm.ci</a> pour recevoir votre invitation.</p>
+    <div class="test-install__help">
+      <p><a href="mailto:support@okalm.ci">Besoin d’aide ? support@okalm.ci</a></p>
+      <details>
+        <summary>L’application n’apparaît pas ?</summary>
+        <p>Vérifiez votre adhésion au groupe et le compte Google affiché sur la page de test. Utilisez le même compte que celui du Play Store. Si le test reste inaccessible, contactez-nous.</p>
+      </details>
+      <p class="test-install__hint">Android uniquement. Pas encore disponible sur iPhone.</p>
+    </div>
   </div>
 </section>
 </main>
-<script>
-  /* Liens à remplir quand le Gérant aura créé le groupe Google. */
-  var LIEN_GROUPE_KALMEURS = "https://groups.google.com/g/okalm-ci-kalmeurs";
-  (function () {
-    var g = document.getElementById("lien-groupe");
-    if (LIEN_GROUPE_KALMEURS) { g.href = LIEN_GROUPE_KALMEURS; }
-    else { g.removeAttribute("href"); document.getElementById("lien-absent").style.display = "block"; }
-  })();
-</script>
+
 
 <footer class="foot">
   <div class="wrap">
