@@ -39,6 +39,20 @@ verifier(index.includes('Commander un cours à domicile') &&
   index.includes('href="/get-app-okalm/"'), 'Accès commande Android absent');
 verifier(index.includes('id="parrainage"') &&
   index.includes('sans vous connecter'), 'Présentation publique absente');
+verifier(index.includes('Activation en préparation') &&
+  index.includes('Après activation du programme'), 'Parrainage annoncé comme déjà actif');
+verifier(index.includes('frais de réception de 1 % (50 F pour 5 000 F)') &&
+  index.includes('4 950 F') && index.includes('ne déduit pas ces frais une seconde fois'),
+  'Frais de réception du parrainage incomplets');
+verifier(!index.includes('Treize communes') &&
+  index.includes("L'application vérifie l'ouverture réelle"),
+  'Ouverture des communes présentée comme garantie');
+verifier(!index.includes('100<span> %</span>') &&
+  !index.includes('Primaire ouvert à tous') &&
+  !contenus['devenir-prof.html'].includes('ouvert à tous nos professeurs'),
+  'Qualification universelle non étayée');
+verifier(contenus['devenir-prof.html'].includes('6 h au lycée'),
+  'Volume lycée obsolète sur la page Kalmeurs');
 verifier(index.includes('120 minutes au lycée'),
   'Première séance lycée incorrecte');
 verifier(contenus['support.html'].includes('120 minutes au lycée'),
