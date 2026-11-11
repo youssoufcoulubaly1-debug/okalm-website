@@ -94,7 +94,7 @@ sup{font-size:.6em;vertical-align:super;line-height:0}
 .nav a{padding:9px 12px;border-radius:999px;transition:background .18s,color .18s}
 .nav a:hover{background:var(--cream);color:var(--ink)}
 .topbar__act{display:flex;align-items:center;gap:8px;margin-left:auto}
-.nav + .topbar__act{margin-left:0}
+.nav + .topbar__act{margin-left:auto}
 
 .menu{position:relative}
 .menu > summary{
@@ -789,3 +789,19 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 .cyc__seg button[aria-selected="true"]{background:var(--cyc-c,#0C5136);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.22)}
 .cyc__seg button[aria-selected="true"] span{opacity:.85}
 .stat__n{font-size:clamp(3.6rem,6vw,4.8rem)}
+
+
+/* ---------- Pas d'Android : accès à la version web (décision du Gérant, 11/11/2026) ---------- */
+.noandroid{padding:0 0 70px}
+.noandroid__box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px 24px;text-align:center;max-width:720px;margin:0 auto}
+.noandroid h2{font-size:clamp(1.25rem,2.6vw,1.6rem);margin-bottom:10px}
+.noandroid p{color:var(--ink-2);font-size:.95rem;max-width:34em;margin:0 auto 18px}
+/* En-tête : plus de lien « Se connecter » ; le bouton Télécharger reste visible partout. */
+@media (max-width:640px){.topbar__download{display:inline-flex}}
+@media (max-width:479px){
+  .topbar .wrap{padding:0 8px}
+  .topbar__in{padding:6px 6px 6px 12px;gap:8px}
+  .menu__panel{right:0;max-width:calc(100vw - 16px)}
+  .btn--sm{padding:9px 13px;font-size:.82rem}
+}
+@media (max-width:359px){.topbar__download{padding:8px 10px;font-size:.76rem}}
