@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculer mon prix — OKALM CI, soutien scolaire à domicile à Abidjan</title>
+  <meta name="description" content="Choisissez la classe de vos enfants et découvrez le prix d'un cycle de soutien scolaire à domicile avec OKALM CI. Prix confirmé à la commande." />
+  <meta name="theme-color" content="#FFF6EC" />
+  <meta property="og:title" content="Calculer mon prix — OKALM CI" />
+  <meta property="og:description" content="Le prix d'un cycle de soutien scolaire à domicile pour un à trois enfants, du CP1 à la Terminale." />
+  <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png" />
+  <link rel="canonical" href="https://okalm.ci/calculer-mon-prix" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-okalm-192.png" />
+  <link rel="apple-touch-icon" href="/assets/icon-okalm-192.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/2026.css" />
+  <style>
+    .cp{padding:44px 0 72px}
+    .cp h1{font-size:clamp(2rem,5vw,3.2rem);margin-top:14px;letter-spacing:-.03em;text-wrap:balance}
+    .cp__sub{margin-top:14px;color:var(--ink-2);font-size:1.04rem;max-width:36em}
+    .cp__grid{display:grid;gap:22px;margin-top:32px;align-items:start}
+    .cp__grid > *{min-width:0}
+    .cp__box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:24px 20px}
+    .cp fieldset{border:0;margin:0;padding:0;min-width:0}
+    .cp legend,.cp__lab{display:block;font-weight:700;font-size:.95rem;margin-bottom:10px;padding:0}
+    .cp__seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .cp__seg label{position:relative;display:block}
+    .cp__seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+    .cp__seg span{display:flex;align-items:center;justify-content:center;min-height:48px;padding:8px 6px;border:1px solid var(--line-strong);border-radius:14px;font-weight:700;text-align:center;background:var(--cream-2)}
+    .cp__seg input:checked + span{background:var(--green);border-color:var(--green);color:#fff}
+    .cp__seg input:focus-visible + span{outline:3px solid var(--accent);outline-offset:3px}
+    .cp__kids{display:grid;gap:14px;margin-top:22px}
+    .cp__kid[hidden]{display:none}
+    .cp select{width:100%;max-width:100%;min-height:48px;font:inherit;font-size:1rem;color:var(--ink);background:var(--cream-2);border:1px solid var(--line-strong);border-radius:14px;padding:10px 12px}
+    .cp__res{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 20px}
+    .cp__res h2{font-size:1.25rem}
+    .cp__row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;padding:14px 0;border-bottom:1px dashed var(--line-strong)}
+    .cp__row:last-of-type{border-bottom:0}
+    .cp__k{font-weight:600;color:var(--ink-2)}
+    .cp__v{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,6vw,2.1rem);letter-spacing:-.03em;color:var(--green);white-space:nowrap}
+    .cp__off{color:var(--muted);font-size:1.05rem;white-space:nowrap}
+    .cp__off del{text-decoration-thickness:1px}
+    .cp__eco{margin-top:6px;display:inline-block;background:#E4F1E9;color:var(--green-deep);font-weight:700;border-radius:999px;padding:7px 14px;font-size:.92rem}
+    .cp__note{margin-top:16px;font-size:.88rem;color:var(--muted)}
+    .cp__cta{margin-top:20px}
+    .cp__cta .btn{width:100%;white-space:normal;text-align:center}
+    .cp__msg{color:var(--ink-2);font-size:.95rem;margin-top:12px}
+    .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media (min-width:880px){.cp__grid{grid-template-columns:1.1fr .9fr;gap:28px}.cp__box,.cp__res{padding:30px 28px}}
+    @media (max-width:359px){.cp .wrap{padding:0 14px}.cp__box,.cp__res{padding:20px 14px}.cp__seg span{font-size:.9rem}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="/">
+      <img src="/assets/icon-okalm-192.png" alt="" width="30" height="30" />
+      OKALM <span class="brand__ci">CI</span>
+    </a>
+    <div class="topbar__act">
+      <a class="btn btn--sm topbar__download" href="/get-app-okalm/">Télécharger l'app</a>
+      <details class="menu">
+        <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
+        <div class="menu__panel">
+          <a href="/">Accueil parents</a>
+          <a href="/#tarifs">Tarifs par niveau</a>
+          <a href="/#faq">Questions des parents</a>
+          <a href="/support">Aide et contact</a>
+          <span class="menu__sep"></span>
+          <a href="/get-app-okalm/" class="menu__strong">Télécharger l'application</a>
+          <a href="/devenir-prof" class="menu__kalmeur">Devenir Kalmeur</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="cp">
+  <div class="wrap">
+    <p class="eyebrow">Calculer mon prix</p>
+    <h1>Le prix de votre famille, en quelques secondes.</h1>
+    <p class="cp__sub">Indiquez le nombre d'enfants et leur classe. Le prix affiché correspond à un cycle de soutien scolaire à domicile en suivi standard.</p>
+
+    <div class="cp__grid">
+      <form class="cp__box" id="calc-form" novalidate>
+        <fieldset>
+          <legend>Nombre d'enfants</legend>
+          <div class="cp__seg">
+            <label><input type="radio" name="nb" value="1" checked /><span>1 enfant</span></label>
+            <label><input type="radio" name="nb" value="2" /><span>2 enfants</span></label>
+            <label><input type="radio" name="nb" value="3" /><span>3 enfants</span></label>
+          </div>
+        </fieldset>
+
+        <div class="cp__kids">
+          <div class="cp__kid" data-enfant="1">
+            <label class="cp__lab" for="classe-1">Classe du 1<sup>er</sup> enfant</label>
+            <select id="classe-1" name="classe-1">
+              <optgroup label="Primaire">
+                <option value="CP1" selected>CP1</option><option value="CP2">CP2</option>
+                <option value="CE1">CE1</option><option value="CE2">CE2</option>
+                <option value="CM1">CM1</option><option value="CM2">CM2</option>
+              </optgroup>
+              <optgroup label="Collège">
+                <option value="6EME">6e</option><option value="5EME">5e</option>
+                <option value="4EME">4e</option><option value="3EME">3e</option>
+              </optgroup>
+              <optgroup label="Lycée">
+                <option value="2NDE">2nde</option><option value="1ERE">1re</option>
+                <option value="TLE">Terminale</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="cp__kid" data-enfant="2" hidden>
+            <label class="cp__lab" for="classe-2">Classe du 2<sup>e</sup> enfant</label>
+            <select id="classe-2" name="classe-2" disabled>
+              <optgroup label="Primaire">
+                <option value="CP1">CP1</option><option value="CP2">CP2</option>
+                <option value="CE1">CE1</option><option value="CE2" selected>CE2</option>
+                <option value="CM1">CM1</option><option value="CM2">CM2</option>
+              </optgroup>
+              <optgroup label="Collège">
+                <option value="6EME">6e</option><option value="5EME">5e</option>
+                <option value="4EME">4e</option><option value="3EME">3e</option>
+              </optgroup>
+              <optgroup label="Lycée">
+                <option value="2NDE">2nde</option><option value="1ERE">1re</option>
+                <option value="TLE">Terminale</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="cp__kid" data-enfant="3" hidden>
+            <label class="cp__lab" for="classe-3">Classe du 3<sup>e</sup> enfant</label>
+            <select id="classe-3" name="classe-3" disabled>
+              <optgroup label="Primaire">
+                <option value="CP1">CP1</option><option value="CP2">CP2</option>
+                <option value="CE1">CE1</option><option value="CE2">CE2</option>
+                <option value="CM1">CM1</option><option value="CM2">CM2</option>
+              </optgroup>
+              <optgroup label="Collège">
+                <option value="6EME" selected>6e</option><option value="5EME">5e</option>
+                <option value="4EME">4e</option><option value="3EME">3e</option>
+              </optgroup>
+              <optgroup label="Lycée">
+                <option value="2NDE">2nde</option><option value="1ERE">1re</option>
+                <option value="TLE">Terminale</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <section class="cp__res" id="calc-res" aria-labelledby="calc-titre" aria-live="polite" aria-busy="true">
+        <h2 id="calc-titre">Votre prix pour un cycle</h2>
+
+        <noscript><p class="cp__msg">Activez JavaScript pour afficher le prix, ou consultez-le directement dans l'application avant de commander.</p></noscript>
+
+        <div id="calc-ok" hidden>
+          <div id="calc-seul">
+            <div class="cp__row">
+              <span class="cp__k">Prix du cycle</span>
+              <span class="cp__v" id="calc-prix-seul"></span>
+            </div>
+          </div>
+          <div id="calc-multi" hidden>
+            <div class="cp__row">
+              <span class="cp__k">Suivi commun</span>
+              <span class="cp__v" id="calc-commun"></span>
+            </div>
+            <div class="cp__row">
+              <span class="cp__k">Suivi séparé</span>
+              <span class="cp__off"><span class="sr">au lieu de </span><del id="calc-separe"></del></span>
+            </div>
+            <p id="calc-eco-bloc"><span class="cp__eco">Vous économisez <span id="calc-eco"></span></span></p>
+          </div>
+        </div>
+
+        <p class="cp__msg" id="calc-ko" hidden>Le calcul n'est pas disponible pour le moment. Votre prix vous est présenté dans l'application avant toute commande.</p>
+
+        <p class="cp__note"><span class="dot" aria-hidden="true"></span> Prix confirmé à la commande.</p>
+        <div class="cp__cta">
+          <a class="btn" href="/get-app-okalm/">Commander dans l'app <span class="btn__arrow" aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="/">OKALM <span class="brand__ci">CI</span></a>
+        <p>Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale.</p>
+      </div>
+      <div>
+        <h4>Applications</h4>
+        <a href="/get-app-okalm/">OKALM CI — parents</a>
+        <a href="/get-app-kalmeurs/">Kalmeurs — professeurs</a>
+      </div>
+      <div>
+        <h4>Aide</h4>
+        <a href="/support">Aide et FAQ</a>
+        <a href="https://wa.me/2250509185121">WhatsApp</a>
+        <a href="mailto:support@okalm.ci">support@okalm.ci</a>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <a href="/terms">Conditions d'utilisation</a>
+        <a href="/privacy">Confidentialité</a>
+        <a href="/terms">Mentions légales</a>
+      </div>
+    </div>
+    <p class="foot__bottom">
+      © 2026 OKALM CI — soutien scolaire en Côte d'Ivoire · Édité par Coulibaly Sanga Youssouf Klotchele
+      Wounakanh · Abobo, Abidjan, Côte d'Ivoire
+    </p>
+  </div>
+</footer>
+
+<script src="/2026.js" defer></script>
+<script src="/js/okalm-prix.js" defer></script>
+<script src="/js/calculateur-parents.js" defer></script>
+</body>
+</html>
