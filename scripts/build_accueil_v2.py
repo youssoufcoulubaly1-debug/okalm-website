@@ -11,6 +11,5 @@ if 'accueil-v2.css' not in s:
     s=s.replace('<link rel="stylesheet" href="/css/accueil-lot5.css" />','<link rel="stylesheet" href="/css/accueil-lot5.css" />\n  <link rel="stylesheet" href="/css/accueil-v2.css" />')
     s=s.replace('family=Inter:wght@400;500;600;700&display=swap','family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap')
     s=s.replace('<script src="/2026.js" defer></script>','<script src="/2026.js" defer></script>\n<script src="/js/okalm-prix.js" defer></script>\n<script src="/js/accueil-v2.js" defer></script>')
-s=s.replace('<a href="#pourquoi">Exemple de rapport</a>','<a href="#pourquoi">Exemple de rapport</a>\n          <a href="#qualite">La qualité</a>')
 open('public/index.html','w',encoding='utf-8').write(s)
 print('ok',len(s))
