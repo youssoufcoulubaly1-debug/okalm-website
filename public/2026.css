@@ -805,3 +805,16 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
   .btn--sm{padding:9px 13px;font-size:.82rem}
 }
 @media (max-width:359px){.topbar__download{padding:8px 10px;font-size:.76rem}}
+
+/* ---------- Vocaux (bouton Écouter, lecture en boucle) ---------- */
+.vocal{margin:14px 0 0}
+.vocal__btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:8px 18px 8px 8px;border:1.5px solid var(--green);border-radius:999px;background:var(--surface);color:var(--green);font:600 15px/1.2 var(--sans);cursor:pointer;box-shadow:var(--shadow-sm)}
+.vocal__btn:hover{background:#F2FAF5}
+.vocal__btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.vocal__ic{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-size:13px}
+.vocal__d{color:var(--muted);font-weight:500;font-size:13px;white-space:nowrap}
+.vocal__t{text-align:left}
+.vocal__ic{flex:none}
+.vocal__btn[aria-pressed="true"]{background:var(--green);color:#fff}
+.vocal__btn[aria-pressed="true"] .vocal__ic{background:#fff;color:var(--green)}
+.vocal__btn[aria-pressed="true"] .vocal__d{color:#DDEFE5}

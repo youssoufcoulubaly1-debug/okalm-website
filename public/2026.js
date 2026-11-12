@@ -81,3 +81,27 @@
     if (b) peindre(b.getAttribute("data-pct"));
   });
 })();
+
+/* Vocaux : un bouton lance l'explication, qui se répète en boucle jusqu'à l'arrêt. */
+(function () {
+  var courant = null;
+  document.querySelectorAll(".vocal[data-src]").forEach(function (bloc) {
+    var btn = bloc.querySelector(".vocal__btn");
+    var ic = bloc.querySelector(".vocal__ic");
+    var t = bloc.querySelector(".vocal__t");
+    var libelle = t ? t.textContent : "";
+    var audio = null;
+    var etat = function (on) {
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      if (ic) ic.textContent = on ? "❚❚" : "▶";
+      if (t) t.textContent = on ? "Arrêter l'écoute" : libelle;
+    };
+    btn.addEventListener("click", function () {
+      if (!audio) { audio = new Audio(bloc.getAttribute("data-src")); audio.loop = true; audio.preload = "auto"; }
+      if (audio.paused) {
+        if (courant && courant.audio !== audio) { courant.audio.pause(); courant.etat(false); }
+        audio.play().then(function () { etat(true); courant = { audio: audio, etat: etat }; }).catch(function () { etat(false); });
+      } else { audio.pause(); etat(false); }
+    });
+  });
+})();
