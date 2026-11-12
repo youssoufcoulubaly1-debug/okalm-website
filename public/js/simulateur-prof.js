@@ -1,63 +1,41 @@
 (function (root) {
   'use strict';
 
-  var NIVEAUX = {
-    primaire: { libelle: 'Primaire', classe: 'CE2' },
-    college: { libelle: 'Collège', classe: '5e' },
-    lycee: { libelle: 'Lycée', classe: '2nde' }
-  };
   var MAX_FAMILLES = 5;
   var MAX_ENFANTS = 3;
-  var PAS = 500;
+  var PAS = 1000;
   var K = [3, 4];
 
   function part() {
     return K[0] / K[1];
   }
 
-  function borne(n, min, max) {
-    n = parseInt(n, 10);
-    if (isNaN(n)) n = min;
-    return Math.min(max, Math.max(min, n));
-  }
-
-  function famille(prix, niveau, enfants) {
-    var liste = [];
-    for (var i = 0; i < enfants; i++) liste.push({ eleveId: 'e' + (i + 1), classe: NIVEAUX[niveau].classe });
-    var r;
-    try { r = prix.prixFamille(liste, 'commun'); } catch (e) { return null; }
-    if (!r || typeof r.montantTotalFcfa !== 'number' || !isFinite(r.montantTotalFcfa) || r.montantTotalFcfa <= 0) return null;
-    var minutes = 0;
-    if (Array.isArray(r.lignes)) {
-      r.lignes.forEach(function (l) {
-        if (l && typeof l.dureeHebdoMinutes === 'number' && l.dureeHebdoMinutes > minutes) minutes = l.dureeHebdoMinutes;
-      });
-    }
-    if (!minutes) return null;
-    return { montant: r.montantTotalFcfa, heures: minutes * 4 / 60 };
-  }
-
   function calculer(familles, prix) {
     prix = prix || (root.OKALMPrix || null);
-    if (!prix || typeof prix.prixFamille !== 'function') return null;
+    if (!prix || typeof prix.prix !== 'function') return null;
     if (!Array.isArray(familles) || familles.length < 1) return null;
     var liste = familles.slice(0, MAX_FAMILLES);
+    var parFamille = [];
     var total = 0;
     var heures = 0;
     for (var i = 0; i < liste.length; i++) {
-      var f = liste[i] || {};
-      var niveau = Object.prototype.hasOwnProperty.call(NIVEAUX, f.niveau) ? f.niveau : 'college';
-      var r = famille(prix, niveau, borne(f.enfants, 1, MAX_ENFANTS));
-      if (!r) return null;
-      total += r.montant;
-      heures += r.heures;
+      var classes = liste[i] && Array.isArray(liste[i].classes) ? liste[i].classes.slice(0, MAX_ENFANTS) : [];
+      if (classes.length < 1) return null;
+      var r;
+      try { r = prix.prix(classes, 'commun'); } catch (e) { return null; }
+      if (!r || typeof r.totalFcfa !== 'number' || !isFinite(r.totalFcfa) || r.totalFcfa <= 0) return null;
+      var h = 0;
+      r.enfants.forEach(function (e) { if (e.heures > h) h = e.heures; });
+      var montant = Math.round((r.totalFcfa * part()) / PAS) * PAS;
+      parFamille.push(montant);
+      total += montant;
+      heures += h;
     }
-    var montant = Math.floor((total * part()) / PAS) * PAS;
-    return { montant: montant, heures: heures, familles: liste.length };
+    return { montant: total, heures: heures, parFamille: parFamille, familles: liste.length };
   }
 
   function formater(n) {
-    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' F';
   }
 
   function el(tag, attrs, texte) {
@@ -68,93 +46,96 @@
   }
 
   var uid = 0;
-  function select(nom, options, valeur, libelle) {
-    var id = 'sim-prof-' + nom + '-' + (++uid);
-    var champ = el('div', { 'class': 'sim-prof__champ' });
-    champ.appendChild(el('label', { 'for': id }, libelle));
-    var s = el('select', { id: id, name: nom });
-    options.forEach(function (o) {
-      var opt = el('option', { value: o[0] }, o[1]);
-      if (String(o[0]) === String(valeur)) opt.selected = true;
-      s.appendChild(opt);
-    });
-    champ.appendChild(s);
-    return { champ: champ, select: s };
-  }
 
   function monter(conteneur) {
     if (!conteneur || conteneur.getAttribute('data-sim-pret') === '1') return;
+    var P = root.OKALMPrix;
+    if (!P) return;
     conteneur.setAttribute('data-sim-pret', '1');
-    var etat = [{ niveau: 'college', enfants: 1 }];
+    var etat = [{ classes: ['4e', 'CM2'] }];
 
-    var form = el('form', { 'class': 'sim-prof__form', novalidate: '' });
-    var lignes = el('div', { 'class': 'sim-prof__familles' });
-    var actions = el('div', { 'class': 'sim-prof__actions' });
-    var ajouter = el('button', { type: 'button', 'class': 'btn btn--ghost btn--sm sim-prof__ajouter' }, 'Ajouter une famille');
-    actions.appendChild(ajouter);
-    form.appendChild(lignes);
-    form.appendChild(actions);
+    var lignes = el('div', { 'class': 'sp-familles' });
+    var actions = el('div', { 'class': 'sp-actions' });
+    var ajouterF = el('button', { type: 'button', 'class': 'sp-btn sp-btn--plein' }, '+ Ajouter une famille');
+    var retirerF = el('button', { type: 'button', 'class': 'sp-btn' }, '− Retirer une famille');
+    actions.appendChild(ajouterF);
+    actions.appendChild(retirerF);
 
-    var sortie = el('div', { 'class': 'sim-prof__resultat', 'aria-live': 'polite' });
-    var montant = el('p', { 'class': 'sim-prof__montant' });
-    var heures = el('p', { 'class': 'sim-prof__heures' });
+    var sortie = el('div', { 'class': 'sp-res', 'aria-live': 'polite' });
+    var lab = el('p', { 'class': 'sp-res__lab' }, 'PAR CYCLE DE 28 JOURS');
+    var montant = el('p', { 'class': 'sp-res__montant' });
+    var heures = el('p', { 'class': 'sp-res__h' });
+    sortie.appendChild(lab);
     sortie.appendChild(montant);
     sortie.appendChild(heures);
-    sortie.appendChild(el('p', { 'class': 'sim-prof__astuce' }, 'Plusieurs enfants dans la même heure = plus de revenus.'));
-    sortie.appendChild(el('p', { 'class': 'sim-prof__note' }, 'Estimation. Frais Wave à votre charge. Versement chaque semaine.'));
+    var note = el('p', { 'class': 'sp-note' }, 'Ce montant est une estimation. Il dépend des résultats de vos élèves. Vous êtes payé chaque semaine. Avec plusieurs enfants dans la même heure, vous gagnez davantage.');
 
-    conteneur.appendChild(form);
+    conteneur.appendChild(lignes);
+    conteneur.appendChild(actions);
     conteneur.appendChild(sortie);
+    conteneur.appendChild(note);
 
     function rendre() {
+      var r = calculer(etat);
       lignes.textContent = '';
       etat.forEach(function (f, i) {
-        var ligne = el('fieldset', { 'class': 'sim-prof__famille' });
-        ligne.appendChild(el('legend', null, 'Famille ' + (i + 1)));
-        var sn = select('niveau', [['primaire', 'Primaire'], ['college', 'Collège'], ['lycee', 'Lycée']], f.niveau, 'Niveau');
-        var se = select('enfants', [[1, '1 enfant'], [2, '2 enfants'], [3, '3 enfants']], f.enfants, 'Enfants');
-        sn.select.addEventListener('change', function (ev) { etat[i].niveau = ev.target.value; maj(); });
-        se.select.addEventListener('change', function (ev) { etat[i].enfants = borne(ev.target.value, 1, MAX_ENFANTS); maj(); });
-        ligne.appendChild(sn.champ);
-        ligne.appendChild(se.champ);
-        if (etat.length > 1) {
-          var retirer = el('button', { type: 'button', 'class': 'sim-prof__retirer', 'aria-label': 'Retirer la famille ' + (i + 1) }, 'Retirer');
-          retirer.addEventListener('click', function () { etat.splice(i, 1); rendre(); ajouter.focus(); });
-          ligne.appendChild(retirer);
+        var carte = el('fieldset', { 'class': 'sp-fam' });
+        var tete = el('legend', { 'class': 'sp-fam__t' });
+        tete.appendChild(el('span', null, 'Famille ' + (i + 1)));
+        var m = el('b', null, r ? formater(r.parFamille[i]) : '');
+        tete.appendChild(m);
+        carte.appendChild(tete);
+        f.classes.forEach(function (c, j) {
+          var id = 'sp-' + (++uid);
+          carte.appendChild(el('label', { 'class': 'sp-lbl', 'for': id }, 'ENFANT ' + (j + 1)));
+          var s = el('select', { id: id, 'class': 'sp-sel' });
+          P.CLASSES.forEach(function (cl, k) {
+            var o = el('option', { value: cl }, P.LIBELLES[k]);
+            if (cl === c) o.selected = true;
+            s.appendChild(o);
+          });
+          s.addEventListener('change', function (ev) { etat[i].classes[j] = ev.target.value; rendre(); });
+          carte.appendChild(s);
+        });
+        var b = el('div', { 'class': 'sp-btns' });
+        if (f.classes.length < MAX_ENFANTS) {
+          var a = el('button', { type: 'button', 'class': 'sp-btn sp-btn--plein' }, '+ Ajouter un enfant');
+          a.addEventListener('click', function () { etat[i].classes.push('CM2'); rendre(); });
+          b.appendChild(a);
         }
-        lignes.appendChild(ligne);
+        if (f.classes.length > 1) {
+          var d = el('button', { type: 'button', 'class': 'sp-btn' }, '− Retirer un enfant');
+          d.addEventListener('click', function () { etat[i].classes.pop(); rendre(); });
+          b.appendChild(d);
+        }
+        carte.appendChild(b);
+        lignes.appendChild(carte);
       });
-      ajouter.disabled = etat.length >= MAX_FAMILLES;
-      maj();
-    }
-
-    function maj() {
-      var r = calculer(etat);
+      ajouterF.disabled = etat.length >= MAX_FAMILLES;
+      retirerF.hidden = etat.length <= 1;
       if (!r) {
         montant.textContent = 'Simulation momentanément indisponible.';
         heures.textContent = '';
         return;
       }
-      montant.textContent = 'Jusqu’à environ ' + formater(r.montant) + ' F par cycle de 28 jours';
-      heures.textContent = 'Pour ' + r.heures + ' h de cours par cycle';
+      montant.textContent = 'jusqu’à environ ' + formater(r.montant);
+      heures.textContent = 'pour ' + r.heures + ' h de cours';
     }
 
-    ajouter.addEventListener('click', function () {
-      if (etat.length < MAX_FAMILLES) { etat.push({ niveau: 'college', enfants: 1 }); rendre(); }
-    });
-    form.addEventListener('submit', function (ev) { ev.preventDefault(); });
+    ajouterF.addEventListener('click', function () { if (etat.length < MAX_FAMILLES) { etat.push({ classes: ['6e'] }); rendre(); } });
+    retirerF.addEventListener('click', function () { if (etat.length > 1) { etat.pop(); rendre(); } });
     rendre();
   }
 
-  function demarrer() {
-    var cibles = root.document.querySelectorAll('[data-okalm-simulateur-prof]');
-    for (var i = 0; i < cibles.length; i++) monter(cibles[i]);
+  function init() {
+    var c = root.document && root.document.querySelector('[data-okalm-simulateur-prof]');
+    if (c) monter(c);
   }
 
-  root.OKALMSimulateurProf = { calculer: calculer, monter: monter, formater: formater };
-
+  var api = { calculer: calculer, formater: formater, monter: monter };
+  root.OKALMSimulateurProf = api;
   if (root.document) {
-    if (root.document.readyState === 'loading') root.document.addEventListener('DOMContentLoaded', demarrer);
-    else demarrer();
+    if (root.document.readyState === 'loading') root.document.addEventListener('DOMContentLoaded', init);
+    else init();
   }
 })(typeof window !== 'undefined' ? window : this);

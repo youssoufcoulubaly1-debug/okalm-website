@@ -1,6 +1,6 @@
 /* OKALM CI - accueil parents V2 : cartes de repères, qualité, parcours, blocs de prix (maquettes 11 et 12 à l'identique), communes.
    À charger APRÈS /2026.css et /css/accueil-lot5.css. Limité à body.page-accueil-lot5. */
-body.page-accueil-lot5{--terra:#B0451A;--terra-s:#FFE3D3;--amb-s:#FEF3D6;--sky:#E3EEF9;--sky-d:#2F5D8A;--verde:#0C5136;--verde-d:#083D28}
+body.page-accueil-lot5,body.theme-kalmeur{--terra:#B0451A;--terra-s:#FFE3D3;--amb-s:#FEF3D6;--sky:#E3EEF9;--sky-d:#2F5D8A;--verde:#0C5136;--verde-d:#083D28}
 
 /* ---------- Haut de page : 4 cartes ---------- */
 .mini4{list-style:none;margin:22px auto 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:760px;text-align:left}
