@@ -1,0 +1,55 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+const html = readFileSync(fileURLToPath(new URL('../public/index.html', import.meta.url)), 'utf8');
+const attendu = ['top','pourquoi','comment','professeurs','tarifs','garanties','communes','faq','telecharger','parrainage'];
+const sections = [...html.matchAll(/<section\b[^>]*\bid="([^"]+)"/g)].map(m => m[1]);
+let checks = 0;
+function ok(c, msg) { assert.ok(c, msg); checks++; }
+ok(JSON.stringify(sections) === JSON.stringify(attendu), 'Ordre des 10 sections incorrect : ' + sections.join(', '));
+function bloc(a,b) {
+  const start=html.indexOf('id="'+a+'"');
+  const end=b?html.indexOf('id="'+b+'"', start):html.indexOf('</main>',start);
+  ok(start>=0 && end>start, 'Bloc '+a+' absent');
+  return html.slice(start,end);
+}
+const hero=bloc('top','pourquoi');
+ok(hero.includes('Un professeur sérieux chez vous'), 'Bénéfice du hero absent');
+ok(hero.includes('preuve écrite des progrès'), 'Promesse écrite absente');
+ok((hero.match(/<li>/g)||[]).length===3, 'Trois repères requis');
+ok(hero.includes('href="/get-app-okalm/"') && hero.includes('>Commander un cours</a>'), 'CTA Commander absent');
+ok(hero.includes('href="/calculer-mon-prix"') && hero.includes('>Calculer mon prix</a>'), 'CTA Calculer absent');
+const preuve=bloc('pourquoi','comment');
+ok(preuve.includes('<figure class="card report">') && !/<figure[^>]*aria-hidden/.test(preuve), 'Rapport invisible ou absent');
+ok(preuve.includes('Points forts') && preuve.includes('À travailler'), 'Exemple de rapport incomplet');
+const etapes=bloc('comment','professeurs');
+ok((etapes.match(/<h3>/g)||[]).length===4, 'Quatre étapes requises');
+const prof=bloc('professeurs','tarifs');
+ok(/Identité vérifiée/.test(prof) && /BAC vérifié/.test(prof) && /Test réussi/.test(prof), 'Sélection professeur incomplète');
+const tarifs=bloc('tarifs','garanties');
+for(const v of ['36 000 F','72 000 F','120 000 F','54 000 F','96 000 F','160 000 F']) ok(tarifs.includes(v), 'Prix manquant '+v);
+ok(tarifs.includes('/calculer-mon-prix'), 'Calculateur non relié aux tarifs');
+ok(tarifs.includes('Options examens'), 'Options examens absentes');
+const garanties=bloc('garanties','communes');
+for(const x of ['Changement de professeur','Wave','Aucun paiement direct']) ok(garanties.includes(x), 'Garantie manquante '+x);
+const communes=bloc('communes','faq');
+ok(communes.includes('Abobo') && communes.includes('Yopougon') && communes.includes('Cocody'), 'Communes absentes');
+const faq=bloc('faq','telecharger');
+ok(faq.includes('première séance est payante') && faq.includes('Aucun délai') && faq.includes('montant') && faq.includes('deux tranches'), 'Réserves FAQ incomplètes');
+ok(!bloc('top','faq').includes('première séance est payante'), 'Réserve anticipée avant la FAQ');
+const appel=bloc('telecharger','parrainage');
+ok(appel.includes('Pas d\'Android') && appel.includes('https://suivi.okalm.ci/parent'), 'Bloc Android absent');
+const parrainage=bloc('parrainage',null);
+ok(parrainage.includes('Bientôt') && (parrainage.match(/5 000 F/g)||[]).length>=3, 'Deux primes parrainage non explicitées');
+ok(parrainage.includes('première commande') && parrainage.includes('confirmée') && parrainage.includes('renouvelle'), 'Conditions parrainage approximatives');
+const menu=html.slice(html.indexOf('<div class="menu__panel">'),html.indexOf('</details>',html.indexOf('<div class="menu__panel">')));
+ok(/<a href="#parrainage">Parrainage<\/a>\s*<\/div>\s*$/.test(menu), 'Parrainage doit être la dernière entrée mobile');
+ok(!/au\s*calme|plein tarif|1\s*000\s*F|\b(?:75|72|70)\s*%|carton/i.test(html), 'Mécanisme interne ou marque erronée');
+ok(!/mission[s]?\s+V2|éligibilité vérifiée|critères contrôlés/i.test(html), 'Jargon interne');
+const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
+for(const m of html.matchAll(/href="#([^"]+)"/g)) ok(ids.has(m[1]),'Ancre cassée #'+m[1]);
+ok((html.match(/<h1\b/g)||[]).length===1, 'Un seul H1 requis');
+ok(html.includes('<html lang="fr">') && html.includes('href="#main"'), 'Langue ou skip link absent');
+ok(!/<img\b(?![^>]*\balt=)[^>]*>/g.test(html), 'Image sans alternative');
+console.log('Accueil lot 5 : '+checks+' contrôles réussis, 0 défaut.');
