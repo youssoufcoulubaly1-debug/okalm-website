@@ -1,0 +1,11 @@
+.pg-mini{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px;counter-reset:pg}
+.pg-mini li{counter-increment:pg;display:flex;align-items:center;gap:10px;font-weight:600;font-size:.92rem;color:var(--ink);background:var(--cream);border-radius:14px;padding:10px 12px;min-width:0;overflow-wrap:anywhere}
+.pg-mini li::before{content:counter(pg);flex:0 0 24px;height:24px;border-radius:8px;display:grid;place-items:center;font-size:.72rem;font-weight:800;background:var(--kal-warm,#FFE8D6);color:#8A3707}
+.pg-etapes{max-width:46em;margin-top:34px}
+.pg-trio{margin-top:34px}
+@media (min-width:760px){
+  .pg-etapes{grid-template-columns:1fr 1fr}
+  .pg-trio{grid-template-columns:repeat(3,1fr)}
+}
+.pg-trio .earn__n{font-size:1.5rem;white-space:normal}
+#simulateur-prof-montage{margin-top:28px;min-height:1px}

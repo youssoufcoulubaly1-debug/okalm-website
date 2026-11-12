@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devenir Kalmeur — enseigner avec Okalm CI à Abidjan</title>
-  <meta name="description" content="Des missions de soutien scolaire à Abidjan, une rémunération communiquée pour chaque mission et des versements hebdomadaires. Enseignez du CP1 à la Terminale avec Okalm CI." />
+  <title>Devenir Kalmeur — enseigner près de chez vous avec OKALM CI</title>
+  <meta name="description" content="Enseignez près de chez vous, du CP1 à la Terminale, avec OKALM CI. Vous êtes payé selon les progrès de vos élèves. Inscription dans l'application Kalmeurs." />
   <meta name="theme-color" content="#FFF6EC" />
-  <meta property="og:title" content="Devenir Kalmeur — Okalm CI" />
-  <meta property="og:description" content="Des missions de soutien scolaire avec des conditions de rémunération communiquées avant engagement et des versements hebdomadaires à Abidjan." />
+  <meta property="og:title" content="Devenir Kalmeur — OKALM CI" />
+  <meta property="og:description" content="Enseignez près de chez vous. Vous êtes payé selon les progrès de vos élèves." />
   <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png" />
   <link rel="canonical" href="https://okalm.ci/devenir-prof" />
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-okalm-192.png" />
@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/2026.css" />
+  <link rel="stylesheet" href="/css/prof-gpt11.css" />
 </head>
 <body class="theme-kalmeur">
 <a class="skip" href="#main">Aller au contenu</a>
@@ -24,15 +25,12 @@
   <div class="wrap topbar__in">
     <a class="brand" href="/">
       <img src="/assets/icon-okalm-192.png" alt="" width="30" height="30" />
-      Okalm <span class="brand__ci">CI</span>
+      OKALM <span class="brand__ci">CI</span>
     </a>
-    <!-- Le chapeau OKALM reste le logo de la marque sur TOUTES les pages (le siège
-         l'utilise en violet, les parents en vert). L'icône orange des Kalmeurs
-         n'apparaît qu'au moment de télécharger leur application. -->
     <nav class="nav" aria-label="Sections">
-      <a href="#gains">Ce que vous gagnez</a>
-      <a href="#preparer">Se préparer</a>
-      <a href="#deroulement">Une mission</a>
+      <a href="#preparer">S'inscrire</a>
+      <a href="#gains">Vos résultats</a>
+      <a href="#simulateur-prof">Simulateur</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="topbar__act">
@@ -41,9 +39,10 @@
         <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
         <div class="menu__panel">
           <a href="/">Accueil parents</a>
-          <a href="#gains">Ce que vous gagnez</a>
-          <a href="#preparer">Comment se préparer</a>
-          <a href="#deroulement">Une mission, étape par étape</a>
+          <a href="#preparer">Les 4 étapes pour s'inscrire</a>
+          <a href="#gains">Vos résultats récompensés</a>
+          <a href="#attentes">Ce que nous attendons</a>
+          <a href="#simulateur-prof">Simulateur</a>
           <a href="#faq">Questions des professeurs</a>
           <span class="menu__sep"></span>
           <a href="#telecharger" class="menu__strong menu__kalmeur">Télécharger l'application Kalmeurs</a>
@@ -58,17 +57,16 @@
 <section class="hero" id="top">
   <div class="wrap hero__in">
     <div>
-      <p class="eyebrow">Enseigner avec Okalm CI</p>
-      <h1>Vous enseignez. Vous êtes <em>payé</em> avant de vous déplacer.</h1>
+      <p class="eyebrow">Enseigner avec OKALM CI</p>
+      <h1>Enseignez près de chez vous. Vous êtes <em>payé</em> selon les progrès de vos élèves.</h1>
       <p class="hero__sub">
-        Les conditions de rémunération sont communiquées pour chaque mission avant votre
-        engagement. Le transport est inclus dans la rémunération annoncée, la première séance
-        est rémunérée comme les autres, et le versement est <strong>hebdomadaire</strong>.
+        Des élèves de votre quartier, du CP1 à la Terminale. Vous donnez les séances à domicile,
+        la plateforme s'occupe des familles et des paiements.
       </p>
       <div class="hero__cta">
-        <a class="btn" href="#telecharger">Télécharger l'application Kalmeurs <span class="btn__arrow">→</span></a>
+        <a class="btn" href="/get-app-kalmeurs/">Télécharger Kalmeurs <span class="btn__arrow">→</span></a>
       </div>
-      <p class="hero__note"><span class="dot"></span> Bac minimum · du CP1 à la Terminale · Abidjan</p>
+      <p class="hero__note"><span class="dot"></span> BAC minimum · du CP1 à la Terminale · Abidjan</p>
     </div>
 
     <div class="stage" aria-hidden="true">
@@ -76,222 +74,109 @@
       <div class="card report">
         <div class="report__top">
           <div>
-            <p class="report__kicker">Votre mission</p>
-            <p class="report__title">Conditions annoncées avant engagement</p>
+            <p class="report__kicker">Kalmeurs</p>
+            <p class="report__title">Votre inscription en 4 étapes</p>
           </div>
-          <p class="report__date">Soutien scolaire<br />à domicile</p>
+          <p class="report__date">Dans<br />l'application</p>
         </div>
-        <div class="calc" style="margin-top:16px">
-          <div>
-            <span class="calc__k">Mission confirmée</span>
-            <span class="calc__v">Séances prévues</span>
-          </div>
-          <span class="calc__arrow">→</span>
-          <div>
-            <span class="calc__k">Rémunération</span>
-            <span class="calc__v calc__v--big">Montant annoncé</span>
-          </div>
-        </div>
-        <p class="calc__note">Le détail du montant et des frais de réception est communiqué
-           avant que vous acceptiez la mission.</p>
-        <div class="report__foot">
-          <span class="pill">Transport inclus</span>
-          <span class="pill pill--warm">Échéancier communiqué</span>
-        </div>
-      </div>
-      <div class="teacher">
-        <span class="teacher__av">✓</span>
-        <span><b>Des conditions communiquées en amont</b><span>Vérification, support et paiements assurés par la plateforme</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--alt" id="gains">
-  <div class="wrap">
-    <div class="sec__head">
-      <p class="eyebrow">La rémunération</p>
-      <h2>Ce que vous gagnez, sans tableau à déchiffrer.</h2>
-      <p class="sec__lead">Les conditions de rémunération sont précisées pour chaque mission, avant que vous vous engagiez.</p>
-    </div>
-
-    <div class="earn">
-      <article class="earn__i">
-        <p class="earn__n">Montant annoncé</p>
-        <p><b>Une rémunération précisée avant engagement.</b> Le détail applicable à la mission est communiqué avant son acceptation.</p>
-      </article>
-      <article class="earn__i">
-        <p class="earn__n">Frais de réception</p>
-        <p><b>À votre charge.</b> Les éventuels frais prélevés par votre prestataire de paiement sont distincts de la rémunération annoncée.</p>
-      </article>
-      <article class="earn__i">
-        <p class="earn__n">Versements</p>
-        <p><b>selon l'échéancier applicable.</b> Les montants et dates de versement sont communiqués pour chaque mission ; leur confirmation dépend des séances et contrôles requis.</p>
-      </article>
-      <article class="earn__i">
-        <p class="earn__n">0 F</p>
-        <p><b>de transport à votre charge.</b> Le déplacement est inclus dans votre part.
-           Aucune déduction kilométrique, aucune avance.</p>
-      </article>
-      <article class="earn__i">
-        <p class="earn__n">1<sup>re</sup></p>
-        <p><b>séance rémunérée comme les autres.</b> Vous ne travaillez pas gratuitement
-           « pour voir » : le cycle est payé avant que vous vous déplaciez.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="preparer">
-  <div class="wrap">
-    <div class="sec__head">
-      <p class="eyebrow">Avant votre première mission</p>
-      <h2>Comment se préparer.</h2>
-      <p class="sec__lead">Quatre pièces, un entretien vidéo, un test. C'est ce qui permet
-        aux familles de vous faire confiance — et à vous d'être assigné vite.</p>
-    </div>
-
-    <div class="teach">
-      <div>
-        <ul class="check">
-          <li><span class="ck">1</span><span><b>Votre pièce d'identité</b>Carte d'identité ou passeport, recto et verso, lisibles.</span></li>
-          <li><span class="ck">2</span><span><b>Vos diplômes</b>Bac minimum. Le diplôme que vous déclarez est vérifié.</span></li>
-          <li><span class="ck">3</span><span><b>Une vidéo pédagogique de 1 à 2 minutes 30</b>Vous expliquez une notion au tableau ou à l'oral. C'est évalué par notre équipe.</span></li>
-          <li><span class="ck">4</span><span><b>Un test de matière noté</b>Sur la matière et le niveau que vous voulez enseigner.</span></li>
+        <ul class="pg-mini">
+          <li>Identité</li>
+          <li>BAC</li>
+          <li>Test validé</li>
+          <li>Engagements signés</li>
         </ul>
-        <p class="hero__note" style="margin-top:22px">
-          <span class="dot"></span> Préparez ces quatre éléments le même jour : c'est ce qui
-          raccourcit le délai avant la première mission.
-        </p>
-      </div>
-
-      <div class="stat">
-        <p class="stat__n">CP1<span> → Tle</span></p>
-        <p>Vous choisissez les niveaux et les matières que vous voulez enseigner.</p>
-        <div class="stat__rule"></div>
-        <div class="stat__list">
-          <div><i>›</i><span><b>Primaire :</b> domaine instituteur soumis à habilitation, avec français et mathématiques vérifiés.</span></div>
-          <div><i>›</i><span><b>Collège et lycée :</b> les matières et domaines validés déterminent les missions accessibles.</span></div>
-          <div><i>›</i><span><b>Éligibilité par mission :</b> statut, identité, test, matières, commune et créneaux sont contrôlés avant attribution.</span></div>
-          <div><i>›</i><span><b>Contrat actif :</b> c'est lui qui ouvre les programmes et les missions dans l'application.</span></div>
+        <div class="report__foot">
+          <span class="pill">Près de chez vous</span>
+          <span class="pill pill--warm">Progrès récompensés</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec sec--alt" id="deroulement">
+<section class="sec sec--alt" id="preparer">
   <div class="wrap">
     <div class="sec__head">
-      <p class="eyebrow">Une mission, pas un pari</p>
-      <h2>Comment se passe une mission.</h2>
+      <p class="eyebrow">S'inscrire</p>
+      <h2>4 étapes, toutes dans l'application Kalmeurs.</h2>
+      <p class="sec__lead">Ces étapes permettent aux familles de vous faire confiance.</p>
     </div>
 
-    <div class="how">
-      <ol class="steps">
-        <li>
-          <div>
-            <h3>La famille commande et paie le cycle</h3>
-            <p>Niveau, matière, volume horaire, commune et créneaux. Le cycle de 4 semaines est
-               réglé avant l'assignation.</p>
-            <small>C'est ce qui garantit que vous êtes payé, pas seulement « prévu »</small>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Vous recevez une mission</h3>
-            <p>Selon votre niveau, vos matières validées, votre commune et vos disponibilités
-               réelles.</p>
-            <small>Attribution selon les besoins des familles et vos disponibilités vérifiées</small>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Vous donnez les séances à domicile</h3>
-            <p>Le volume hebdomadaire standard est fixé au départ : 3 h au primaire, 4 h 30 au collège et 6 h au lycée. Les options intensives peuvent modifier ce volume.</p>
-            <small>Vous n'avez pas à négocier le prix avec la famille</small>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Vous transmettez les bilans pédagogiques</h3>
-            <p>Ce qui a été vu, ce qui est acquis, ce qui reste à travailler. La famille le lit
-               le soir même.</p>
-            <small>Diagnostic initial, bilan hebdomadaire, note rapide et fin de cycle selon l'échéance</small>
-          </div>
-        </li>
-      </ol>
+    <ol class="check pg-etapes">
+      <li><span class="ck">1</span><span><b>Votre identité</b>Carte d'identité ou passeport, recto et verso, lisibles.</span></li>
+      <li><span class="ck">2</span><span><b>Votre BAC</b>Votre série et votre diplôme ou attestation de réussite. Le bulletin de Terminale est recommandé.</span></li>
+      <li><span class="ck">3</span><span><b>Un test validé</b>Sur la matière et le niveau que vous souhaitez enseigner.</span></li>
+      <li><span class="ck">4</span><span><b>Vos engagements signés</b>Vous les lisez et les signez directement dans l'application.</span></li>
+    </ol>
+  </div>
+</section>
 
-      <aside class="why-pay">
-        <h3>À quoi sert la commission de la plateforme ?</h3>
-        <p>Elle contribue à la vérification des professeurs, au support des familles,
-           aux remplacements et à la gestion des paiements. Les conditions applicables
-           sont communiquées pour chaque mission.</p>
-        <div class="why-pay__b">
-          <div><span>✓</span><span><b>Pas de frais d'inscription</b> pour candidater.</span></div>
-          <div><span>✓</span><span><b>Pas d'exclusivité</b> : vous gardez vos autres cours.</span></div>
-          <div><span>✓</span><span><b>Pas de séance bénévole</b> : la première est payée.</span></div>
-        </div>
-      </aside>
+<section class="sec" id="gains">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Vos résultats</p>
+      <h2>Votre rémunération récompense les résultats.</h2>
+    </div>
+    <div class="earn pg-trio">
+      <article class="earn__i">
+        <p class="earn__n">Résultats</p>
+        <p><b>Récompensés.</b> Des élèves qui progressent et obtiennent des résultats moyens à bons, c'est une rémunération au plus haut.</p>
+      </article>
+      <article class="earn__i">
+        <p class="earn__n">Progrès</p>
+        <p><b>Réexaminés.</b> Si les résultats d'un élève n'évoluent pas, l'équipe OKALM CI revoit avec vous son suivi, et votre statut de professeur peut être réexaminé.</p>
+      </article>
+      <article class="earn__i">
+        <p class="earn__n">Règles</p>
+        <p><b>Détaillées dans l'application Kalmeurs.</b> Toutes les règles vous sont présentées avant votre qualification.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="faq">
+<section class="sec sec--alt" id="attentes">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Ce que nous attendons</p>
+      <h2>Trois choses, simplement.</h2>
+      <p class="sec__lead">De la ponctualité, un rapport après chaque séance, et du sérieux.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="simulateur-prof">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Simulateur</p>
+      <h2>Estimez votre activité.</h2>
+    </div>
+    <div id="simulateur-prof-montage"></div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="faq">
   <div class="wrap">
     <div class="sec__head">
       <p class="eyebrow">Questions des professeurs</p>
-      <h2>Ce qu'on nous demande avant de postuler.</h2>
+      <h2>Avant de vous inscrire.</h2>
     </div>
 
     <div class="faq">
       <details open>
-        <summary>Comment connaître ma rémunération ?</summary>
-        <p>Le montant et les conditions de rémunération applicables sont communiqués pour chaque mission avant votre engagement. Les éventuels frais de réception de votre prestataire de paiement restent à votre charge.</p>
+        <summary>Comment suis-je payé ?</summary>
+        <p>Votre rémunération dépend des progrès de vos élèves. Les règles détaillées sont présentées dans l'application Kalmeurs avant votre qualification.</p>
       </details>
-
       <details>
-        <summary>Quand et comment suis-je payé ?</summary>
-        <p>Les dates de versement et les séances prises en compte sont précisées pour chaque mission. Le paiement est effectué sur le moyen de réception enregistré, après les vérifications applicables.</p>
+        <summary>Quel diplôme faut-il ?</summary>
+        <p><strong>Le BAC.</strong> Vous indiquez votre série et fournissez votre diplôme ou une attestation de réussite. Le bulletin de Terminale est recommandé.</p>
       </details>
-
-      <details>
-        <summary>À quoi sert la commission de la plateforme ?</summary>
-        <p>La commission couvre notamment la vérification des dossiers, la mise en relation, le suivi des familles, le support et la gestion des paiements. Sa répartition dépend des conditions applicables à la mission.</p>
-      </details>
-
-      <details>
-        <summary>Faut-il un diplôme particulier ?</summary>
-        <p><strong>Bac minimum.</strong> Ce qui compte ensuite, c'est la vérification : pièce
-           d'identité, diplôme déclaré, vidéo pédagogique de 1 à 2 minutes 30 et test de la
-           matière que vous voulez enseigner.</p>
-      </details>
-
-      <details>
-        <summary>Puis-je enseigner plusieurs matières et plusieurs niveaux ?</summary>
-        <p>Oui, à condition de valider un test par matière. Au primaire, tous nos professeurs
-           peuvent intervenir quel que soit le bac. Au collège et au lycée, l'accès dépend de
-           votre série : un scientifique enseigne les matières scientifiques, un littéraire les
-           littéraires.</p>
-      </details>
-
-      <details>
-        <summary>La première séance est-elle vraiment payée ?</summary>
-        <p><strong>Oui.</strong> Toute séance effectuée est rémunérée. Nous ne demandons
-           jamais une séance « gratuite pour voir » — et la première échéance de la famille est confirmée avant
-           que vous vous déplaciez.</p>
-      </details>
-
       <details>
         <summary>Combien d'heures par semaine ?</summary>
-        <p>Le volume standard est fixé par le niveau&nbsp;: <strong>3 h par semaine au primaire</strong> (2 séances de 90 min), <strong>4 h 30 au collège</strong> (3 séances de 90 min) et <strong>6 h au lycée</strong> (3 séances de 120 min), sur un cycle de <strong>28 jours</strong>. Les options CEPE, BEPC, BAC et 3e à 2 h modifient le rythme selon le devis.</p>
+        <p>Le volume standard dépend du niveau&nbsp;: <strong>3 h au primaire</strong>, <strong>4 h 30 au collège</strong> et <strong>6 h au lycée</strong>.</p>
       </details>
-
       <details>
-        <summary>Pourquoi les programmes sont-ils grisés dans l'application ?</summary>
-        <p>Parce qu'ils s'ouvrent avec un <strong>contrat actif</strong>. Tant que votre
-           dossier n'est pas validé, les programmes restent visibles mais inactifs, avec la
-           raison affichée. C'est ce qui protège les familles — et votre travail.</p>
+        <summary>Où vais-je enseigner ?</summary>
+        <p>Près de chez vous : les familles proposées tiennent compte de votre commune et de vos disponibilités.</p>
       </details>
     </div>
 
@@ -304,10 +189,9 @@
   <div class="wrap">
     <div class="final__box">
       <img class="final__logo" src="/assets/icon-kalmeurs-192.png" alt="" width="64" height="64" />
-      <h2>Kalmeurs — l'application des professeurs</h2>
-      <p>Préparez votre dossier, choisissez vos niveaux, recevez vos missions.
-         L'inscription se fait dans l'application.</p>
-      <a class="btn" href="/get-app-kalmeurs/">Télécharger l'application Kalmeurs <span class="btn__arrow">→</span></a>
+      <h2>Prêt à enseigner près de chez vous ?</h2>
+      <p>Téléchargez Kalmeurs, l'application des professeurs OKALM CI. L'inscription se fait dans l'application.</p>
+      <a class="btn" href="/get-app-kalmeurs/">Télécharger Kalmeurs <span class="btn__arrow">→</span></a>
       <p class="final__note">Android 7 ou plus · installation directe, sans Play Store</p>
     </div>
   </div>
@@ -319,13 +203,13 @@
   <div class="wrap">
     <div class="foot__grid">
       <div class="foot__brand">
-        <a class="brand" href="/">Okalm <span class="brand__ci">CI</span></a>
+        <a class="brand" href="/">OKALM <span class="brand__ci">CI</span></a>
         <p>Soutien scolaire à domicile à Abidjan, du CP1 à la Terminale. Un professeur
            vérifié, un rapport après chaque séance.</p>
       </div>
       <div>
         <h4>Applications</h4>
-        <a href="/get-app-okalm/">Okalm CI — parents</a>
+        <a href="/get-app-okalm/">OKALM CI — parents</a>
         <a href="/get-app-kalmeurs/">Kalmeurs — professeurs</a>
       </div>
       <div>
@@ -343,17 +227,19 @@
       <div>
         <h4>Enseigner</h4>
         <a href="/devenir-prof">Devenir Kalmeur</a>
-        <a href="/devenir-prof#preparer">Comment se préparer</a>
+        <a href="/devenir-prof#preparer">Comment s'inscrire</a>
         <a href="/get-app-kalmeurs/">Télécharger Kalmeurs</a>
       </div>
     </div>
     <p class="foot__bottom">
-      © 2026 Okalm CI — Okalm CI · Édité par Coulibaly Sanga Youssouf Klotchele
+      © 2026 OKALM CI · Édité par Coulibaly Sanga Youssouf Klotchele
       Wounakanh · Abobo, Abidjan, Côte d'Ivoire
     </p>
   </div>
 </footer>
 
 <script src="/2026.js" defer></script>
+<script src="/js/okalm-prix.js" defer></script>
+<script src="/js/simulateur-prof.js" defer></script>
 </body>
 </html>
