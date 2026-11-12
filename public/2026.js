@@ -82,22 +82,36 @@
   });
 })();
 
-/* Vocaux : un bouton lance l'explication, qui se répète en boucle jusqu'à l'arrêt. */
+/* Vocaux façon Wave : rond lecture/pause, anneau de progression, lecture en boucle jusqu'à l'arrêt. */
 (function () {
   var courant = null;
+  var C = 138.2; /* 2πr avec r = 22 */
   document.querySelectorAll(".vocal[data-src]").forEach(function (bloc) {
     var btn = bloc.querySelector(".vocal__btn");
     var ic = bloc.querySelector(".vocal__ic");
     var t = bloc.querySelector(".vocal__t");
-    var libelle = t ? t.textContent : "";
+    var d = bloc.querySelector(".vocal__d");
+    if (!btn || !ic || !t || !d) return;
+    var libelle = t.textContent;
+    ic.innerHTML = '<svg class="vocal__ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bg" cx="26" cy="26" r="22"/><circle class="fg" cx="26" cy="26" r="22"/></svg><span class="vocal__glyph"><b></b></span>';
+    var txt = document.createElement("span");
+    txt.className = "vocal__txt";
+    btn.insertBefore(txt, t); txt.appendChild(t); txt.appendChild(d);
+    var fg = ic.querySelector(".fg"), glyph = ic.querySelector(".vocal__glyph");
     var audio = null;
     var etat = function (on) {
       btn.setAttribute("aria-pressed", on ? "true" : "false");
-      if (ic) ic.textContent = on ? "❚❚" : "▶";
-      if (t) t.textContent = on ? "Arrêter l'écoute" : libelle;
+      glyph.innerHTML = on ? "<i></i><i></i>" : "<b></b>";
+      t.textContent = on ? "En écoute… touchez pour arrêter" : libelle;
+      if (!on) fg.style.strokeDashoffset = C;
     };
     btn.addEventListener("click", function () {
-      if (!audio) { audio = new Audio(bloc.getAttribute("data-src")); audio.loop = true; audio.preload = "auto"; }
+      if (!audio) {
+        audio = new Audio(bloc.getAttribute("data-src")); audio.loop = true; audio.preload = "auto";
+        audio.addEventListener("timeupdate", function () {
+          if (audio.duration) fg.style.strokeDashoffset = C * (1 - audio.currentTime / audio.duration);
+        });
+      }
       if (audio.paused) {
         if (courant && courant.audio !== audio) { courant.audio.pause(); courant.etat(false); }
         audio.play().then(function () { etat(true); courant = { audio: audio, etat: etat }; }).catch(function () { etat(false); });

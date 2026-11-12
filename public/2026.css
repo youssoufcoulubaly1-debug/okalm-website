@@ -806,15 +806,17 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 }
 @media (max-width:359px){.topbar__download{padding:8px 10px;font-size:.76rem}}
 
-/* ---------- Vocaux (bouton Écouter, lecture en boucle) ---------- */
+/* ---------- Vocaux façon Wave : rond lecture/pause avec anneau de progression ---------- */
 .vocal{margin:14px 0 0}
-.vocal__btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:8px 18px 8px 8px;border:1.5px solid var(--green);border-radius:999px;background:var(--surface);color:var(--green);font:600 15px/1.2 var(--sans);cursor:pointer;box-shadow:var(--shadow-sm)}
-.vocal__btn:hover{background:#F2FAF5}
-.vocal__btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.vocal__ic{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-size:13px}
+.vocal__btn{display:inline-flex;align-items:center;gap:12px;padding:0;border:0;background:none;color:var(--ink);font:600 15px/1.25 var(--sans);cursor:pointer;text-align:left}
+.vocal__btn:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:999px}
+.vocal__ic{position:relative;flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 4px 14px -6px rgba(16,24,64,.45)}
+.vocal__ring{position:absolute;inset:0;width:52px;height:52px;transform:rotate(-90deg)}
+.vocal__ring circle{fill:none;stroke-width:3.5}
+.vocal__ring .bg{stroke:#E4E7F2}
+.vocal__ring .fg{stroke:#1A2470;stroke-linecap:round;stroke-dasharray:138.2;stroke-dashoffset:138.2;transition:stroke-dashoffset .25s linear}
+.vocal__glyph{position:relative;display:flex;gap:4px;align-items:center;justify-content:center}
+.vocal__glyph i{display:block;width:5px;height:17px;border-radius:2px;background:#1A2470}
+.vocal__glyph b{display:block;width:0;height:0;margin-left:4px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #1A2470}
+.vocal__txt{display:flex;flex-direction:column}
 .vocal__d{color:var(--muted);font-weight:500;font-size:13px;white-space:nowrap}
-.vocal__t{text-align:left}
-.vocal__ic{flex:none}
-.vocal__btn[aria-pressed="true"]{background:var(--green);color:#fff}
-.vocal__btn[aria-pressed="true"] .vocal__ic{background:#fff;color:var(--green)}
-.vocal__btn[aria-pressed="true"] .vocal__d{color:#DDEFE5}
