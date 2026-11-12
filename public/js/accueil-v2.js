@@ -47,7 +47,7 @@
       var tot = P.prix(cl, "commun").totalFcfa, sep = P.prix(cl, "separe").totalFcfa;
       var place = k === "c" ? "au collège" : k === "l" ? "au lycée" : "en primaire";
       var ex = n > 1
-        ? '<p class="g-ex__t">Exemple : ' + n + " enfants " + place + '</p><p class="g-ex__b"><b>' + fmt(tot) + "</b> au lieu de " + fmt(sep) + ' en suivi séparé.<br><b class="g-ex__big">Vous économisez ' + fmt(sep - tot) + ".</b></p>"
+        ? '<p class="g-ex__t">Exemple : ' + n + " enfants " + place + '</p><p class="g-ex__b"><b>' + fmt(tot) + "</b> au lieu de " + fmt(sep) + ' en suivi séparé.</p><p class="g-ex__e"><b>Vous économisez</b><b>' + fmt(sep - tot) + "</b></p>"
         : '<p class="g-ex__t">Exemple : 1 enfant ' + place + '</p><p class="g-ex__b"><b>' + fmt(tot) + "</b> par cycle. Ajoutez un enfant pour voir l'économie.</p>";
       grille.innerHTML =
         '<div class="g-head"><span class="g-badge">100% TRANSPARENT</span><h3>Combien d\'enfants à suivre ?</h3>' +
@@ -102,7 +102,9 @@
   /* ---------- Communes ---------- */
   var zone = document.getElementById("communes-liste");
   if (zone) {
-    fetch("/data/communes.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
+    fetch("https://europe-west1-okalm-ci-5c925.cloudfunctions.net/communesPubliques")
+      .then(function (r) { if (!r.ok) throw new Error("http"); return r.json(); })
+      .catch(function () { return fetch("/data/communes.json", { cache: "no-cache" }).then(function (r) { return r.json(); }); }).then(function (d) {
       var ouv = Array.isArray(d.ouvertes) ? d.ouvertes : [], bien = Array.isArray(d.bientot) ? d.bientot : [];
       var pil = function (l, c) { return l.map(function (n) { return '<span class="zone ' + c + '">' + n + "</span>"; }).join(""); };
       var h = "";
