@@ -1,0 +1,122 @@
+[
+  {
+    "page": "accueil",
+    "largeur": 320,
+    "http": 200,
+    "erreurs": [],
+    "scrollWidth": 320,
+    "viewport": 320
+  },
+  {
+    "page": "calculateur-parents",
+    "largeur": 320,
+    "http": 200,
+    "erreurs": [],
+    "prixInitial": "36 000 F",
+    "commun": "150 000 F",
+    "separe": "228 000 F",
+    "economie": "78 000 F",
+    "scrollWidth": 320,
+    "viewport": 320
+  },
+  {
+    "page": "devenir-prof",
+    "largeur": 320,
+    "http": 200,
+    "erreurs": [],
+    "simulateur": "Jusqu’à environ 54 000 F par cycle de 28 jours",
+    "simulateurTrois": "Jusqu’à environ 81 000 F par cycle de 28 jours",
+    "scrollWidth": 320,
+    "viewport": 320
+  },
+  {
+    "page": "accueil",
+    "largeur": 390,
+    "http": 200,
+    "erreurs": [],
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  {
+    "page": "calculateur-parents",
+    "largeur": 390,
+    "http": 200,
+    "erreurs": [],
+    "prixInitial": "36 000 F",
+    "commun": "150 000 F",
+    "separe": "228 000 F",
+    "economie": "78 000 F",
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  {
+    "page": "devenir-prof",
+    "largeur": 390,
+    "http": 200,
+    "erreurs": [],
+    "simulateur": "Jusqu’à environ 54 000 F par cycle de 28 jours",
+    "simulateurTrois": "Jusqu’à environ 81 000 F par cycle de 28 jours",
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  {
+    "page": "accueil",
+    "largeur": 430,
+    "http": 200,
+    "erreurs": [],
+    "scrollWidth": 430,
+    "viewport": 430
+  },
+  {
+    "page": "calculateur-parents",
+    "largeur": 430,
+    "http": 200,
+    "erreurs": [],
+    "prixInitial": "36 000 F",
+    "commun": "150 000 F",
+    "separe": "228 000 F",
+    "economie": "78 000 F",
+    "scrollWidth": 430,
+    "viewport": 430
+  },
+  {
+    "page": "devenir-prof",
+    "largeur": 430,
+    "http": 200,
+    "erreurs": [],
+    "simulateur": "Jusqu’à environ 54 000 F par cycle de 28 jours",
+    "simulateurTrois": "Jusqu’à environ 81 000 F par cycle de 28 jours",
+    "scrollWidth": 430,
+    "viewport": 430
+  },
+  {
+    "page": "accueil",
+    "largeur": 1280,
+    "http": 200,
+    "erreurs": [],
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "page": "calculateur-parents",
+    "largeur": 1280,
+    "http": 200,
+    "erreurs": [],
+    "prixInitial": "36 000 F",
+    "commun": "150 000 F",
+    "separe": "228 000 F",
+    "economie": "78 000 F",
+    "scrollWidth": 1280,
+    "viewport": 1280
+  },
+  {
+    "page": "devenir-prof",
+    "largeur": 1280,
+    "http": 200,
+    "erreurs": [],
+    "simulateur": "Jusqu’à environ 54 000 F par cycle de 28 jours",
+    "simulateurTrois": "Jusqu’à environ 81 000 F par cycle de 28 jours",
+    "scrollWidth": 1280,
+    "viewport": 1280
+  }
+]

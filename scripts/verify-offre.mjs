@@ -30,20 +30,20 @@ for (const prix of ['3 000 F', '4 000 F', '5 000 F',
   '54 000 F', '96 000 F', '160 000 F']) {
   verifier(index.includes(prix), 'Tarif/option absent : ' + prix);
 }
-verifier(index.includes('84 000 F') && index.includes('108 000 F'),
-  'Exemple famille commun/séparé absent');
-verifier(index.includes('1 000 F/h'), 'Supplément commun absent');
-verifier(index.includes('Se connecter') && index.includes('account-link'),
-  'Connexion accessible absente');
+verifier(index.includes('href="/calculer-mon-prix"') &&
+  index.includes('Plusieurs enfants ? Calculez votre prix'), 'Lien calculateur absent');
+verifier(!index.includes('84 000 F') && !index.includes('108 000 F') &&
+  !index.includes('1 000 F/h'), 'Ancienne formule ou exemple famille encore affiché');
+verifier(!index.includes('Se connecter') && !index.includes('account-link'),
+  'Ancien lien de connexion présent');
 verifier(index.includes('Commander un cours à domicile') &&
   index.includes('href="/get-app-okalm/"'), 'Accès commande Android absent');
 verifier(index.includes('id="parrainage"') &&
-  index.includes('sans vous connecter'), 'Présentation publique absente');
-verifier(index.includes('Activation en préparation') &&
-  index.includes('Après activation du programme'), 'Parrainage annoncé comme déjà actif');
-verifier(index.includes('frais de réception de 1 % (50 F pour 5 000 F)') &&
-  index.includes('4 950 F') && index.includes('ne déduit pas ces frais une seconde fois'),
-  'Frais de réception du parrainage incomplets');
+  index.includes('Bientôt : parrainez une famille et gagnez 5 000 F'),
+  'Parrainage discret en préparation absent');
+verifier(!index.includes('Activation en préparation') &&
+  !index.includes('Après activation du programme') &&
+  !index.includes('4 950 F'), 'Ancien bloc parrainage encore visible');
 verifier(!index.includes('Treize communes') &&
   index.includes("L'application vérifie l'ouverture réelle"),
   'Ouverture des communes présentée comme garantie');

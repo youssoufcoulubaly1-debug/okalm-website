@@ -68,8 +68,23 @@
     return String(Math.round(montant)).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " F";
   }
 
+  function prixFamille(enfants, mode) {
+    if (!Array.isArray(enfants)) throw erreur("enfants invalides");
+    var ids = new Set();
+    var classes = enfants.map(function (e) {
+      if (!e || typeof e.eleveId !== "string" || !/^[\w-]{1,150}$/.test(e.eleveId) || ids.has(e.eleveId)) throw erreur("identifiants invalides");
+      ids.add(e.eleveId);
+      return e.classe;
+    });
+    var r = prix(classes, mode);
+    return { montantTotalFcfa: r.totalFcfa, lignes: r.enfants.map(function (x, i) {
+      return { eleveId: enfants[i].eleveId, classe: x.classe, dureeHebdoMinutes: x.heures * 60 / S, prixEnfantCycleFcfa: x.montantFcfa };
+    }) };
+  }
+
   var api = Object.freeze({
     CLASSES: Object.freeze(CLASSES.slice()),
+    prixFamille: prixFamille,
     LIBELLES: Object.freeze(LIBELLES.slice()),
     classeValide: classeValide,
     prix: prix,

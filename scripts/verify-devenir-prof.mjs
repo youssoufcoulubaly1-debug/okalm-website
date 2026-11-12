@@ -18,11 +18,11 @@ for (const etape of ['Votre identité', 'Votre BAC', 'Un test validé', 'Vos eng
 }
 ok(/série/.test(texte) && /attestation/.test(texte) && /bulletin de Terminale est recommandé/.test(texte),
   'Détail BAC incomplet');
-ok(texte.includes('récompense les résultats') && texte.includes('Réexaminés') &&
-  texte.includes("Détaillées dans l'application Kalmeurs"), 'Bloc résultats incomplet');
+ok(texte.includes('récompense les résultats') && texte.includes('statut de professeur peut être réexaminé') &&
+  texte.includes("Toutes les règles sont détaillées dans l'application Kalmeurs"), 'Bloc résultats incomplet');
 ok(texte.includes('De la ponctualité, un rapport après chaque séance, et du sérieux.'),
   'Phrase des attentes absente');
-ok(/<section[^>]*id="simulateur-prof"/.test(html) && html.includes('<div id="simulateur-prof-montage"></div>'),
+ok(/<section[^>]*id="simulateur-prof"/.test(html) && /<div id="simulateur-prof-montage"[^>]*data-okalm-simulateur-prof[^>]*><\/div>/.test(html),
   'Emplacement simulateur absent');
 ok(html.includes('src="/js/okalm-prix.js"') && html.includes('src="/js/simulateur-prof.js"'),
   'Scripts simulateur non référencés');
