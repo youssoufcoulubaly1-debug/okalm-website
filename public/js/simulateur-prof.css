@@ -1,0 +1,15 @@
+.sim-prof { display: grid; gap: 1rem; max-width: 40rem; }
+.sim-prof__familles { display: grid; gap: .75rem; }
+.sim-prof__famille { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .75rem; margin: 0; padding: .75rem 1rem; border: 1px solid var(--line, rgba(0, 0, 0, .12)); border-radius: var(--radius-sm, 12px); min-width: 0; }
+.sim-prof__famille legend { padding: 0 .35rem; font-weight: 600; }
+.sim-prof__champ { display: grid; gap: .25rem; flex: 1 1 8rem; min-width: 0; font-size: .9rem; }
+.sim-prof__champ select { width: 100%; min-height: 44px; padding: .4rem .6rem; border-radius: 8px; border: 1px solid var(--line-strong, rgba(0, 0, 0, .2)); background: var(--surface, #fff); color: inherit; font: inherit; }
+.sim-prof__retirer { min-height: 44px; padding: 0 .8rem; border: 0; background: none; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; }
+.sim-prof__actions { margin-top: .25rem; }
+.sim-prof__ajouter[disabled] { opacity: .5; cursor: not-allowed; }
+.sim-prof__resultat { padding: 1rem 1.25rem; border-radius: var(--radius, 12px); background: var(--cream-2, rgba(0, 0, 0, .04)); }
+.sim-prof__montant { margin: 0 0 .35rem; font-family: var(--display, inherit); font-size: 1.2rem; font-weight: 700; overflow-wrap: anywhere; }
+.sim-prof__heures, .sim-prof__astuce, .sim-prof__note { margin: .25rem 0 0; }
+.sim-prof__astuce { font-weight: 600; }
+.sim-prof__note { font-size: .85rem; color: var(--muted, inherit); }
+@media (max-width: 360px) { .sim-prof__famille { padding: .6rem; } .sim-prof__montant { font-size: 1.05rem; } }

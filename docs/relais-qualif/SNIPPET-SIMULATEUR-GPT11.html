@@ -1,0 +1,20 @@
+<!-- Snippet S3 a integrer par S5 dans devenir-prof.html, apres cherry-pick de S1 (window.OKALMPrix).
+     Dans <head> : <link rel="stylesheet" href="/js/simulateur-prof.css" />
+     Avant </body>, APRES le script S1 :
+       <script src="/js/okalm-prix.js" defer></script>
+       <script src="/js/simulateur-prof.js" defer></script>
+     Contrat S1 attendu (identique a pricing.js serveur) :
+       OKALMPrix.prixFamille([{ eleveId, classe }], 'commun') -> { lignes[{ dureeHebdoMinutes }], montantTotalFcfa }
+     Ne pas copier ce commentaire dans la page publique. -->
+<section class="sec" id="simulateur-revenus">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">Simulateur</p>
+      <h2>Estimez vos revenus avec OKALM CI</h2>
+      <p class="sec__lead">Choisissez le nombre de familles suivies, puis le niveau et le nombre d'enfants de chacune.</p>
+    </div>
+    <div class="sim-prof" data-okalm-simulateur-prof>
+      <noscript><p>Activez JavaScript pour utiliser le simulateur.</p></noscript>
+    </div>
+  </div>
+</section>
