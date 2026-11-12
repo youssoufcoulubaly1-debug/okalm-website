@@ -82,27 +82,22 @@
   });
 })();
 
-/* Vocaux façon Wave : rond lecture/pause, anneau de progression, lecture en boucle jusqu'à l'arrêt. */
+/* Vocaux : carte façon Wave, rond lecture/pause avec anneau de progression, lecture en boucle jusqu'à l'arrêt. */
 (function () {
   var courant = null;
-  var C = 138.2; /* 2πr avec r = 22 */
+  var C = 150.8; /* 2πr avec r = 24 */
   document.querySelectorAll(".vocal[data-src]").forEach(function (bloc) {
     var btn = bloc.querySelector(".vocal__btn");
     var ic = bloc.querySelector(".vocal__ic");
-    var t = bloc.querySelector(".vocal__t");
-    var d = bloc.querySelector(".vocal__d");
-    if (!btn || !ic || !t || !d) return;
-    var libelle = t.textContent;
-    ic.innerHTML = '<svg class="vocal__ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bg" cx="26" cy="26" r="22"/><circle class="fg" cx="26" cy="26" r="22"/></svg><span class="vocal__glyph"><b></b></span>';
-    var txt = document.createElement("span");
-    txt.className = "vocal__txt";
-    btn.insertBefore(txt, t); txt.appendChild(t); txt.appendChild(d);
+    if (!btn || !ic) return;
+    var nom = btn.getAttribute("aria-label") || "Écouter";
+    ic.innerHTML = '<svg class="vocal__ring" viewBox="0 0 56 56" aria-hidden="true"><circle class="bg" cx="28" cy="28" r="24"/><circle class="fg" cx="28" cy="28" r="24"/></svg><span class="vocal__glyph"><b></b></span>';
     var fg = ic.querySelector(".fg"), glyph = ic.querySelector(".vocal__glyph");
     var audio = null;
     var etat = function (on) {
       btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.setAttribute("aria-label", on ? "Arrêter l'écoute" : nom);
       glyph.innerHTML = on ? "<i></i><i></i>" : "<b></b>";
-      t.textContent = on ? "En écoute… touchez pour arrêter" : libelle;
       if (!on) fg.style.strokeDashoffset = C;
     };
     btn.addEventListener("click", function () {

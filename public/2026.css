@@ -806,17 +806,25 @@ li.is-full .ladder__b{background:transparent;color:var(--muted);border:1px solid
 }
 @media (max-width:359px){.topbar__download{padding:8px 10px;font-size:.76rem}}
 
-/* ---------- Vocaux façon Wave : rond lecture/pause avec anneau de progression ---------- */
-.vocal{margin:14px 0 0}
-.vocal__btn{display:inline-flex;align-items:center;gap:12px;padding:0;border:0;background:none;color:var(--ink);font:600 15px/1.25 var(--sans);cursor:pointer;text-align:left}
-.vocal__btn:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:999px}
-.vocal__ic{position:relative;flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 4px 14px -6px rgba(16,24,64,.45)}
-.vocal__ring{position:absolute;inset:0;width:52px;height:52px;transform:rotate(-90deg)}
+/* ---------- Vocaux : carte façon Wave (titre, phrase, rond lecture/pause avec anneau) ---------- */
+.vocal{display:flex;align-items:center;gap:14px;margin:16px 0 0;padding:16px 16px 16px 18px;border-radius:18px;background:linear-gradient(120deg,#083D28 0%,#0C5136 55%,#1E7A52 100%);color:#fff;box-shadow:0 10px 26px -14px rgba(8,61,40,.6);max-width:520px}
+.vocal__corps{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.vocal__titre{font:700 17px/1.25 var(--sans);color:#fff}
+.vocal__desc{font:400 14px/1.4 var(--sans);color:#DDF1E6}
+.vocal__d{white-space:nowrap;font-weight:600;color:#fff}
+.vocal__btn{flex:none;padding:0;border:0;background:none;cursor:pointer;border-radius:50%}
+.vocal__btn:focus-visible{outline:3px solid #FFD27A;outline-offset:3px}
+.vocal__ic{position:relative;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff;box-shadow:0 4px 14px -6px rgba(0,0,0,.5)}
+.vocal__ring{position:absolute;inset:0;width:56px;height:56px;transform:rotate(-90deg)}
 .vocal__ring circle{fill:none;stroke-width:3.5}
-.vocal__ring .bg{stroke:#E4E7F2}
-.vocal__ring .fg{stroke:#1A2470;stroke-linecap:round;stroke-dasharray:138.2;stroke-dashoffset:138.2;transition:stroke-dashoffset .25s linear}
+.vocal__ring .bg{stroke:#E1EDE6}
+.vocal__ring .fg{stroke:#0C5136;stroke-linecap:round;stroke-dasharray:150.8;stroke-dashoffset:150.8;transition:stroke-dashoffset .25s linear}
 .vocal__glyph{position:relative;display:flex;gap:4px;align-items:center;justify-content:center}
-.vocal__glyph i{display:block;width:5px;height:17px;border-radius:2px;background:#1A2470}
-.vocal__glyph b{display:block;width:0;height:0;margin-left:4px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #1A2470}
-.vocal__txt{display:flex;flex-direction:column}
-.vocal__d{color:var(--muted);font-weight:500;font-size:13px;white-space:nowrap}
+.vocal__glyph i{display:block;width:5px;height:18px;border-radius:2px;background:#0C5136}
+.vocal__glyph b{display:block;width:0;height:0;margin-left:4px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #0C5136}
+.vocal--k{background:linear-gradient(120deg,#6E2A0D 0%,#B0451A 55%,#D86A2C 100%);box-shadow:0 10px 26px -14px rgba(110,42,13,.6)}
+.vocal--k .vocal__desc{color:#FFE6D6}
+.vocal--k .vocal__ring .bg{stroke:#F6E1D4}
+.vocal--k .vocal__ring .fg{stroke:#B0451A}
+.vocal--k .vocal__glyph i{background:#B0451A}
+.vocal--k .vocal__glyph b{border-left-color:#B0451A}
