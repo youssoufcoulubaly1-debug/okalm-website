@@ -90,7 +90,7 @@
         '<p class="c-max">Le suivi commun est limité à 3 enfants, pour garantir la qualité.</p></div>' +
         '<div class="c-res"><div class="c-res__top"><div class="c-commun"><span>SUIVI COMMUN</span><b>' + fmt(r.totalFcfa) + "</b><small>par cycle de 28 jours</small></div>" +
         '<div class="c-sep"><span>SUIVI SÉPARÉ</span><b>' + fmt(s.totalFcfa) + "</b><small>un suivi pour chaque enfant</small></div></div>" +
-        '<div class="c-eco"><small>Avec le suivi commun, vous économisez</small><b>' + fmt(s.totalFcfa - r.totalFcfa) + "</b></div></div>" +
+        '<div class="c-eco"><small>Avec le suivi commun</small><b>Vous économisez</b><b>' + fmt(s.totalFcfa - r.totalFcfa) + "</b></div></div>" +
         '<p class="c-how">Comment c\'est calculé : l\'enfant de la classe la plus élevée paie le plein tarif ; chaque autre enfant paie 1' + NBSP + "000" + NBSP + "F par heure de cours. Le devis exact est confirmé à la commande.</p>" +
         '<a class="g-cta c-cta" href="/get-app-okalm/">Commander avec ces classes</a>';
       calcul.querySelectorAll("select").forEach(function (sel) { sel.onchange = function () { cls[+sel.dataset.i] = sel.value; dessiner(); }; });
@@ -107,7 +107,7 @@
       var pil = function (l, c) { return l.map(function (n) { return '<span class="zone ' + c + '">' + n + "</span>"; }).join(""); };
       var h = "";
       if (ouv.length) h += '<p class="zl zl--on">Ouvertes actuellement</p><div class="zones">' + pil(ouv, "zone--on") + "</div>";
-      if (bien.length) h += '<p class="zl">' + (ouv.length ? "Bientôt disponibles" : "Ouverture prochaine") + '</p><div class="zones">' + pil(bien, "") + "</div>";
+      if (bien.length) h += '<p class="zl">' + "Très bientôt disponibles" + '</p><div class="zones">' + pil(bien, "") + "</div>";
       if (h) zone.innerHTML = h;
     }).catch(function () {});
   }
