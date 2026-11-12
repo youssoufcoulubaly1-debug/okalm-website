@@ -1,0 +1,5 @@
+{
+  "_note": "Liste publique des communes. A mettre a jour depuis l'administration (communes ouvertes) avant chaque ouverture. Tant que 'ouvertes' est vide, le site affiche seulement 'Bientot disponibles'.",
+  "ouvertes": [],
+  "bientot": ["Abobo", "Adjamé", "Anyama", "Attécoubé", "Bingerville", "Cocody", "Koumassi", "Marcory", "Plateau", "Port-Bouët", "Songon", "Treichville", "Yopougon"]
+}

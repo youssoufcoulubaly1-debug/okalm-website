@@ -17,9 +17,10 @@
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/2026.css" />
   <link rel="stylesheet" href="/css/accueil-lot5.css" />
+  <link rel="stylesheet" href="/css/accueil-v2.css" />
 </head>
 <body class="page-accueil-lot5">
 <a class="skip" href="#main">Aller au contenu</a>
@@ -44,6 +45,7 @@
         <summary aria-label="Ouvrir le menu"><span class="menu__bars"><span></span></span></summary>
         <div class="menu__panel">
           <a href="#pourquoi">Exemple de rapport</a>
+          <a href="#qualite">La qualité</a>
           <a href="#comment">Comment ça marche</a>
           <a href="#professeurs">Nos professeurs</a>
           <a href="#tarifs">Tarifs par niveau</a>
@@ -71,15 +73,16 @@
     <div>
       <p class="eyebrow">Soutien scolaire à domicile · Abidjan</p>
       <h1>Un professeur sérieux chez vous, <em>et la preuve écrite des progrès de votre enfant</em></h1>
-      <p class="hero__sub">Du CP1 à la Terminale, à Abidjan, selon le programme ivoirien.</p>
-      <ul class="lot5-reperes">
-        <li>Professeur vérifié</li>
-        <li>Un rapport après chaque séance</li>
-        <li>Prix connu avant de payer</li>
+      <p class="hero__sub">Votre enfant est suivi du CP1 à la Terminale, selon le programme ivoirien. Après chaque séance, vous lisez ce qu'il a travaillé, ce qu'il maîtrise et ce qu'il doit encore travailler.</p>
+      <ul class="mini4">
+        <li><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C5136" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Professeur vérifié</b><span class="t">Identité, diplômes et test</span></li>
+        <li class="px"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0451A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h9v9l-9 9z"/><circle cx="16.5" cy="7.5" r="1.5"/></svg></span><b>Prix connu</b><span class="t">À partir de <u>36&nbsp;000&nbsp;F</u> par cycle de 28 jours</span></li>
+        <li><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Cours à domicile</b><span class="t">Transport compris</span></li>
+        <li><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B26A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M3 10h18"/></svg></span><b>Paiement sécurisé</b><span class="t">Par Wave, sans frais d'inscription</span></li>
       </ul>
       <div class="hero__cta">
-        <a class="btn" href="/get-app-okalm/">Commander un cours</a>
-        <a class="btn btn--ghost" href="/calculer-mon-prix">Calculer mon prix</a>
+        <a class="btn" href="/get-app-okalm/">Commander un cours à domicile</a>
+        <a class="btn btn--ghost" href="#tarifs">Calculer mon prix</a>
       </div>
     </div>
   </div>
@@ -91,7 +94,7 @@
     <div class="sec__head">
       <p class="eyebrow">La preuve écrite</p>
       <h2>Après chaque séance, vous lisez ce qui a été fait.</h2>
-      <p class="sec__lead">Ce que votre enfant a travaillé, ce qu'il maîtrise et ce qu'il doit encore travailler, dans l'application.</p>
+      <p class="sec__lead">Vous voyez ce que votre enfant a travaillé, ce qu'il maîtrise et ce qu'il doit encore travailler, dans l'application.</p>
     </div>
 
     <figure class="card report">
@@ -121,113 +124,118 @@
   </div>
 </section>
 
-<!-- 3 · COMMENT ÇA MARCHE -->
-<section class="sec sec--alt" id="comment">
+<!-- 3 · QUALITÉ -->
+<section class="sec sec--terra" id="qualite">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">La qualité avant tout</p>
+      <h2>Un vrai enseignement, suivi de près.</h2>
+      <p class="sec__lead">Le prix compte, mais ce que votre enfant apprend compte davantage. Voici ce qui garantit la qualité.</p>
+    </div>
+    <ul class="qual">
+      <li><span class="qi c-vert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C5136" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span><b>Des professeurs sélectionnés</b><span class="t">Nous vérifions leur identité, leurs diplômes et leur niveau avant la première séance. Chaque matière est enseignée par un spécialiste.</span></span></li>
+      <li><span class="qi c-amb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B26A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span><b>Un bilan de départ</b><span class="t">La première séance mesure le niveau réel de votre enfant. Le professeur part ensuite du bon point.</span></span></li>
+      <li><span class="qi c-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><span><b>Un plan d'action sur 28 jours</b><span class="t">Le professeur fixe des objectifs clairs, adaptés à votre enfant. Il y a deux à trois séances par semaine.</span></span></li>
+      <li><span class="qi c-terra"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0451A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></span><span><b>Un rapport écrit à chaque séance</b><span class="t">Vous lisez ce qui a été travaillé et ce qui reste à améliorer. Vous voyez les progrès séance après séance.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · NOS PROFESSEURS -->
+<section class="sec band-dark" id="professeurs">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow">La sélection</p>
+      <h2>Chaque professeur est vérifié avant de venir chez vous.</h2>
+    </div>
+    <ul class="pills">
+      <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M14 10h4M14 14h4M6 16c1-2 5-2 6 0"/></svg>Identité vérifiée</li>
+      <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg>Diplôme(s) vérifié(s)</li>
+      <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Test réussi dans sa matière et son niveau</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 · COMMENT ÇA MARCHE -->
+<section class="sec" id="comment">
   <div class="wrap">
     <div class="sec__head">
       <p class="eyebrow">En 4 étapes</p>
       <h2>Comment ça marche.</h2>
     </div>
-    <ol class="steps">
-      <li><div><h3>Vous commandez</h3><p>Dans l'application : la classe, la matière et vos créneaux.</p></div></li>
-      <li><div><h3>Vous payez par Wave</h3><p>Notre équipe vérifie et confirme votre paiement.</p></div></li>
-      <li><div><h3>Nous choisissons votre professeur</h3><p>Selon la classe, la matière, votre commune et vos créneaux.</p></div></li>
-      <li><div><h3>Les cours ont lieu chez vous</h3><p>Vous recevez un rapport après chaque séance.</p></div></li>
+    <ol class="tl">
+      <li><span class="n">1</span><span><b>Vous commandez</b><span class="t">Dans l'application, vous indiquez la classe de votre enfant, la matière et vos créneaux.</span></span></li>
+      <li><span class="n">2</span><span><b>Vous payez par Wave</b><span class="t">Notre équipe vérifie votre paiement et vous le confirme.</span></span></li>
+      <li><span class="n">3</span><span><b>Nous choisissons votre professeur</b><span class="t">Nous le choisissons selon la classe, la matière, votre commune et vos créneaux. Vous voyez ensuite son nom et ses matières dans l'application.</span></span></li>
+      <li><span class="n">4</span><span><b>Les cours ont lieu chez vous</b><span class="t">Le professeur vient à domicile. Après chaque séance, vous recevez un rapport.</span></span></li>
     </ol>
   </div>
 </section>
 
-<!-- 4 · NOS PROFESSEURS -->
-<section class="sec" id="professeurs">
-  <div class="wrap">
-    <div class="sec__head">
-      <p class="eyebrow">La sélection</p>
-      <h2>Des professeurs vérifiés avant de venir chez vous.</h2>
-    </div>
-    <ul class="check">
-      <li><span class="ck">✓</span><span><b>Identité vérifiée</b>Pièce d'identité contrôlée par notre équipe.</span></li>
-      <li><span class="ck">✓</span><span><b>BAC vérifié</b>Le diplôme ou l'attestation est examiné dans le dossier.</span></li>
-      <li><span class="ck">✓</span><span><b>Test réussi</b>Dans la matière et le niveau qu'il enseigne.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- 5 · TARIFS -->
+<!-- 6 · TARIFS -->
 <section class="sec sec--alt" id="tarifs">
   <div class="wrap">
     <div class="sec__head">
       <p class="eyebrow">Tarifs</p>
-      <h2>Le prix pour un enfant, par cycle de 28 jours.</h2>
-      <p class="sec__lead">Transport compris, sans frais d'inscription.</p>
+      <h2>Le prix est connu avant de payer.</h2>
+      <p class="sec__lead">Les prix sont donnés par cycle de 28 jours. Le transport est compris et il n'y a pas de frais d'inscription.</p>
     </div>
-    <div class="pricing__grid" aria-label="Tarifs du suivi standard">
-      <article class="price-card">
-        <span class="price-card__group">CP1 à CM2</span>
-        <h3>Primaire</h3>
-        <p class="offer-cycle"><strong>36 000 F</strong><span>par cycle · 3 000 F / heure · 12 h</span></p>
-      </article>
-      <article class="price-card">
-        <span class="price-card__group">6e à 3e</span>
-        <h3>Collège</h3>
-        <p class="offer-cycle"><strong>72 000 F</strong><span>par cycle · 4 000 F / heure · 18 h</span></p>
-      </article>
-      <article class="price-card">
-        <span class="price-card__group">2nde à Terminale</span>
-        <h3>Lycée</h3>
-        <p class="offer-cycle"><strong>120 000 F</strong><span>par cycle · 5 000 F / heure · 24 h</span></p>
-      </article>
+    <div class="prix-wrap">
+      <div id="tarifs-grille"><noscript><p style="padding:20px">Primaire (CP1 à CM2) : 36 000 F par cycle. Collège (6e à 3e) : 72 000 F. Lycée (2nde à Tle) : 120 000 F. Prix pour un enfant.</p></noscript></div>
+      <div id="tarifs-calcul"></div>
     </div>
-    <details class="offer-options">
-      <summary>Options examens</summary>
-      <ul>
-        <li><strong>CEPE (CM2) :</strong> 54 000 F par cycle</li>
-        <li><strong>BEPC (3e) :</strong> 96 000 F par cycle</li>
-        <li><strong>3e, séances de 2 h :</strong> 96 000 F par cycle</li>
-        <li><strong>BAC (Terminale) :</strong> 160 000 F par cycle</li>
-      </ul>
-    </details>
-    <div class="pricing__cta">
-      <a class="btn btn--ghost" href="/calculer-mon-prix">Plusieurs enfants ? Calculez votre prix</a>
+
+    <div class="sec__head" style="margin-top:44px">
+      <p class="eyebrow">Options examens</p>
+      <p class="sec__lead">Pour préparer un examen, votre enfant a une séance de plus par semaine, ou des séances plus longues. C'est ce qui fait monter le prix.</p>
     </div>
+    <ul class="ex4">
+      <li><div class="eh"><b>CEPE · CM2</b><em>54&nbsp;000&nbsp;F</em></div><span class="t">Votre enfant a 3 séances par semaine au lieu de 2. Il a donc 18 heures de cours par cycle au lieu de 12.</span></li>
+      <li><div class="eh"><b>BEPC · 3e</b><em>96&nbsp;000&nbsp;F</em></div><span class="t">Votre enfant a 4 séances par semaine au lieu de 3. Il a donc 24 heures de cours par cycle au lieu de 18.</span></li>
+      <li><div class="eh"><b>3e · séances de 2 h</b><em>96&nbsp;000&nbsp;F</em></div><span class="t">Votre enfant garde 3 séances par semaine, mais elles durent 2 heures au lieu de 1 h 30. Il a donc 24 heures par cycle.</span></li>
+      <li><div class="eh"><b>BAC · Terminale</b><em>160&nbsp;000&nbsp;F</em></div><span class="t">Votre enfant a 4 séances par semaine au lieu de 3. Il a donc 32 heures de cours par cycle au lieu de 24.</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- 6 · GARANTIES -->
+<!-- 7 · GARANTIES -->
 <section class="sec" id="garanties">
   <div class="wrap">
     <div class="sec__head">
       <p class="eyebrow">Vos garanties</p>
       <h2>Vous restez protégé.</h2>
     </div>
-    <ul class="lot5-garanties">
-      <li><h3>Changement de professeur possible</h3><p>Vous pouvez en faire la demande depuis l'application.</p></li>
-      <li><h3>Paiement Wave vérifié</h3><p>Notre équipe contrôle votre paiement et vous le confirme.</p></li>
-      <li><h3>Aucun paiement direct au professeur</h3><p>Vous réglez vos cours à OKALM CI, jamais au professeur.</p></li>
+    <ul class="gar">
+      <li><span class="qi c-vert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C5136" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg></span>Vous pouvez demander un autre professeur depuis l'application.</li>
+      <li><span class="qi c-terra"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0451A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M3 10h18"/></svg></span>Notre équipe vérifie votre paiement et vous le confirme.</li>
+      <li><span class="qi c-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>Vous payez OKALM CI. Vous ne payez jamais le professeur directement.</li>
     </ul>
   </div>
 </section>
 
-<!-- 7 · COMMUNES -->
+<!-- 8 · COMMUNES -->
 <section class="sec sec--alt" id="communes">
   <div class="wrap">
     <div class="sec__head">
       <p class="eyebrow">Votre commune</p>
       <h2>Où nous venons.</h2>
-      <p class="sec__lead">L'application vérifie l'ouverture réelle de votre commune au moment de la demande.</p>
+      <p class="sec__lead">Nous ne sommes pas encore présents dans toutes les communes d'Abidjan. L'application vérifie l'ouverture de votre commune au moment de la demande.</p>
     </div>
-    <div class="zones">
-      <span class="zone">Abobo</span><span class="zone">Adjamé</span><span class="zone">Anyama</span>
-      <span class="zone">Attécoubé</span><span class="zone">Bingerville</span><span class="zone">Cocody</span>
-      <span class="zone">Koumassi</span><span class="zone">Marcory</span><span class="zone">Plateau</span>
-      <span class="zone">Port-Bouët</span><span class="zone">Songon</span><span class="zone">Treichville</span>
-      <span class="zone">Yopougon</span>
+    <div id="communes-liste">
+      <div class="zones">
+        <span class="zone">Abobo</span><span class="zone">Adjamé</span><span class="zone">Anyama</span>
+        <span class="zone">Attécoubé</span><span class="zone">Bingerville</span><span class="zone">Cocody</span>
+        <span class="zone">Koumassi</span><span class="zone">Marcory</span><span class="zone">Plateau</span>
+        <span class="zone">Port-Bouët</span><span class="zone">Songon</span><span class="zone">Treichville</span>
+        <span class="zone">Yopougon</span>
+      </div>
     </div>
-    <p class="zones__more">Votre commune n'est pas ouverte ou ne figure pas ici ?
-      <a href="https://wa.me/2250509185121">Écrivez-nous sur WhatsApp</a>.</p>
+    <p class="zones__more">Votre commune n'est pas dans la liste ? Dites-le-nous.
+      <a href="https://wa.me/2250509185121?text=Bonjour%2C%20pr%C3%A9venez-moi%20quand%20ma%20commune%20ouvre">Prévenez-moi sur WhatsApp</a>.</p>
   </div>
 </section>
 
-<!-- 8 · FAQ -->
+<!-- 9 · FAQ -->
 <section class="sec" id="faq">
   <div class="wrap">
     <div class="sec__head">
@@ -235,42 +243,29 @@
       <h2>Ce qu'on nous demande le plus.</h2>
     </div>
     <div class="faq">
-      <details>
-        <summary>La première séance est-elle gratuite ?</summary>
-        <p><strong>Non.</strong> La première séance est payante et sert de bilan de départ. Elle dure 90 minutes en primaire et au collège, 120 minutes au lycée ou en 3e avec l'option de 2 heures.</p>
-      </details>
-      <details>
-        <summary>Sous quel délai un professeur est-il trouvé ?</summary>
-        <p>Aucun délai n'est garanti. Il dépend de la classe, des matières, de votre commune et des professeurs disponibles.</p>
-      </details>
-      <details>
-        <summary>Où voir le montant exact de ma commande ?</summary>
-        <p>Dans l'application, avant de confirmer. Le montant dépend des besoins de vos enfants et de votre planning.</p>
-      </details>
-      <details>
-        <summary>Puis-je payer en deux fois ?</summary>
-        <p>Pour le premier cycle, vous pouvez régler en deux tranches par Wave, selon les conditions présentées dans l'application.</p>
-      </details>
-      <details>
-        <summary>Comment faire une réclamation ou renouveler ?</summary>
-        <p>Pour toute difficulté, utilisez l'espace <a href="/support">Aide</a> ou WhatsApp. Vous payez cycle par cycle et vous êtes libre de renouveler ou d'arrêter à chaque fin de cycle, sans reconduction automatique.</p>
-      </details>
-      <details>
-        <summary>Quel programme suit mon enfant ?</summary>
-        <p>Le programme national ivoirien, du CP1 à la Terminale, avec la préparation au CEPE, au BEPC et au BAC.</p>
-      </details>
+      <details><summary>Pourquoi payer avant la première séance ?</summary><p>Le professeur sait que le cycle est payé. Il vient pour enseigner, sans discuter le prix à la porte. Vous savez de votre côté que le professeur a été vérifié. C'est une protection des deux côtés.</p></details>
+      <details><summary>La première séance est-elle gratuite ?</summary><p><strong>Non.</strong> Elle est payante et sert de bilan de départ. Elle dure 90 minutes en primaire et au collège, et 120 minutes au lycée ou en 3e avec l'option de 2 heures.</p></details>
+      <details><summary>Puis-je payer en deux fois ?</summary><p>Pour le premier cycle, vous pouvez payer en deux tranches par Wave. Les conditions sont présentées dans l'application.</p></details>
+      <details><summary>Que faire si le professeur ne convient pas ?</summary><p>Vous pouvez demander un autre professeur depuis l'application. Notre équipe étudie votre demande.</p></details>
+      <details><summary>Comment payer par Wave ?</summary><p>Vous payez depuis l'application. Notre équipe vérifie votre paiement et vous le confirme. La recherche du professeur commence ensuite.</p></details>
+      <details><summary>Que contient le rapport après chaque séance ?</summary><p>Vous y lisez les notions travaillées, ce qui est acquis et les difficultés qui restent. Vous y trouvez aussi le devoir donné et le commentaire du professeur.</p></details>
+      <details><summary>Sous quel délai un professeur est-il trouvé ?</summary><p>Nous ne pouvons pas promettre de délai. Il dépend de la classe, des matières, de votre commune et des professeurs disponibles.</p></details>
+      <details><summary>Faut-il s'engager sur plusieurs cycles ?</summary><p>Non. Vous payez cycle par cycle. À la fin de chaque cycle, vous renouvelez ou vous arrêtez, sans reconduction automatique.</p></details>
+      <details><summary>Peut-on suivre plus de 3 enfants ?</summary><p>Non. Pour garantir la qualité du suivi, nous limitons le suivi commun à 3 enfants.</p></details>
+      <details><summary>Quel programme suit mon enfant ?</summary><p>Nous suivons uniquement le programme national ivoirien, du CP1 à la Terminale. Nous préparons aussi au CEPE, au BEPC et au BAC.</p></details>
+      <details><summary>Je n'ai pas Android. Comment faire ?</summary><p>Vous pouvez commander sur WhatsApp au +225 05 09 18 51 21. Notre équipe vous aide à commander et vous transmet les rapports.</p></details>
     </div>
-    <p class="faq__more">Une autre question ? <a href="https://wa.me/2250509185121">Posez-la à notre équipe sur WhatsApp</a>.</p>
+    <p class="faq__more">Une autre question ? <a href="https://wa.me/2250509185121">Posez-la à notre équipe sur WhatsApp</a>. Pour une réclamation, utilisez l'espace <a href="/support">Aide</a>.</p>
   </div>
 </section>
 
-<!-- 9 · DERNIER APPEL + PAS D'ANDROID -->
+<!-- 10 · DERNIER APPEL + PAS D'ANDROID -->
 <section class="final" id="telecharger">
   <div class="wrap">
     <div class="final__box">
       <img class="final__logo" src="/assets/icon-okalm-192.png" alt="" width="64" height="64" />
       <h2>Prêt à démarrer ?</h2>
-      <p>Téléchargez l'application OKALM CI et commandez le suivi de votre enfant.</p>
+      <p>Téléchargez l'application OKALM CI. Vous pourrez commander le suivi de votre enfant.</p>
       <div class="hero__cta">
         <a class="btn" href="/get-app-okalm/">Commander un cours à domicile</a>
         <a class="btn btn--ghost" href="https://wa.me/2250509185121?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20avec%20OKALM%20CI" target="_blank" rel="noopener">Échanger avec nous</a>
@@ -286,19 +281,14 @@
   </div>
 </section>
 
-<!-- 10 · PARRAINAGE (dernier bloc) -->
+<!-- 11 · PARRAINAGE (dernier bloc) -->
 <section class="sec sec--alt" id="parrainage">
   <div class="wrap">
-    <div class="sec__head">
-      <p class="eyebrow">Parrainage · Bientôt</p>
-      <h2>Bientôt : parrainez une famille et gagnez 5 000 F</h2>
-    </div>
-    <div class="lot5-parrainage">
-      <ul>
-        <li><strong>5 000 F</strong> lorsque la première commande de la famille recommandée est payée et confirmée.</li>
-        <li><strong>5 000 F de plus</strong> lorsque cette famille renouvelle son suivi.</li>
-      </ul>
-      <p>Programme bientôt disponible. Conditions présentées dans l'application lors de son activation.</p>
+    <div class="parr-wrap">
+      <div class="parr">
+        <div style="flex:1"><b>Parrainez une famille</b><p>Vous gagnez 5 000 F quand sa première commande est payée. Vous gagnez 5 000 F de plus quand elle renouvelle. Les conditions sont présentées dans l'application.</p></div>
+        <div class="m">5&nbsp;000&nbsp;F</div>
+      </div>
     </div>
   </div>
 </section>
@@ -344,5 +334,7 @@
 </footer>
 
 <script src="/2026.js" defer></script>
+<script src="/js/okalm-prix.js" defer></script>
+<script src="/js/accueil-v2.js" defer></script>
 </body>
 </html>
