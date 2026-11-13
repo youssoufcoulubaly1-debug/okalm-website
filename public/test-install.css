@@ -25,3 +25,28 @@
 .test-install__help details p{margin-top:14px;line-height:1.8}
 .test-install__button{padding-left:16px;padding-right:16px}
 @media(min-width:700px){.test-install__step{padding:34px}.test-install__step>p{max-width:60ch}}
+
+/* Captures guidées par étape (13/11) : une capture sous l'autre, dans l'ordre */
+.ti-lead{margin:6px 0 0;font-weight:700;color:var(--ink)}
+.ti-caps{display:grid;gap:22px;margin:14px 0 6px;counter-reset:ti}
+.ti-cap{margin:0;max-width:300px;width:100%;justify-self:center;counter-increment:ti}
+.ti-cap img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line-strong);box-shadow:var(--shadow-sm);background:#fff}
+.ti-cap figcaption{margin-top:10px;font-size:.95rem;line-height:1.45;color:var(--ink)}
+.ti-cap figcaption::before{content:counter(ti);width:22px;height:22px;margin-right:8px;vertical-align:1px;border-radius:50%;background:#FF6A00;color:#fff;font-size:.78rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.vocal--mini{margin:2px 0 0;padding:10px 12px 10px 16px;border-radius:14px}
+.vocal--mini .vocal__titre{font-size:.95rem}
+
+/* Carrousel (13/11) */
+.ti-caps--carrousel{display:block;position:relative;max-width:300px;margin-left:auto;margin-right:auto}
+.ti-track{display:flex;align-items:flex-start;transition:height .25s ease;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ti-track::-webkit-scrollbar{display:none}
+.ti-track .ti-cap{flex:0 0 100%;max-width:none;scroll-snap-align:center;padding:0 2px;box-sizing:border-box}
+.ti-nav{position:absolute;top:150px;width:44px;height:44px;border-radius:50%;border:0;background:#FF6A00;color:#fff;font-size:30px;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.45);cursor:pointer;z-index:2}
+.ti-nav span{transform:translateY(-2px)}
+.ti-prev{left:-14px}.ti-next{right:-14px}
+.ti-nav:disabled{opacity:0;pointer-events:none}
+.ti-pulse{animation:tiPulse 1.3s ease-in-out infinite}
+@keyframes tiPulse{0%,100%{transform:translateX(0) scale(1)}50%{transform:translateX(5px) scale(1.1)}}
+@media (prefers-reduced-motion:reduce){.ti-pulse{animation:none}}
+.ti-count{text-align:center;margin:8px 0 0;font-size:.82rem;font-weight:700;color:var(--muted)}
+.ti-caps>.ti-cap:only-child figcaption::before{display:none}
