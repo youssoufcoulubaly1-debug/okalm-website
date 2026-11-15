@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFF6EC">
+  <title>Un proche vous recommande OKALM CI</title>
+  <meta name="description" content="Découvrez OKALM CI : des cours à domicile avec des professeurs vérifiés, recommandés par un proche.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Un proche vous recommande OKALM CI">
+  <meta property="og:description" content="Des professeurs vérifiés à domicile pour accompagner vos enfants. Découvrez OKALM CI.">
+  <meta property="og:image" content="https://okalm.ci/assets/icon-okalm-192.png">
+  <meta property="og:image:alt" content="Logo officiel OKALM CI">
+  <link rel="icon" href="/assets/icon-okalm-192.png">
+  <link rel="stylesheet" href="/2026.css">
+  <style>
+    .reco{max-width:570px;margin:5rem auto;padding:1.5rem}
+    .reco__panel{background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:clamp(1.3rem,5vw,2.6rem);box-shadow:0 12px 44px #182b2414}
+    .reco__brand{display:flex;align-items:center;gap:12px;font-weight:800;color:#174f3b;margin-bottom:1.5rem}
+    .reco h1{font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.15;margin:0 0 1rem;color:#153d31}
+    .reco p{line-height:1.65;color:#43564e}
+    .reco label{display:block;font-weight:700;font-size:.9rem;margin:1.5rem 0 .4rem;color:#233e32}
+    .reco input{width:100%;border:1px solid #9caca3;border-radius:12px;padding:14px;font:inherit}
+    .reco__hint{font-size:.79rem}
+    .reco .btn{display:block;text-align:center;width:100%;margin-top:1.4rem;cursor:pointer}
+    .reco__status{min-height:1.5em;font-size:.88rem}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="topbar"><div class="wrap topbar__in">
+  <a class="brand" href="/"><img src="/assets/icon-okalm-192.png" width="30" height="30" alt=""> OKALM <span class="brand__ci">CI</span></a>
+</div></header>
+<main id="main" class="reco">
+  <div class="reco__panel">
+    <div class="reco__brand"><img src="/assets/icon-okalm-192.png" width="48" height="48" alt=""> Une recommandation personnelle</div>
+    <h1>Un proche vous recommande OKALM CI</h1>
+    <p>Profitez de cours à domicile avec des professeurs vérifiés et un suivi pédagogique pour chaque enfant.</p>
+    <form id="parrainage-form">
+      <label for="whatsapp">Votre numéro WhatsApp (facultatif)</label>
+      <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel"
+        maxlength="32" placeholder="Ex. : 07 00 00 00 00">
+      <p class="reco__hint">Ce numéro sert uniquement au rapprochement de la recommandation avec votre commande. Il n'est pas communiqué à la personne qui vous recommande.</p>
+      <button id="continuer" class="btn" type="submit">Découvrir comment installer OKALM CI</button>
+      <p class="reco__status" id="statut" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</main>
+<script src="/js/parrainage-lien.js" defer></script>
+</body>
+</html>
