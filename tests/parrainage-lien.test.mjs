@@ -7,7 +7,7 @@ const base=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"../public"
 const read=p=>readFileSync(path.join(base,p),"utf8");
 test("lien /p/CODE servi avant le 404, code jamais affiché",()=>{
   const redirects=read("_redirects");
-  assert.match(redirects,/\/p\/\*\s+\/p\/index\.html\s+200/);
+  assert.match(redirects,/\/p\/\*\s+\/p\/\s+200/);
   assert.ok(redirects.indexOf("/p/*")<redirects.indexOf("/* "));
   const html=read("p/index.html");
   assert.match(html,/Un proche vous recommande OKALM CI/);

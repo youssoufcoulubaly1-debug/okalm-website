@@ -15,5 +15,5 @@
 # Ce sont des DOSSIERS avec index.html, servis nativement — ne jamais les declarer ici.
 # Les adresses descriptives /telecharger-au-calme et /telecharger-kalmeurs sont des stubs
 # HTML (redirection <meta refresh> vers les adresses courtes), servis nativement aussi.
-/p/*              /p/index.html       200
+/p/*              /p/                 200
 /*                /404.html           404
