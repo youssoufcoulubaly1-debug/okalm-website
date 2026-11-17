@@ -2,6 +2,11 @@
 (() => {
   const code = new URLSearchParams(window.location.search).get("invitation") || "";
   if (!/^[A-HJ-NP-Z2-9]{6,12}$/.test(code)) return;
+  const store = document.getElementById("lien-play-store-kalmeurs");
+  if (store) {
+    store.href = "https://play.google.com/store/apps/details?id=com.okalm.kalmeurs&referrer="
+      + encodeURIComponent("okalm_p_" + code);
+  }
   const section = document.getElementById("invitation-kalmeurs");
   const label = document.getElementById("invitation-code");
   const button = document.getElementById("invitation-copier");
