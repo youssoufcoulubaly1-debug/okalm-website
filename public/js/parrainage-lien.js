@@ -10,8 +10,25 @@
     return;
   }
   const code = match[1];
+  const profil = form.elements.namedItem("profil");
+  const famille = document.getElementById("reco-famille");
+  const kalmeur = document.getElementById("reco-kalmeur");
+  function selection() {
+    const professeur = profil.value === "kalmeur";
+    famille.hidden = professeur;
+    kalmeur.hidden = !professeur;
+    button.textContent = professeur ? "Installer Kalmeurs et copier mon code" : "Installer OKALM CI pour les familles";
+  }
+  form.addEventListener("change", selection);
+  selection();
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (profil.value === "kalmeur") {
+      // Le clic public /parrainage/clic s’applique aux familles, pas aux professeurs.
+      // Le professeur confirme lui-même le code dans Kalmeurs avant son premier test.
+      window.location.assign("/get-app-kalmeurs/?invitation=" + encodeURIComponent(code));
+      return;
+    }
     const number = document.getElementById("whatsapp").value.trim();
     button.disabled = true;
     status.textContent = "Vérification de la recommandation…";

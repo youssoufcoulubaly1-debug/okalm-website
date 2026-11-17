@@ -35,13 +35,21 @@
   <div class="reco__panel">
     <div class="reco__brand"><img src="/assets/icon-okalm-192.png" width="48" height="48" alt=""> Une recommandation personnelle</div>
     <h1>Un proche vous recommande OKALM CI</h1>
-    <p>Profitez de cours à domicile avec des professeurs vérifiés et un suivi pédagogique pour chaque enfant.</p>
+    <p id="presentation-reco">Choisissez comment vous souhaitez rejoindre OKALM CI.</p>
     <form id="parrainage-form">
+      <fieldset style="border:0;padding:0;margin:1rem 0">
+        <legend style="font-weight:700;color:#233e32;margin-bottom:.5rem">Je souhaite rejoindre OKALM CI comme :</legend>
+        <label style="font-weight:500;margin:.4rem 0"><input type="radio" name="profil" value="parent" checked style="width:auto"> Parent / famille</label>
+        <label style="font-weight:500;margin:.4rem 0"><input type="radio" name="profil" value="kalmeur" style="width:auto"> Professeur / Kalmeur</label>
+      </fieldset>
+      <div id="reco-famille">
       <label for="whatsapp">Votre numéro WhatsApp (facultatif)</label>
       <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel"
         maxlength="32" placeholder="Ex. : 07 00 00 00 00">
       <p class="reco__hint">Ce numéro sert uniquement au rapprochement de la recommandation avec votre commande. Il n'est pas communiqué à la personne qui vous recommande.</p>
-      <button id="continuer" class="btn" type="submit">Découvrir comment installer OKALM CI</button>
+      </div>
+      <p id="reco-kalmeur" class="reco__hint" hidden>Votre code de recommandation sera affiché sur la page d’installation Kalmeurs. Copiez-le et saisissez-le dans « Qui m’a recommandé » avant votre premier test. La recommandation n’est pas attribuée automatiquement.</p>
+      <button id="continuer" class="btn" type="submit">Installer OKALM CI pour les familles</button>
       <p class="reco__status" id="statut" role="status" aria-live="polite"></p>
     </form>
   </div>

@@ -58,6 +58,12 @@
   <div class="wrap test-install__wrap">
     <p class="test-install__eyebrow">Application Android · Côte d’Ivoire</p>
     <h1>Installer Kalmeurs</h1>
+    <section id="invitation-kalmeurs" hidden aria-label="Code de recommandation" style="background:#fff;border:1px solid #d3e1d9;border-radius:12px;padding:1rem;margin:1rem 0">
+      <p><strong>Votre code de recommandation :</strong> <code id="invitation-code"></code></p>
+      <button type="button" id="invitation-copier" class="btn">Copier le code</button>
+      <p id="invitation-message" role="status" aria-live="polite"></p>
+      <p>Après installation et connexion, ouvrez « Qui m’a recommandé » dans Kalmeurs, saisissez ce code et confirmez-le avant votre premier test. L’attribution n’est pas automatique.</p>
+    </section>
     <p class="test-install__intro">En ce moment, Kalmeurs est en test sur Google Play. Trois petites étapes suffisent. Les pages de Google sont souvent en anglais : suivez les images, le bouton à toucher est entouré en orange.</p>
     <div class="vocal vocal--k" data-src="/audio/kalmeurs-installer.mp3"><div class="vocal__corps"><b class="vocal__titre">Comment installer Kalmeurs aujourd'hui</b><span class="vocal__desc">Écoutez les 3 étapes, avant de commencer. <span class="vocal__d">40 s</span></span></div><button type="button" class="vocal__btn" aria-pressed="false" aria-label="Écouter : Comment installer Kalmeurs aujourd'hui"><span class="vocal__ic" aria-hidden="true"></span></button></div>
     <p class="test-install__account"><strong>Utilisez le même compte Google du début à la fin : pour le groupe et pour votre Play Store.</strong></p>
@@ -139,6 +145,7 @@
 </footer>
 
 <script src="/2026.js" defer></script>
+<script src="/js/invitation-kalmeurs.js" defer></script>
 <script src="/js/ti-caps.js?v=20261113b" defer></script>
 </body>
 </html>
